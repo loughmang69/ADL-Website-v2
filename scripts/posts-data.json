@@ -1,0 +1,1781 @@
+﻿[
+    {
+        "_id":  "post-quickbooks-setup-problems",
+        "_type":  "blogPost",
+        "title":  "QuickBooks Setup Problems That Hide in Plain Sight",
+        "slug":  {
+                     "_type":  "slug",
+                     "current":  "quickbooks-setup-problems"
+                 },
+        "publishedAt":  "2026-06-03T16:00:00.000Z",
+        "category":  "Accounting",
+        "excerpt":  "QuickBooks Online is easy to set up yourself, and easy to set up wrong. Five setup problems that hide in plain sight, why they matter, and what they cost.",
+        "body":  [
+                     {
+                         "_key":  "b002",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b001",
+                                              "text":  "QuickBooks Online has made small business bookkeeping genuinely easier than it was 15 years ago. The bank feeds, when they work correctly, save hours of manual data entry every month. The reports are better. The payroll integration is cleaner. The mobile access is useful."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b004",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b003",
+                                              "text":  "But \u0027easier to set up yourself\u0027 also means \u0027easier to set up incorrectly.\u0027 And because the dashboard looks clean regardless, setup problems tend to go undetected until someone looks closely at the underlying data."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b006",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b005",
+                                              "text":  "I review a lot of QuickBooks setups. Here\u0027s what I consistently find, why it matters, and what it costs."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b007",
+                         "_type":  "block",
+                         "style":  "h2",
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b008",
+                                              "text":  "The Entity Type Problem"
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b010",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b009",
+                                              "text":  "When you first set up a QBO account, the software asks you to select your business entity type. This choice affects your default chart of accounts, which is the foundation for everything that follows."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b012",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b011",
+                                              "text":  "If you select the wrong entity type, QBO builds your accounting structure on a bad foundation. The equity accounts, the default categories for certain transaction types, the structure of owner distributions and draws, all of this flows from that initial selection."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b014",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b013",
+                                              "text":  "I\u0027ve seen sole proprietors set up as S-Corps, LLCs set up as C-Corps, and single-member LLCs configured as partnerships. The fix isn\u0027t impossible, but it requires restructuring the chart of accounts, recategorizing affected transactions, and sometimes starting the setup over. The longer the error persists, the more work the correction requires."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b016",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b015",
+                                              "text":  "The right approach: if you\u0027re not sure which entity type to select, talk to a CPA before setting up the account. It\u0027s a five-minute conversation that prevents hours of cleanup."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b017",
+                         "_type":  "block",
+                         "style":  "h2",
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b018",
+                                              "text":  "The Bank Feed Review Gap"
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b020",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b019",
+                                              "text":  "Bank feeds are one of QBO\u0027s best features. The AI-powered transaction categorization has gotten good enough that most routine transactions get categorized correctly on the first pass."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b022",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b021",
+                                              "text":  "The problem is that \u0027most\u0027 isn\u0027t \u0027all,\u0027 and the ones that get categorized incorrectly look exactly the same as the ones that don\u0027t. If you\u0027re accepting bank feed suggestions without reviewing them, you\u0027re accumulating errors that are invisible until you pull a detailed report or have your return prepared."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b024",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b023",
+                                              "text":  "Common bank feed errors I see: fixed asset purchases coded as office expenses (which creates a depreciation problem), personal expenses that shouldn\u0027t be in the business account, payments coded to the wrong expense category because QBO made a pattern-based guess, and bank fees coded to incorrect accounts because the description doesn\u0027t clearly indicate what they are."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b026",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b025",
+                                              "text":  "The fix isn\u0027t to stop using bank feeds. It\u0027s to build a review step into your monthly bookkeeping process. Scan the accepted transactions before the month closes. It takes 15 minutes and it catches errors before they compound."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b027",
+                         "_type":  "block",
+                         "style":  "h2",
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b028",
+                                              "text":  "Categorization Rules (and What Happens Without Them)"
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b030",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b029",
+                                              "text":  "If you pay the same vendors every month and haven\u0027t set up categorization rules in QBO, you\u0027re relying on the auto-categorization algorithm every time those transactions come through. The algorithm guesses based on transaction description and historical data from other users. It\u0027s usually right. It\u0027s sometimes wrong. And it\u0027s inconsistent in ways that make year-end reporting unreliable."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b032",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b031",
+                                              "text":  "Rules take about five minutes to set up per vendor. You tell QBO: when you see a transaction from this payee, categorize it as this expense account. After that, the rule runs automatically."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b034",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b033",
+                                              "text":  "The businesses that benefit most are the ones with high transaction volume. Consistent rules mean consistent coding, which means reports you can actually rely on when you need them."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b035",
+                         "_type":  "block",
+                         "style":  "h2",
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b036",
+                                              "text":  "The Personal/Business Account Problem"
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b038",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b037",
+                                              "text":  "Mixing personal and business transactions is one of those things that seems manageable in the moment and turns into a problem at year-end. Every mixed transaction creates a documentation requirement: what was the business purpose? How should it be split? Was this reimbursable?"
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b040",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b039",
+                                              "text":  "In practice, these questions often don\u0027t get answered at the time of the transaction. By year-end, you\u0027re either guessing or spending time reconstructing the purpose of every mixed item."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b042",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b041",
+                                              "text":  "The IRS takes a dim view of commingled accounts, and the documentation requirements for business deductions are real. The simplest fix is separate accounts, established from day one."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b044",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b043",
+                                              "text":  "If you\u0027re already operating with commingled accounts, the cleanup process is workable but time-consuming. A CPA or bookkeeper can help you go through the transaction history and properly categorize everything, but it\u0027s time and money you could have avoided."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b045",
+                         "_type":  "block",
+                         "style":  "h2",
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b046",
+                                              "text":  "Products, Services, and Income Categories"
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b048",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b047",
+                                              "text":  "If you invoice through QBO, the products and services you set up map directly to your income accounts. The connection between what you invoice and where the income lands in your chart of accounts is defined at setup."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b050",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b049",
+                                              "text":  "I\u0027ve seen businesses that invoice for multiple service types but have all income posting to a single \u0027Sales\u0027 category. This makes it impossible to run meaningful sales-by-service reporting, which matters when you\u0027re trying to understand which parts of your business are actually profitable."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b052",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b051",
+                                              "text":  "I\u0027ve also seen businesses where services were mapped to the wrong income accounts entirely, so the income statement shows income in categories that don\u0027t correspond to what the business actually sold. Tax returns prepared from this data require significant correction."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b054",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b053",
+                                              "text":  "The fix is reviewing your products and services list, understanding which income account each one maps to, and making sure the mapping reflects your actual business categories."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b055",
+                         "_type":  "block",
+                         "style":  "h2",
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b056",
+                                              "text":  "Getting It Right"
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b058",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b057",
+                                              "text":  "None of these are issues that announce themselves. That\u0027s the central problem. A QBO dashboard can look clean, show a reasonable P\u0026L, and have the bank balance reconcile, while still containing errors that affect your tax position and your ability to make sound financial decisions."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b060",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b059",
+                                              "text":  "If you set up QBO yourself more than a year ago and haven\u0027t had a professional review the configuration, it\u0027s worth having someone look. Most setups have at least one of the issues above. Many have several."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b062",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b061",
+                                              "text":  "The review doesn\u0027t have to be extensive. A CPA or bookkeeper familiar with QBO can usually identify the significant problems in a single session and give you a clear list of what needs to be corrected."
+                                          }
+                                      ]
+                     }
+                 ]
+    },
+    {
+        "_id":  "post-tax-preparation-vs-planning",
+        "_type":  "blogPost",
+        "title":  "Tax Preparation vs. Tax Planning: Why Most Small Business Owners Only Get Half the Picture",
+        "slug":  {
+                     "_type":  "slug",
+                     "current":  "tax-preparation-vs-planning"
+                 },
+        "publishedAt":  "2026-06-02T16:00:00.000Z",
+        "category":  "Tax",
+        "excerpt":  "Tax preparation records what happened; tax planning influences what happens. Why small business owners only get half the picture, and how to fix it.",
+        "body":  [
+                     {
+                         "_key":  "b002",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b001",
+                                              "text":  "Most small business owners have a CPA. Many of them hear from that CPA once a year."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b004",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b003",
+                                              "text":  "That model works fine for getting your return filed correctly. It works less well if you\u0027re trying to pay the right amount of tax rather than whatever amount the year happened to produce."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b006",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b005",
+                                              "text":  "The difference between tax preparation and tax planning is the difference between recording what happened and influencing what happens. Both matter. Most small business owners only get one."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b007",
+                         "_type":  "block",
+                         "style":  "h2",
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b008",
+                                              "text":  "What Tax Preparation Actually Is"
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b010",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b009",
+                                              "text":  "Tax preparation is the process of documenting income and expenses from the prior year, applying the relevant tax rules, and submitting the required forms to the IRS and your state. It\u0027s a backward-looking exercise. The year ended in December. The return is due in April. Everything that\u0027s going to happen has already happened."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b012",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b011",
+                                              "text":  "Good preparation is important. An accurately prepared return avoids penalties, correctly applies available deductions, and makes sure you\u0027re not paying more than you legally owe. That\u0027s not nothing."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b014",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b013",
+                                              "text":  "But by the time a return is being prepared, the decisions that determined your tax liability for the year are mostly fixed. The income was earned. The expenses were or weren\u0027t paid. The entity structure was what it was. Preparation documents all of that. It doesn\u0027t change it."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b015",
+                         "_type":  "block",
+                         "style":  "h2",
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b016",
+                                              "text":  "What Tax Planning Actually Is"
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b018",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b017",
+                                              "text":  "Tax planning is the work that happens during the year to influence what the return will look like. It\u0027s forward-looking. It involves understanding where your income is tracking, identifying decisions you can make before year-end, and acting on those decisions while there\u0027s still time."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b021",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+                                                            "strong"
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b019",
+                                              "text":  "Retirement account contributions."
+                                          },
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b020",
+                                              "text":  " A sole proprietor who knows in August that income is tracking strong can make a larger SEP-IRA contribution before December 31st, reducing taxable income by up to 25% of net self-employment income, subject to annual limits. This decision doesn\u0027t exist in the preparation phase. It has to happen during the year."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b024",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+                                                            "strong"
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b022",
+                                              "text":  "Timing of deductible purchases."
+                                          },
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b023",
+                                              "text":  " Under Section 179, many business assets can be expensed in the year they\u0027re placed in service. If you\u0027re planning to buy equipment or software, the year that purchase happens matters. Pulling a planned January purchase into December moves the deduction forward by a year. That\u0027s a planning decision."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b027",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+                                                            "strong"
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b025",
+                                              "text":  "Quarterly estimated tax calibration."
+                                          },
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b026",
+                                              "text":  " Business owners pay quarterly estimated taxes based on expected annual income. If you had a much stronger year than expected and didn\u0027t adjust your quarterly payments upward, you may owe underpayment penalties in April. Reviewing your estimated payments mid-year and adjusting based on actual income is a planning activity."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b030",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+                                                            "strong"
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b028",
+                                              "text":  "Entity structure review."
+                                          },
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b029",
+                                              "text":  " The most significant planning decision for many small businesses is entity structure. An LLC that has grown to $150,000 in net income may be a good candidate for an S-Corp election, which could reduce SE tax by thousands per year. But S-Corp elections have filing deadlines. The conversation needs to happen before those deadlines, not after."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b031",
+                         "_type":  "block",
+                         "style":  "h2",
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b032",
+                                              "text":  "Why the Gap Exists"
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b034",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b033",
+                                              "text":  "Most small business owners interact with their CPA at the same time every year: when documents are assembled and the return is due. The relationship is defined by the compliance calendar, not by the business calendar."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b036",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b035",
+                                              "text":  "This is partly a structural problem. CPA firms have high workload concentrations in tax season. Proactive outreach during the year, mid-year reviews, check-ins on estimated payments, these require deliberate effort on both sides and don\u0027t happen by default."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b038",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b037",
+                                              "text":  "It\u0027s also partly an awareness problem. Many business owners assume that a CPA\u0027s job is to file accurate returns, full stop. They don\u0027t know the planning layer exists, or they assume it\u0027s something only larger businesses need."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b040",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b039",
+                                              "text":  "Neither assumption is true. Planning opportunities scale to business size. A sole proprietor with $80,000 in net income has decisions worth making just as much as a $5M company. The tools are smaller but the proportional impact is often just as real."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b041",
+                         "_type":  "block",
+                         "style":  "h2",
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b042",
+                                              "text":  "Common Planning Decisions Business Owners Miss"
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b044",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b043",
+                                              "text":  "Beyond the examples above, here are situations I see regularly where a planning conversation would have changed the outcome."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b047",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+                                                            "strong"
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b045",
+                                              "text":  "Home office deduction."
+                                          },
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b046",
+                                              "text":  " If you have a dedicated space in your home used regularly and exclusively for business, you may be able to deduct a proportionate share of home-related expenses. For business owners who work from home full-time, this can be a meaningful deduction. The key word is \u0027exclusively,\u0027 which means the space can\u0027t also serve as a guest bedroom or family room."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b050",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+                                                            "strong"
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b048",
+                                              "text":  "Vehicle use."
+                                          },
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b049",
+                                              "text":  " Business-related vehicle mileage is deductible at the IRS standard mileage rate (72.5 cents per mile in 2026) or using actual expenses. Either method requires contemporaneous records. Many business owners have business vehicle use that goes untracked and undocumented by year-end."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b053",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+                                                            "strong"
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b051",
+                                              "text":  "Meal expenses."
+                                          },
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b052",
+                                              "text":  " Business meals with clients or potential clients are generally 50% deductible. The documentation requirement is specific: who was present, what business was discussed. Without that documentation, the deduction is at risk on audit."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b056",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+                                                            "strong"
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b054",
+                                              "text":  "Health insurance premiums."
+                                          },
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b055",
+                                              "text":  " Self-employed business owners can generally deduct health insurance premiums for themselves and their families as an above-the-line deduction, reducing adjusted gross income. This is one of the more impactful deductions available and is surprisingly often not claimed correctly."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b057",
+                         "_type":  "block",
+                         "style":  "h2",
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b058",
+                                              "text":  "Building a Planning Relationship"
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b060",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b059",
+                                              "text":  "The difference between a tax preparer and a tax advisor is largely about timing. A preparer is engaged at year-end to document what happened. An advisor is engaged earlier to influence what will happen."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b062",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b061",
+                                              "text":  "You don\u0027t need a complex advisory engagement to get the benefit of planning. It can be as simple as a scheduled mid-year call with your CPA in June or July to review where income is tracking and identify what decisions you should be thinking about before December."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b064",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b063",
+                                              "text":  "That conversation typically surfaces two or three concrete items with real dollar values attached. Retirement contribution scenarios. A purchase timing decision. A payroll or entity structure question. An hour of time at mid-year is worth more to your tax position than an extra hour of time in April, because there\u0027s still time to act."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b066",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b065",
+                                              "text":  "If your current CPA relationship is structured entirely around preparation, it\u0027s worth asking whether a broader conversation is possible. Most CPAs will engage in planning discussions if the client asks. Many clients don\u0027t ask."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b067",
+                         "_type":  "block",
+                         "style":  "h2",
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b068",
+                                              "text":  "What to Do Next"
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b070",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b069",
+                                              "text":  "If you\u0027re a small business owner who has never had a conversation with your CPA that didn\u0027t involve a specific return or document, that\u0027s a sign the planning layer isn\u0027t active in your relationship."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b072",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b071",
+                                              "text":  "That doesn\u0027t mean your CPA is doing a bad job. It may just mean the relationship needs to expand."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b074",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b073",
+                                              "text":  "A single mid-year review can clarify what decisions are in front of you and what they\u0027re worth. It\u0027s not complicated, and it\u0027s not expensive relative to what it can change."
+                                          }
+                                      ]
+                     }
+                 ]
+    },
+    {
+        "_id":  "post-choosing-a-business-entity",
+        "_type":  "blogPost",
+        "title":  "Which Business Entity Should You Choose? What the Tax Code Actually Says",
+        "slug":  {
+                     "_type":  "slug",
+                     "current":  "choosing-a-business-entity"
+                 },
+        "publishedAt":  "2026-05-30T16:00:00.000Z",
+        "category":  "Tax",
+        "excerpt":  "LLC, S-Corp, or C-Corp? What the tax code actually says about each, the self-employment tax math, and when it\u0027s worth revisiting your entity choice.",
+        "body":  [
+                     {
+                         "_key":  "b002",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b001",
+                                              "text":  "Most people choose their business entity based on what their attorney recommends, what their neighbor used, or what came up first in a Google search. Very few choose it based on a deliberate tax analysis."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b004",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b003",
+                                              "text":  "That\u0027s not a criticism. The entity choice conversation at formation usually focuses on liability protection and legal structure, both of which matter. But the tax implications are just as significant, and they don\u0027t usually come up until it\u0027s time to file."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b006",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b005",
+                                              "text":  "By then, the decisions that affected your first year or two are already made. This post walks through the main entity options for small businesses, what each one means for taxes, and the situations where it makes sense to revisit the choice you made at the start."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b007",
+                         "_type":  "block",
+                         "style":  "h2",
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b008",
+                                              "text":  "The Default: LLC"
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b010",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b009",
+                                              "text":  "An LLC (limited liability company) is the most common small business structure, and for good reason. It\u0027s straightforward to form, provides personal liability protection, and doesn\u0027t require much ongoing maintenance. California has an $800 annual minimum franchise tax and additional fees for LLCs with higher gross income, but the structural simplicity still makes it the go-to starting point for most founders."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b012",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b011",
+                                              "text":  "By default, a single-member LLC is taxed as a sole proprietorship for federal purposes. A multi-member LLC is taxed as a partnership. Either way, the business itself doesn\u0027t pay federal income tax. The net income flows through to the owner\u0027s personal return, where it gets taxed at your individual rate."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b014",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b013",
+                                              "text":  "The issue is self-employment tax. As a sole proprietor or general partner, you pay SE tax on all net business income: 15.3% on the first $168,600 (the 2024 Social Security wage base) and 2.9% above that. For a business netting $100,000, you\u0027re looking at roughly $14,130 in SE tax before income tax. That\u0027s a real number. It\u0027s also where entity structure planning starts to matter."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b015",
+                         "_type":  "block",
+                         "style":  "h2",
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b016",
+                                              "text":  "The S-Corporation Election"
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b018",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b017",
+                                              "text":  "An LLC or C-Corp can elect to be taxed as an S-Corporation by filing Form 2553 with the IRS. For many small businesses earning consistent profit, this election is one of the most effective tax-reduction strategies available."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b020",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b019",
+                                              "text":  "Here\u0027s the mechanism: in an S-Corp, you pay yourself a reasonable salary. That salary is subject to payroll taxes. But any remaining profit above your salary distributes to you as an owner distribution, which is not subject to SE or payroll tax."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b022",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b021",
+                                              "text":  "If your business nets $150,000 and you pay yourself a reasonable salary of $85,000, roughly $65,000 distributes without SE tax. At 15.3%, that\u0027s nearly $10,000 in annual tax savings. The savings come at a cost: you need to run actual payroll, file additional returns (Form 1120-S), and pay your accountant for the increased complexity. But for many businesses, the net savings are well above those costs."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b024",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b023",
+                                              "text":  "The S-Corp election generally starts to make financial sense when net business income is consistently above $60,000 to $80,000, depending on your state. Below that threshold, the administrative overhead tends to eat most of the savings."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b026",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b025",
+                                              "text":  "In California, the calculation is a bit different. S-Corps here pay an additional 1.5% franchise tax on net income, with an $800 minimum. That reduces the savings relative to other states. The election can still make sense in California, but the income threshold where it starts to pencil out is higher, typically around $80,000 to $100,000 in net income."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b028",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b027",
+                                              "text":  "There\u0027s also the timing issue. S-Corp elections for the current tax year generally need to be filed within the first 75 days of the year, or within 75 days of entity formation for a new business. Miss that window and you\u0027re waiting at least a year. This is one of the most common reasons people end up in a suboptimal structure: the conversation happened too late to act on it."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b029",
+                         "_type":  "block",
+                         "style":  "h2",
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b030",
+                                              "text":  "The C-Corporation"
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b032",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b031",
+                                              "text":  "The C-Corp pays corporate income tax at the entity level before any money reaches the owner. The current federal rate is a flat 21%. When profits are distributed as dividends, they get taxed again at the shareholder level."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b034",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b033",
+                                              "text":  "For most small business owners, that\u0027s a worse outcome than a pass-through structure. You\u0027re effectively paying tax twice on the same earnings."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b036",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b035",
+                                              "text":  "There are cases where a C-Corp makes sense. If you\u0027re planning to raise venture capital, a C-Corp is the standard structure investors expect. If you\u0027re retaining significant profit inside the business for reinvestment and don\u0027t need it personally, the 21% corporate rate can be lower than your individual marginal rate. For certain professional service businesses, a C-Corp provides specific structural advantages."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b038",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b037",
+                                              "text":  "But \u0027my attorney set it up as a C-Corp\u0027 is not itself a reason to be a C-Corp. I\u0027ve reviewed small businesses taxed as C-Corps where the owners were paying double taxation on distributions, with no offsetting benefit. That\u0027s an expensive structure to be in without understanding why."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b039",
+                         "_type":  "block",
+                         "style":  "h2",
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b040",
+                                              "text":  "When to Review Your Entity Structure"
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b042",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b041",
+                                              "text":  "A few situations make a review worth doing."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b045",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+                                                            "strong"
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b043",
+                                              "text":  "Your income has grown significantly."
+                                          },
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b044",
+                                              "text":  " If your business was netting $40,000 when you formed it and is now netting $120,000, the structure that made sense three years ago may not be the most efficient one today. The S-Corp math changes substantially as income grows."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b048",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+                                                            "strong"
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b046",
+                                              "text":  "You\u0027re planning to bring on partners or investors."
+                                          },
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b047",
+                                              "text":  " Changes in ownership have tax implications that vary by entity type. Planning before the change is far easier than unwinding a structure after."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b051",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+                                                            "strong"
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b049",
+                                              "text":  "You\u0027ve added significant assets."
+                                          },
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b050",
+                                              "text":  " Businesses that own real estate, equipment, or intellectual property have different structural considerations than pure service businesses."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b054",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+                                                            "strong"
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b052",
+                                              "text":  "You\u0027re planning an exit."
+                                          },
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b053",
+                                              "text":  " How you\u0027re taxed when you sell or transfer your business depends heavily on what type of entity it is and how it\u0027s structured."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b056",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b055",
+                                              "text":  "The election timing matters. If you\u0027re considering an S-Corp election for the current year, that window closes quickly. The earlier this conversation happens, the more options you have."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b057",
+                         "_type":  "block",
+                         "style":  "h2",
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b058",
+                                              "text":  "What to Do Next"
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b060",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b059",
+                                              "text":  "Entity structure isn\u0027t a set-it-and-forget-it decision. The structure that made sense when you were starting out may not be the most efficient one now that your revenue has stabilized and grown."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b062",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b061",
+                                              "text":  "A tax analysis doesn\u0027t have to be complicated. The basic question is: given your current net income, your state, your payroll situation, and your plans for the business, what\u0027s the most efficient way to be structured? That analysis has a dollar answer attached to it. Sometimes the answer is \u0027stay where you are.\u0027 Sometimes it\u0027s not."
+                                          }
+                                      ]
+                     },
+                     {
+                         "_key":  "b064",
+                         "_type":  "block",
+                         "style":  "normal",
+                         "markDefs":  [
+
+                                      ],
+                         "children":  [
+                                          {
+                                              "marks":  [
+
+                                                        ],
+                                              "_type":  "span",
+                                              "_key":  "b063",
+                                              "text":  "If you formed your entity more than two years ago and haven\u0027t had a CPA look at whether it still makes sense, it\u0027s worth the conversation."
+                                          }
+                                      ]
+                     }
+                 ]
+    }
+]
