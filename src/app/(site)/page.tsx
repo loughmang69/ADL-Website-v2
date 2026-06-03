@@ -16,7 +16,7 @@ const description =
   "Bay Area CPA and business consultant serving small business owners in Fremont, CA. Accounting, bookkeeping, tax, payroll, and advisory services.";
 
 export const metadata: Metadata = {
-  title: `${SITE.name} | Bay Area CPA & Business Advisor`,
+  title: { absolute: `${SITE.name} | Bay Area CPA & Business Advisor` },
   description,
   alternates: { canonical: SITE.url },
   openGraph: {
