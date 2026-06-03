@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ArrowLeftIcon } from "@phosphor-icons/react/dist/ssr";
 import { sanityFetch, urlForImage } from "@/lib/sanity/client";
 import {
   POST_BY_SLUG_QUERY,
@@ -93,6 +95,13 @@ export default async function BlogPostPage({
     <article className="bg-white px-6 pb-24 pt-32">
       <JsonLd data={blogPostingJsonLd(post, ogImage)} />
       <div className="mx-auto max-w-prose">
+        <Link
+          href="/blog"
+          className="mb-8 inline-flex items-center gap-1.5 rounded-sm text-sm font-semibold text-navy-soft transition-colors hover:text-accent"
+        >
+          <ArrowLeftIcon size={16} aria-hidden="true" />
+          All posts
+        </Link>
         <PostHeader post={post} />
         <div className="mt-8">
           <DisclaimerBanner />
