@@ -15,7 +15,8 @@ export const LATEST_3_POSTS_QUERY = `*[_type == "blogPost"] | order(publishedAt 
 }`;
 
 export const RELATED_POSTS_QUERY = `*[_type == "blogPost" && category == $category && slug.current != $slug] | order(publishedAt desc) [0..2] {
-  _id, title, slug, publishedAt, category, excerpt, featuredImage
+  _id, title, slug, publishedAt, category, excerpt, featuredImage,
+  "estimatedReadingTime": round(length(pt::text(body)) / 5 / 200)
 }`;
 
 export const APPROVED_TESTIMONIALS_QUERY = `*[_type == "testimonial" && approved == true] | order(_createdAt desc) {
