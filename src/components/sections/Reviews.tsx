@@ -1,76 +1,71 @@
-"use client";
-
-import { useState } from "react";
-import { GoogleLogoIcon } from "@phosphor-icons/react/dist/ssr";
 import Button from "@/components/ui/Button";
 import StarRating from "@/components/ui/StarRating";
+import ReviewCard from "@/components/ui/ReviewCard";
 import { SITE, GOOGLE_REVIEW } from "@/data/content";
-import { initials, truncate } from "@/lib/utils";
+import { getGoogleReviews } from "@/lib/google/reviews";
 
-export default function Reviews() {
-  const [expanded, setExpanded] = useState(false);
-  const isLong = GOOGLE_REVIEW.body.length > 220;
-  const shown =
-    expanded || !isLong ? GOOGLE_REVIEW.body : truncate(GOOGLE_REVIEW.body, 220);
+function gridClass(count: number): string {
+  if (count <= 1) return "mx-auto max-w-2xl";
+  if (count === 2) return "grid gap-6 md:grid-cols-2 max-w-4xl mx-auto";
+  return "grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3";
+}
+
+export default async function Reviews() {
+  const data = await getGoogleReviews();
+  const dynamic = data && data.reviews.length > 0;
+  const profileUrl = data?.mapsUri ?? SITE.googleProfileUrl;
 
   return (
     <section id="reviews" className="bg-surface-soft px-6 py-24">
-      <div className="mx-auto max-w-2xl text-center">
-        <span className="text-xs font-bold uppercase tracking-[0.1em] text-navy-soft">
-          Google Reviews
-        </span>
-        <h2 className="mt-2 text-3xl font-black tracking-tight text-navy-deepest md:text-4xl">
-          What Clients Say on Google
-        </h2>
-
-        <div className="mt-10 rounded-2xl border border-navy-deepest/[0.08] bg-white p-8 text-left shadow-sm">
-          <div className="flex items-center justify-between">
-            <GoogleLogoIcon
-              size={28}
-              weight="bold"
-              className="text-navy"
-              aria-label="Google"
-            />
-            <StarRating value={GOOGLE_REVIEW.stars} size={20} />
-          </div>
-
-          <div className="mt-6 flex items-center gap-3">
-            <span
-              className="flex h-11 w-11 items-center justify-center rounded-full bg-navy text-sm font-bold text-white"
-              aria-hidden="true"
-            >
-              {initials(GOOGLE_REVIEW.author)}
-            </span>
-            <span className="text-sm font-bold text-navy-deepest">
-              {GOOGLE_REVIEW.author}
-            </span>
-          </div>
-
-          <h3 className="mt-5 text-lg font-bold tracking-tight text-navy-deepest">
-            {GOOGLE_REVIEW.title}
-          </h3>
-          <p className="mt-2 leading-relaxed text-navy-soft">{shown}</p>
-          {isLong && (
-            <button
-              type="button"
-              onClick={() => setExpanded((v) => !v)}
-              aria-expanded={expanded}
-              className="mt-2 rounded-sm text-sm font-semibold text-navy transition-colors hover:text-accent active:scale-[0.97]"
-            >
-              {expanded ? "Show less" : "Read full review"}
-            </button>
+      <div className="mx-auto max-w-7xl">
+        <div className="text-center">
+          <span className="text-xs font-bold uppercase tracking-[0.1em] text-navy-soft">
+            Google Reviews
+          </span>
+          <h2 className="mt-2 text-3xl font-black tracking-tight text-navy-deepest md:text-4xl">
+            What Clients Say on Google
+          </h2>
+          {dynamic && typeof data.rating === "number" && (
+            <div className="mt-4 flex flex-col items-center gap-2">
+              <StarRating value={Math.round(data.rating)} size={22} />
+              <p className="text-sm text-navy-soft">
+                {data.rating.toFixed(1)} out of 5
+                {data.total ? ` · ${data.total} Google reviews` : ""}
+              </p>
+            </div>
           )}
+        </div>
 
-          <p className="mt-6 border-t border-navy-deepest/10 pt-4 text-xs text-navy-soft">
-            {GOOGLE_REVIEW.source}
-          </p>
+        <div className="mt-10">
+          {dynamic ? (
+            <div className={gridClass(data.reviews.length)}>
+              {data.reviews.map((r, i) => (
+                <ReviewCard
+                  key={`${r.author}-${i}`}
+                  author={r.author}
+                  rating={r.rating}
+                  text={r.text}
+                  meta={r.relativeTime || "Google Review"}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className={gridClass(1)}>
+              <ReviewCard
+                author={GOOGLE_REVIEW.author}
+                rating={GOOGLE_REVIEW.stars}
+                text={GOOGLE_REVIEW.body}
+                meta={GOOGLE_REVIEW.source}
+              />
+            </div>
+          )}
         </div>
 
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
           <Button href={SITE.googleReviewUrl} variant="primary" external>
             Leave Us a Review
           </Button>
-          <Button href={SITE.googleProfileUrl} variant="secondary" external>
+          <Button href={profileUrl} variant="secondary" external>
             View Google Profile
           </Button>
         </div>

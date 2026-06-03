@@ -6,8 +6,7 @@ const apiKey = process.env.RESEND_API_KEY;
 export const resend = apiKey ? new Resend(apiKey) : null;
 
 export const CONTACT_TO_EMAIL =
-  process.env.CONTACT_TO_EMAIL ??
-  "garrett.loughman@adlbusinessconsulting.com";
+  process.env.CONTACT_TO_EMAIL ?? "info@adlbusinessconsulting.com";
 
 export const CONTACT_FROM_EMAIL =
   process.env.CONTACT_FROM_EMAIL ?? "onboarding@resend.dev";
