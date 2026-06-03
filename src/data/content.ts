@@ -32,14 +32,11 @@ export const SITE = {
     "https://www.google.com/search?q=ADL+Business+Consulting+PC+Garrett+Loughman+CPA+Fremont+CA",
 } as const;
 
-/**
- * About-section bio. Three paragraphs, reused verbatim from the current site.
- * TODO(verbatim): replace with the exact existing bio copy.
- */
+/** About-section bio (three paragraphs). */
 export const ABOUT_BIO: string[] = [
-  "Garrett Loughman is a licensed California CPA who has spent more than fifteen years in accounting, finance, consulting, finance transformation, and both internal and external audit. He founded ADL Business Consulting to bring the rigor and quality of large-firm engagements directly to the small business owners who need it most.",
-  "After years advising large organizations, Garrett saw the same gap again and again: small businesses make consequential financial decisions without access to the kind of expertise that bigger companies take for granted. ADL exists to close that gap with hands-on, practical guidance.",
-  "Today Garrett works directly with each client, from entity structure and bookkeeping to tax review and technology, so owners spend less time wrestling with their financials and more time growing what they built.",
+  "Garrett Loughman is a California-licensed CPA (License #150109) with more than 15 years of experience across accounting, finance, consulting, finance transformation, and both internal and external audit. He founded ADL Business Consulting, PC to bring big-firm expertise directly to the small business owners who need it most.",
+  "After years advising larger organizations, Garrett kept seeing the same gap: small businesses making major financial decisions without the guidance bigger companies take for granted. ADL exists to close that gap with hands-on, practical advice — not just at tax time, but year-round.",
+  "Today he works directly with every client across entity structure, bookkeeping, tax, payroll, and technology, so owners spend less time wrestling with their financials and more time growing what they built.",
 ];
 
 /**
@@ -55,10 +52,7 @@ export const GOOGLE_REVIEW = {
   source: "Verified Google Review",
 } as const;
 
-/**
- * Contact form "What can we help you with?" options.
- * TODO(verbatim): confirm these match the 10 options on the current site.
- */
+/** Contact form "What can we help you with?" options. */
 export const HELP_OPTIONS: string[] = [
   "Entity Structure Review",
   "Accounting & Bookkeeping",
