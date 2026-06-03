@@ -11,12 +11,19 @@ export const apiVersion =
 /** True only when a Sanity project is actually configured. */
 export const sanityConfigured = projectId.length > 0;
 
-/** Read-only client used by Server Components and ISR data fetching. */
+/**
+ * Read-only client used by Server Components and ISR data fetching.
+ *
+ * useCdn is false so that webhook-triggered revalidation always reads the
+ * freshly published content. With the CDN on, a regeneration fired immediately
+ * after a publish can race the API CDN and cache a stale render until the next
+ * revalidation. Next.js ISR already caches these reads, so the CDN adds little.
+ */
 export const client: SanityClient = createClient({
   projectId,
   dataset,
   apiVersion,
-  useCdn: true,
+  useCdn: false,
 });
 
 /**
