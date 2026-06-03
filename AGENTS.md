@@ -1,5 +1,25 @@
-<!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
+# ADL Business Consulting — Agent Notes
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- END:nextjs-agent-rules -->
+Stack: **Next.js 15 (App Router) + React 19 + TypeScript (strict)**, Tailwind CSS **v3**,
+Framer Motion, Sanity v3 (embedded Studio at `/studio`), Resend, Zod, Upstash rate limiting.
+Deployed to Vercel. Built from `ADL_Website_Redesign_Prompt.md` (one directory up).
+
+## Conventions
+
+- Routes live under `src/app`. Marketing pages are in the `(site)` route group, which
+  owns the Nav + Footer chrome. The root `layout.tsx` is intentionally minimal (html/body
+  + fonts) so the Sanity Studio at `/studio` renders without site chrome.
+- Phosphor icons: import the **`*Icon`-suffixed** names from `@phosphor-icons/react/dist/ssr`
+  (the bare names are deprecated). Import the `Icon`/`IconProps` *types* from `@phosphor-icons/react`.
+- Sanity reads go through `sanityFetch()` in `src/lib/sanity/client.ts` (fails soft to a
+  fallback so the build works without a populated dataset). Writes use `getWriteClient()`
+  (server-only token).
+- Service data is in `src/data/services.ts`; pricing in `src/data/packages.ts` (empty by design).
+  Verbatim site copy and NAP are in `src/data/content.ts` (items marked `TODO(verbatim)`).
+- Animations: only `transform` + `opacity`; wrap motion in `useReducedMotion()`.
+
+## Env
+
+Copy `.env.example` → `.env.local`. `NEXT_PUBLIC_SANITY_PROJECT_ID` and `RESEND_API_KEY`
+are set; `SANITY_API_TOKEN` (Editor) and Upstash creds are still needed for testimonial
+writes and rate limiting respectively.

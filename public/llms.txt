@@ -1,0 +1,39 @@
+# ADL Business Consulting, PC
+
+> Bay Area CPA and business consulting firm serving small business owners and individuals in Fremont, California and the surrounding Bay Area.
+
+## About
+
+ADL Business Consulting, PC is a California professional corporation founded by Garrett Loughman, a licensed CPA (California License #150109) with over 15 years of experience in accounting, finance, consulting, finance transformation, and both internal and external audit. Founded in 2026, the firm brings big-firm quality directly to small business owners who deserve it.
+
+## Services
+
+- Entity structure review — determining the optimal business structure (LLC, S-Corp, C-Corp) from a tax efficiency standpoint
+- Accounting and bookkeeping — monthly reconciliation, categorization, financial reporting
+- Tax return review — business and personal returns, deduction maximization
+- Payroll provider implementation — selecting, configuring, and launching payroll systems; California compliance
+- Technology implementations — QuickBooks setup, point-of-sale systems, small business tools
+- Business process optimization — identifying inefficiencies, reducing operational costs, building scalable workflows
+- Personal finance education — budgeting, debt management, retirement planning
+- Website and app development — modern responsive websites and web apps
+- AI agent implementation — deploying AI-powered automations tailored to business workflows
+
+## Credentials
+
+- Garrett Loughman, CPA — California License #150109, licensed since 2013
+- MBA
+- 15+ years in accounting, finance, consulting, finance transformation, internal and external audit
+
+## Location
+
+Fremont, California. Serving clients remotely and in person across the Bay Area.
+
+## Contact
+
+- Phone: 510-320-2724
+- Email: info@adlbusinessconsulting.com
+- Website: https://www.adlbusinessconsulting.com
+
+## Blog
+
+Regular articles on tax strategy, accounting best practices, California payroll compliance, QuickBooks, entity structure, and small business finance, written by Garrett Loughman.

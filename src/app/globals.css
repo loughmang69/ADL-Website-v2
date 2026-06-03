@@ -1,49 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --c-navy-deepest: #0d1f3c;
+  --c-navy-deep: #142b56;
+  --c-navy: #1a3d6e;
+  --c-navy-soft: #1a6a8a;
+  --c-accent: #67cbea;
+  --c-bg-soft: #f7f9fc;
+  --c-danger: #e05a5a;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Offset for the fixed nav so anchor targets aren't hidden beneath it */
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-white text-navy font-sans antialiased;
+    min-height: 100dvh;
+  }
+
+  ::selection {
+    background-color: var(--c-accent);
+    color: var(--c-navy-deepest);
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2;
   }
 }
 
-html {
-  height: 100%;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
+/* Respect users who prefer reduced motion: kill smooth scroll and
+   perpetual/keyframe animations, keep instant transitions. */
+@media (prefers-reduced-motion: reduce) {
   html {
-    color-scheme: dark;
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
   }
 }

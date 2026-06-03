@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "name": "ADL Business Consulting, PC",
+  "description": "Bay Area CPA and business consulting firm. Services include accounting, bookkeeping, tax, payroll, business consulting, website development, and AI implementation. Founded and operated by Garrett Loughman, CPA (CA #150109).",
+  "capabilities": ["contact", "blog", "services"],
+  "contact": "info@adlbusinessconsulting.com",
+  "url": "https://www.adlbusinessconsulting.com",
+  "owner": {
+    "name": "Garrett Loughman",
+    "role": "Founder, CPA",
+    "license": "CA CPA License #150109"
+  }
+}
