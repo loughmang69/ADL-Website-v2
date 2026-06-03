@@ -14,6 +14,10 @@ Deployed to Vercel. Built from `ADL_Website_Redesign_Prompt.md` (one directory u
 - Sanity reads go through `sanityFetch()` in `src/lib/sanity/client.ts` (fails soft to a
   fallback so the build works without a populated dataset). Writes use `getWriteClient()`
   (server-only token).
+- Every read is tagged `"sanity"` and revalidates every 60s. For instant updates, a Sanity
+  webhook POSTs to `/api/revalidate` (`SANITY_REVALIDATE_SECRET` bearer token), which calls
+  `revalidateTag("sanity")` to purge the homepage preview, `/blog`, `/blog/[slug]`, and the
+  sitemap at once. New posts therefore appear in both places automatically — no code change.
 - Service data is in `src/data/services.ts`; pricing in `src/data/packages.ts` (empty by design).
   Verbatim site copy and NAP are in `src/data/content.ts` (items marked `TODO(verbatim)`).
 - Animations: only `transform` + `opacity`; wrap motion in `useReducedMotion()`.

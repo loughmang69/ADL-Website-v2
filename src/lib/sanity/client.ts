@@ -49,7 +49,10 @@ export async function sanityFetch<T>(
   if (!sanityConfigured) return fallback;
   try {
     return await client.fetch<T>(query, params, {
-      next: { revalidate: 60 },
+      // Time-based fallback (60s) plus a shared "sanity" cache tag so the
+      // /api/revalidate webhook can purge every Sanity-backed page instantly
+      // when content is published or edited in the Studio.
+      next: { revalidate: 60, tags: ["sanity"] },
     });
   } catch (err) {
     console.error(
