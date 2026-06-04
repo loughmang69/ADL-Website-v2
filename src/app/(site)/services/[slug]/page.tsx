@@ -200,7 +200,7 @@ export default async function ServiceDetailPage({
               Ready to talk it through?
             </p>
             <p className="mt-1 max-w-md text-white/70">
-              No cost, no commitment — just a clear next step for your business.
+              No cost, no commitment: just a clear next step for your business.
             </p>
           </div>
           <Button href="/#contact" variant="primary" className="shrink-0">

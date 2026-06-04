@@ -35,7 +35,7 @@ export default async function BlogListingPage() {
         </h1>
         <p className="mt-4 max-w-prose text-navy-soft">
           Practical guidance on tax, accounting, payroll, technology, and small
-          business finance — written by {SITE.founderName}, CPA.
+          business finance, written by {SITE.founderName}, CPA.
         </p>
 
         {posts.length === 0 ? (

@@ -32,7 +32,7 @@ export default function Footer() {
               {SITE.tagline}
             </p>
             <p className="mt-5 text-sm text-white/80">
-              {SITE.founderName}, CPA — {SITE.license}
+              {SITE.founderName}, CPA, {SITE.license}
             </p>
             <p className="mt-1 text-sm text-white/50">
               © 2026 {SITE.name}. All rights reserved.

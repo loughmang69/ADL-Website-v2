@@ -64,16 +64,16 @@ export const SERVICES: Service[] = [
         ],
       },
       {
-        heading: "LLC, S-Corp, or C-Corp — what actually drives the decision",
+        heading: "LLC, S-Corp, or C-Corp: what actually drives the decision",
         paragraphs: [
-          "An LLC is simple and flexible, but by default its profit is all subject to self-employment tax. Once net profit climbs into the five figures, an S-Corp election often saves money: you pay yourself a reasonable salary (subject to payroll taxes) and take the rest as a distribution that isn't. The savings are real, but only if your salary is genuinely reasonable — the IRS scrutinizes owners who pay themselves too little.",
+          "An LLC is simple and flexible, but by default its profit is all subject to self-employment tax. Once net profit climbs into the five figures, an S-Corp election often saves money: you pay yourself a reasonable salary (subject to payroll taxes) and take the rest as a distribution that isn't. The savings are real, but only if your salary is genuinely reasonable; the IRS scrutinizes owners who pay themselves too little.",
           "A C-Corp rarely makes sense for a typical Bay Area small business because of double taxation, but it can be the right call if you're raising venture capital or planning to retain significant earnings inside the company. The point is that none of this is one-size-fits-all. The right answer depends on your numbers, and it changes as those numbers change.",
         ],
       },
       {
         heading: "California-specific costs that the online guides skip",
         paragraphs: [
-          "California adds wrinkles that generic advice ignores. Every LLC and corporation pays the $800 minimum franchise tax to the Franchise Tax Board each year, regardless of profit. LLCs above certain revenue thresholds owe an additional gross-receipts fee on top of that. An S-Corp election doesn't escape California either — the state levies a 1.5% tax on S-Corp net income.",
+          "California adds wrinkles that generic advice ignores. Every LLC and corporation pays the $800 minimum franchise tax to the Franchise Tax Board each year, regardless of profit. LLCs above certain revenue thresholds owe an additional gross-receipts fee on top of that. An S-Corp election doesn't escape California either: the state levies a 1.5% tax on S-Corp net income.",
           "These costs don't make any single structure wrong, but they do change the math. A federal-only analysis can point you toward an election that looks great on paper and then gets eaten up by California's add-ons. The review accounts for both layers so the recommendation holds up when you actually file.",
         ],
       },
@@ -124,7 +124,7 @@ export const SERVICES: Service[] = [
     slug: "bookkeeping-services-fremont",
     metaTitle: "Bookkeeping Services in Fremont, CA | ADL Business Consulting",
     metaDescription:
-      "Monthly bookkeeping for Fremont, CA small businesses: clean reconciliations, accurate categorization, and reports you can actually use — from a licensed CPA.",
+      "Monthly bookkeeping for Fremont, CA small businesses: clean reconciliations, accurate categorization, and reports you can actually use, from a licensed CPA.",
     heroTagline:
       "Books you can trust, closed every month, by a CPA who reads them too.",
     relatedCategorySlugs: ["Accounting"],
@@ -139,14 +139,14 @@ export const SERVICES: Service[] = [
       {
         heading: "What monthly bookkeeping actually includes",
         paragraphs: [
-          "Every month we reconcile your bank and credit-card accounts to the penny, categorize transactions correctly, and review for the small errors that compound — duplicate entries, miscategorized owner draws, transfers double-counted as income. We keep your chart of accounts sane instead of letting it sprawl into hundreds of categories nobody uses.",
+          "Every month we reconcile your bank and credit-card accounts to the penny, categorize transactions correctly, and review for the small errors that compound: duplicate entries, miscategorized owner draws, transfers double-counted as income. We keep your chart of accounts sane instead of letting it sprawl into hundreds of categories nobody uses.",
           "You get a clean set of financials (profit and loss, balance sheet, and cash position) delivered on a predictable schedule. More importantly, because a CPA is the one reviewing them, you get a heads-up when something looks off: margins slipping, a vendor cost creeping up, sales tax that's accruing faster than you expected.",
         ],
       },
       {
         heading: "A CPA reading your books, not just recording them",
         paragraphs: [
-          "Plenty of services will record transactions. The difference here is that the person keeping your books understands what they mean for your taxes and your business. Categorization isn't just tidiness — it determines your deductions, your taxable income, and how defensible your return is if anyone ever asks questions.",
+          "Plenty of services will record transactions. The difference here is that the person keeping your books understands what they mean for your taxes and your business. Categorization isn't just tidiness; it determines your deductions, your taxable income, and how defensible your return is if anyone ever asks questions.",
           "That's especially true for California businesses juggling sales-and-use tax, 1099 contractor tracking, and the documentation the FTB and IRS expect. Getting it right monthly means there's nothing to untangle in April.",
         ],
       },
@@ -154,7 +154,7 @@ export const SERVICES: Service[] = [
         heading: "Built to hand off cleanly at tax time",
         paragraphs: [
           "Because the same practice handles your bookkeeping and understands tax, your year-end hand-off is seamless. No separate bookkeeper-to-preparer translation, no surprise adjustments, no \"we'll need to redo Q1.\" The books are already built the way the return needs them.",
-          "Whether you're a sole proprietor who's fallen behind or an established LLC that wants a steady monthly close, we'll meet you where you are — including cleaning up a backlog before we start the regular cadence.",
+          "Whether you're a sole proprietor who's fallen behind or an established LLC that wants a steady monthly close, we'll meet you where you are, including cleaning up a backlog before we start the regular cadence.",
         ],
       },
     ],
@@ -205,13 +205,13 @@ export const SERVICES: Service[] = [
       {
         heading: "Two ways to work with us on taxes",
         paragraphs: [
-          "ADL handles tax on both ends. We prepare and file new returns, and we review returns you've already filed to find money that may still be recoverable. Most owners start with one and come back for the other. Whichever fits your situation, you're working with a licensed California CPA and IRS-credentialed preparer — not seasonal help.",
+          "ADL handles tax on both ends. We prepare and file new returns, and we review returns you've already filed to find money that may still be recoverable. Most owners start with one and come back for the other. Whichever fits your situation, you're working with a licensed California CPA and IRS-credentialed preparer, not seasonal help.",
         ],
       },
       {
         heading: "Prior-Year Tax Return Review",
         paragraphs: [
-          "If you've already filed, this is the low-risk place to start: you're not committing to anything beyond finding out what was missed. Garrett reviews your previously filed business and personal returns to identify deductions, credits, and elections that were overlooked — and quantifies the savings that may still be recoverable through amended returns.",
+          "If you've already filed, this is the low-risk place to start: you're not committing to anything beyond finding out what was missed. Garrett reviews your previously filed business and personal returns to identify deductions, credits, and elections that were overlooked, and quantifies the savings that may still be recoverable through amended returns.",
           "Returns prepared in a hurry, or by software that doesn't know your business, routinely leave money behind: a missed home-office or vehicle allocation, depreciation that wasn't optimized, an election that was never made, credits the preparer didn't ask about. As a general rule, amended returns can reach back within three years of filing, so the question of whether it's worth a look has a time limit. (That three-year window is a general rule, not advice on your specific return; we'll confirm what applies to you.)",
           "You already did the hard part by filing. The review tells you what was left on the table and whether it's worth recovering.",
         ],
@@ -220,7 +220,7 @@ export const SERVICES: Service[] = [
         heading: "Tax Return Preparation",
         paragraphs: [
           "On the preparation side, ADL handles full preparation and filing of new business and personal returns. Garrett is an IRS-credentialed preparer with an EFIN and PTIN and a licensed California CPA, so the same person who understands your books and your entity structure is the one signing your return.",
-          "We prepare both federal and California returns for individuals, partnerships, LLCs, S-Corps, and C-Corps. Because we work year-round — not just in filing season — preparation isn't a once-a-year data dump. The structure decisions, the bookkeeping, and the return all line up, which is how you actually keep your tax bill down rather than just reporting it accurately after the fact.",
+          "We prepare both federal and California returns for individuals, partnerships, LLCs, S-Corps, and C-Corps. Because we work year-round, not just in filing season, preparation isn't a once-a-year data dump. The structure decisions, the bookkeeping, and the return all line up, which is how you actually keep your tax bill down rather than just reporting it accurately after the fact.",
         ],
       },
       {
@@ -240,7 +240,7 @@ export const SERVICES: Service[] = [
       {
         question: "How far back can amended returns recover missed savings?",
         answer:
-          "As a general rule, amended returns can be filed within three years of the original filing date (or two years from when the tax was paid, if later). That's a general guideline rather than advice on your specific return — we'll confirm exactly what applies to your situation.",
+          "As a general rule, amended returns can be filed within three years of the original filing date (or two years from when the tax was paid, if later). That's a general guideline rather than advice on your specific return; we'll confirm exactly what applies to your situation.",
       },
       {
         question: "Do you prepare both business and personal returns?",
@@ -250,7 +250,7 @@ export const SERVICES: Service[] = [
       {
         question: "What do you charge for tax preparation?",
         answer:
-          "Pricing depends on the entity type and the complexity of the return — a single-member LLC is very different from a multi-owner S-Corp with payroll. We'll give you a clear quote up front after a short conversation about your situation, with no surprise fees.",
+          "Pricing depends on the entity type and the complexity of the return: a single-member LLC is very different from a multi-owner S-Corp with payroll. We'll give you a clear quote up front after a short conversation about your situation, with no surprise fees.",
       },
       {
         question: "Are you credentialed to file returns?",
@@ -260,7 +260,7 @@ export const SERVICES: Service[] = [
       {
         question: "Can you both prepare this year and review last year?",
         answer:
-          "Absolutely — many clients do both. We'll often review a prior return while preparing the current one, since the same look at your situation surfaces opportunities in both directions.",
+          "Absolutely, many clients do both. We'll often review a prior return while preparing the current one, since the same look at your situation surfaces opportunities in both directions.",
       },
     ],
   },
@@ -275,7 +275,7 @@ export const SERVICES: Service[] = [
     slug: "payroll-setup-california",
     metaTitle: "Payroll Provider Setup for California Small Businesses | ADL",
     metaDescription:
-      "Set up payroll the right way for your California small business: provider selection, EDD registration, and compliance with state payroll rules — guided by a CPA.",
+      "Set up payroll the right way for your California small business: provider selection, EDD registration, and compliance with state payroll rules, guided by a CPA.",
     heroTagline:
       "Run payroll that's compliant with California's rules from the first check.",
     relatedCategorySlugs: ["Payroll"],
@@ -283,7 +283,7 @@ export const SERVICES: Service[] = [
       {
         heading: "Payroll is where compliance mistakes get expensive fast",
         paragraphs: [
-          "Payroll feels like a solved problem until you're the one responsible for it. Misclassify an employee as a contractor, miss an EDD deposit, or set up withholding wrong, and the penalties stack up quickly — and in California, the rules are stricter than most owners expect.",
+          "Payroll feels like a solved problem until you're the one responsible for it. Misclassify an employee as a contractor, miss an EDD deposit, or set up withholding wrong, and the penalties stack up quickly, and in California, the rules are stricter than most owners expect.",
           "ADL helps you select, configure, and launch payroll correctly the first time, so you're compliant from the first check instead of cleaning up after a notice arrives.",
         ],
       },
@@ -298,13 +298,13 @@ export const SERVICES: Service[] = [
         heading: "California payroll compliance, specifically",
         paragraphs: [
           "California adds layers most payroll setups get wrong. You need to register with the EDD and handle state payroll taxes (UI, ETT, SDI) on top of federal withholding and FICA. Worker classification is heavily enforced under California's ABC test, and getting it wrong is one of the most expensive mistakes a small employer can make.",
-          "Then there are the details: itemized wage-statement requirements, sick-leave accrual, final-paycheck timing rules, and new-hire reporting. We make sure your system and your process satisfy these so you're not exposed. The goal isn't just software that runs payroll — it's a setup that keeps you on the right side of California's labor and tax agencies.",
+          "Then there are the details: itemized wage-statement requirements, sick-leave accrual, final-paycheck timing rules, and new-hire reporting. We make sure your system and your process satisfy these so you're not exposed. The goal isn't just software that runs payroll; it's a setup that keeps you on the right side of California's labor and tax agencies.",
         ],
       },
       {
         heading: "Set up to run cleanly, with backup when you need it",
         paragraphs: [
-          "Once payroll is live, it should be boring — and that's the point. We get the foundation right so the recurring runs are routine, and we make sure payroll data flows cleanly into your books so it's not a separate reconciliation headache every quarter.",
+          "Once payroll is live, it should be boring, and that's the point. We get the foundation right so the recurring runs are routine, and we make sure payroll data flows cleanly into your books so it's not a separate reconciliation headache every quarter.",
           "Because ADL also handles bookkeeping and tax, your payroll, your financials, and your returns all reconcile. If a question or a notice ever does come up, you have a CPA who already understands your setup.",
         ],
       },
@@ -313,7 +313,7 @@ export const SERVICES: Service[] = [
       {
         question: "Which payroll provider should I use?",
         answer:
-          "It depends on your team and how you operate — number of employees, hourly vs. salaried, contractors, benefits, and whether you run in more than one state. We help you choose based on your actual needs rather than steering you to one platform.",
+          "It depends on your team and how you operate: number of employees, hourly vs. salaried, contractors, benefits, and whether you run in more than one state. We help you choose based on your actual needs rather than steering you to one platform.",
       },
       {
         question: "What do I have to register for to run payroll in California?",
@@ -328,7 +328,7 @@ export const SERVICES: Service[] = [
       {
         question: "Can you fix a payroll setup that's already a mess?",
         answer:
-          "Yes. We regularly clean up existing setups — wrong tax settings, missed registrations, payroll that doesn't reconcile to the books — and get you onto a compliant, repeatable process.",
+          "Yes. We regularly clean up existing setups (wrong tax settings, missed registrations, payroll that doesn't reconcile to the books) and get you onto a compliant, repeatable process.",
       },
       {
         question: "Does payroll connect to my bookkeeping?",
@@ -350,7 +350,7 @@ export const SERVICES: Service[] = [
     metaDescription:
       "QuickBooks setup and cleanup for Bay Area small businesses, configured by a CPA so your chart of accounts and reports give you data you can actually use.",
     heroTagline:
-      "Set up QuickBooks the way a CPA reads it — so the reports actually mean something.",
+      "Set up QuickBooks the way a CPA reads it, so the reports actually mean something.",
     relatedCategorySlugs: ["Technology"],
     body: [
       {
@@ -370,7 +370,7 @@ export const SERVICES: Service[] = [
       {
         heading: "The rest of your small business stack",
         paragraphs: [
-          "Beyond QuickBooks, most businesses run a handful of other tools — a point-of-sale system, invoicing, expense capture, time tracking, maybe inventory. The value isn't any single app; it's making them talk to each other so data flows automatically instead of being re-keyed by hand, where errors creep in.",
+          "Beyond QuickBooks, most businesses run a handful of other tools: a point-of-sale system, invoicing, expense capture, time tracking, maybe inventory. The value isn't any single app; it's making them talk to each other so data flows automatically instead of being re-keyed by hand, where errors creep in.",
           "We help you choose tools that fit your size and budget (not the enterprise package a salesperson pushed), configure them, and connect them so your financial picture stays current without constant manual work. The aim is a stack that runs quietly in the background and feeds you accurate numbers.",
         ],
       },
@@ -378,7 +378,7 @@ export const SERVICES: Service[] = [
         heading: "Tools chosen for the data you actually need",
         paragraphs: [
           "Because the same practice handles your books and your taxes, technology decisions are made with the end in mind: clean financials, an easy tax season, and reports that answer the questions you actually ask. You won't end up with an impressive-looking system that produces numbers you can't use.",
-          "Set it up right once, and the software does what it was supposed to do — give you back time and give you data you trust.",
+          "Set it up right once, and the software does what it was supposed to do: give you back time and give you data you trust.",
         ],
       },
     ],
@@ -406,7 +406,7 @@ export const SERVICES: Service[] = [
       {
         question: "Do you provide training once it's set up?",
         answer:
-          "We make sure you and your team know how to run the day-to-day — entering transactions, invoicing, pulling reports — so the system stays clean after we hand it off.",
+          "We make sure you and your team know how to run the day-to-day (entering transactions, invoicing, pulling reports) so the system stays clean after we hand it off.",
       },
     ],
   },
@@ -416,12 +416,12 @@ export const SERVICES: Service[] = [
     category: "Consulting",
     tag: "Consulting",
     description:
-      "Identify inefficiencies, reduce operational costs, and build scalable workflows — from back-office finance to customer-facing processes.",
+      "Identify inefficiencies, reduce operational costs, and build scalable workflows, from back-office finance to customer-facing processes.",
     icon: "ArrowsClockwise",
     slug: "business-process-optimization",
     metaTitle: "Business Process Optimization for Small Businesses | ADL",
     metaDescription:
-      "A CPA's outside look at where your small business loses time and money — from back-office finance to customer-facing workflows — with practical fixes.",
+      "A CPA's outside look at where your small business loses time and money, from back-office finance to customer-facing workflows, with practical fixes.",
     heroTagline:
       "Find where the business leaks time and money, then fix the workflow.",
     relatedCategorySlugs: ["Business Strategy"],
@@ -437,14 +437,14 @@ export const SERVICES: Service[] = [
         heading: "Where the money leaks",
         paragraphs: [
           "The leaks are usually mundane: an invoicing process that lets receivables age, manual re-keying between systems that introduces errors, approval steps that exist for no reason, vendor costs nobody has reviewed in years. None of them feel urgent on their own, but together they quietly compress your margin.",
-          "We start by understanding how work actually flows — not the org chart version, the real one — and follow the money and the time. Because the analysis is grounded in your financials, the recommendations are concrete and prioritized by impact, not a generic list of best practices.",
+          "We start by understanding how work actually flows (not the org chart version, the real one) and follow the money and the time. Because the analysis is grounded in your financials, the recommendations are concrete and prioritized by impact, not a generic list of best practices.",
         ],
       },
       {
         heading: "Practical fixes that stick",
         paragraphs: [
           "The goal isn't a binder of recommendations you'll never implement. It's a short list of changes that pay off, sequenced so you can actually do them: tighten the back-office finance workflow, automate the steps worth automating, renegotiate or cut costs that don't earn their keep, and build repeatable processes so the business depends less on any one person holding it together.",
-          "Because the same practice understands your books and your taxes, the improvements reinforce each other — cleaner operations feed cleaner financials feed an easier tax season.",
+          "Because the same practice understands your books and your taxes, the improvements reinforce each other: cleaner operations feed cleaner financials feed an easier tax season.",
         ],
       },
     ],
@@ -467,7 +467,7 @@ export const SERVICES: Service[] = [
       {
         question: "Can you help implement the changes, not just recommend them?",
         answer:
-          "Yes. We can stay involved through implementation — setting up the tools, rebuilding the workflow, and confirming the change actually took — rather than handing you a report and walking away.",
+          "Yes. We can stay involved through implementation (setting up the tools, rebuilding the workflow, and confirming the change actually took) rather than handing you a report and walking away.",
       },
     ],
   },
@@ -477,7 +477,7 @@ export const SERVICES: Service[] = [
     category: "Education",
     tag: "Education",
     description:
-      "Practical guidance on budgeting, debt management, retirement planning, and building wealth — designed for individuals and small business owners.",
+      "Practical guidance on budgeting, debt management, retirement planning, and building wealth, designed for individuals and small business owners.",
     icon: "GraduationCap",
     slug: "personal-finance-education",
     metaTitle: "Personal Finance Education & Coaching | ADL Business Consulting",
@@ -490,7 +490,7 @@ export const SERVICES: Service[] = [
       {
         heading: "Most people were never taught this, and it shows",
         paragraphs: [
-          "Budgeting, debt, retirement, taxes — almost nobody gets a real education in any of it, and the financial industry often benefits from keeping it confusing. The result is smart, capable people making big money decisions on instinct and hoping it works out.",
+          "Budgeting, debt, retirement, taxes: almost nobody gets a real education in any of it, and the financial industry often benefits from keeping it confusing. The result is smart, capable people making big money decisions on instinct and hoping it works out.",
           "ADL's personal finance education is the opposite of a sales pitch. It's straightforward, jargon-free guidance from a CPA whose job is to explain, not to sell you a product. The goal is for you to understand your own money well enough to make confident decisions.",
         ],
       },
@@ -504,8 +504,8 @@ export const SERVICES: Service[] = [
       {
         heading: "Especially valuable for small business owners",
         paragraphs: [
-          "When you own a business, your personal and business finances are deeply intertwined — how you pay yourself, how you save for retirement through the business, how your entity choice affects your personal taxes. Generic personal-finance advice misses all of that. Working with a CPA who sees both sides means the guidance actually fits an owner's reality.",
-          "You walk away understanding not just what to do, but why — so you can keep making good decisions long after our conversation.",
+          "When you own a business, your personal and business finances are deeply intertwined: how you pay yourself, how you save for retirement through the business, how your entity choice affects your personal taxes. Generic personal-finance advice misses all of that. Working with a CPA who sees both sides means the guidance actually fits an owner's reality.",
+          "You walk away understanding not just what to do, but why, so you can keep making good decisions long after our conversation.",
         ],
       },
     ],
@@ -513,7 +513,7 @@ export const SERVICES: Service[] = [
       {
         question: "Is this financial advising or selling me products?",
         answer:
-          "Education, not product sales. The goal is to help you understand your own finances and make confident decisions — there's nothing being sold to you on commission.",
+          "Education, not product sales. The goal is to help you understand your own finances and make confident decisions; there's nothing being sold to you on commission.",
       },
       {
         question: "Who is this for?",
@@ -523,7 +523,7 @@ export const SERVICES: Service[] = [
       {
         question: "Can you help me with retirement savings as a business owner?",
         answer:
-          "Yes — understanding the retirement-savings options available through your business and how they interact with your taxes is one of the most valuable areas for owners, and one generic advice usually misses.",
+          "Yes, understanding the retirement-savings options available through your business and how they interact with your taxes is one of the most valuable areas for owners, and one generic advice usually misses.",
       },
       {
         question: "Do you give specific investment recommendations?",
@@ -543,9 +543,9 @@ export const SERVICES: Service[] = [
     slug: "website-app-development",
     metaTitle: "Website & App Development for Small Businesses | ADL",
     metaDescription:
-      "Modern, fast, responsive websites and web apps for small businesses — built and maintained so your online presence keeps working for you.",
+      "Modern, fast, responsive websites and web apps for small businesses, built and maintained so your online presence keeps working for you.",
     heroTagline:
-      "A fast, modern site that actually brings in business — and stays maintained.",
+      "A fast, modern site that actually brings in business, and stays maintained.",
     relatedCategorySlugs: ["Technology"],
     body: [
       {
@@ -558,7 +558,7 @@ export const SERVICES: Service[] = [
       {
         heading: "Built modern, built to last",
         paragraphs: [
-          "We build with current tools and best practices: fast load times, mobile-first responsive design, sensible structure for search visibility, and clean code that won't be a liability to update later. The result is a site that's quick, accessible, and easy to keep current — not a fragile template that breaks the moment you need a change.",
+          "We build with current tools and best practices: fast load times, mobile-first responsive design, sensible structure for search visibility, and clean code that won't be a liability to update later. The result is a site that's quick, accessible, and easy to keep current, not a fragile template that breaks the moment you need a change.",
           "Whether you need a straightforward marketing site, a blog, or a more involved web app with custom functionality, we scope it to what your business actually needs rather than overbuilding.",
         ],
       },
@@ -566,7 +566,7 @@ export const SERVICES: Service[] = [
         heading: "Maintained, not abandoned",
         paragraphs: [
           "The reason most small business sites go stale is that there's no plan to maintain them. We build yours so updates are easy and, where it makes sense, handle the ongoing maintenance so it stays fast, secure, and current. A site that's kept up to date keeps working; one that's left to rot becomes a liability.",
-          "And because ADL understands the business behind the website, the work is oriented around results — bringing in inquiries and customers — not just shipping something that looks nice.",
+          "And because ADL understands the business behind the website, the work is oriented around results (bringing in inquiries and customers), not just shipping something that looks nice.",
         ],
       },
     ],
@@ -579,12 +579,12 @@ export const SERVICES: Service[] = [
       {
         question: "Will my site work well on phones and load fast?",
         answer:
-          "Yes — mobile-first responsive design and fast load times are baseline, not extras. Most of your visitors are on a phone, and speed directly affects whether they stay.",
+          "Yes, mobile-first responsive design and fast load times are baseline, not extras. Most of your visitors are on a phone, and speed directly affects whether they stay.",
       },
       {
         question: "Can you maintain the site after it launches?",
         answer:
-          "Yes. We can build it so updates are easy for you, handle ongoing maintenance ourselves, or a mix of both — so the site stays fast, secure, and current instead of going stale.",
+          "Yes. We can build it so updates are easy for you, handle ongoing maintenance ourselves, or a mix of both, so the site stays fast, secure, and current instead of going stale.",
       },
       {
         question: "Can you also handle the blog or content setup?",
@@ -599,14 +599,14 @@ export const SERVICES: Service[] = [
     category: "Innovation",
     tag: "Innovation",
     description:
-      "Deploy AI-powered tools and automations tailored to your workflows — from customer service to intelligent financial reporting assistants.",
+      "Deploy AI-powered tools and automations tailored to your workflows, from customer service to intelligent financial reporting assistants.",
     icon: "Robot",
     slug: "ai-agent-implementation",
     metaTitle: "AI Agent Implementation for Small Businesses | ADL",
     metaDescription:
-      "Practical AI automation for small businesses — customer service, admin, and financial reporting assistants tailored to your workflows by a CPA-led team.",
+      "Practical AI automation for small businesses: customer service, admin, and financial reporting assistants tailored to your workflows by a CPA-led team.",
     heroTagline:
-      "Put AI to work on the busywork — practically, and tied to real results.",
+      "Put AI to work on the busywork: practically, and tied to real results.",
     relatedCategorySlugs: ["Technology"],
     body: [
       {
@@ -626,7 +626,7 @@ export const SERVICES: Service[] = [
       {
         heading: "Implemented responsibly, with a CPA's eye on the numbers",
         paragraphs: [
-          "Anything touching your financial data has to be handled carefully — accuracy and privacy aren't optional. Because ADL approaches this with a CPA's standards, AI tools that touch your numbers are implemented with appropriate guardrails and human review, not blind trust in an output.",
+          "Anything touching your financial data has to be handled carefully; accuracy and privacy aren't optional. Because ADL approaches this with a CPA's standards, AI tools that touch your numbers are implemented with appropriate guardrails and human review, not blind trust in an output.",
           "You get practical automation that fits how you actually work, set up by someone who understands both the technology and the business it's serving.",
         ],
       },
@@ -635,7 +635,7 @@ export const SERVICES: Service[] = [
       {
         question: "Is AI actually useful for a business my size?",
         answer:
-          "Often, yes — the best uses are narrow and practical, like handling routine inquiries or repetitive admin. We focus on specific tasks where AI clearly saves time rather than adopting it for its own sake.",
+          "Often, yes: the best uses are narrow and practical, like handling routine inquiries or repetitive admin. We focus on specific tasks where AI clearly saves time rather than adopting it for its own sake.",
       },
       {
         question: "Where do most small businesses see the quickest win?",
