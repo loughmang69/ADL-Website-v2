@@ -50,7 +50,7 @@ export default function Services() {
           Services
         </h2>
         <p className="mt-4 max-w-prose text-navy-soft">
-          From entity structure to bookkeeping, tax, and technology — practical
+          From entity structure to bookkeeping, tax, and technology: practical
           help across the nine areas small businesses need most.
         </p>
 
@@ -76,15 +76,23 @@ export default function Services() {
                   {FEATURED_SERVICE.description}
                 </p>
               </div>
-              <Button
-                href="/#contact"
-                variant="primary"
-                className="shrink-0"
-                aria-label={`Get started with ${FEATURED_SERVICE.title}`}
-              >
-                Get Started
-                <ArrowRightIcon size={18} aria-hidden="true" />
-              </Button>
+              <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
+                <Button
+                  href={`/services/${FEATURED_SERVICE.slug}`}
+                  variant="light"
+                  aria-label={`Learn more about ${FEATURED_SERVICE.title}`}
+                >
+                  Learn more
+                </Button>
+                <Button
+                  href="/#contact"
+                  variant="primary"
+                  aria-label={`Get started with ${FEATURED_SERVICE.title}`}
+                >
+                  Get Started
+                  <ArrowRightIcon size={18} aria-hidden="true" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>

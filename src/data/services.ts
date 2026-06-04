@@ -53,14 +53,14 @@ export const SERVICES: Service[] = [
     metaDescription:
       "LLC vs S-Corp vs C-Corp? A Fremont, CA CPA reviews your entity structure for tax efficiency, reasonable-comp rules, and California's $800 franchise tax.",
     heroTagline:
-      "Pick the structure that fits your numbers — not a template you found online.",
+      "Pick the structure that fits your numbers, not a template you found online.",
     relatedCategorySlugs: ["Tax", "Business Strategy"],
     body: [
       {
         heading: "The structure you chose at the start is rarely the one that fits today",
         paragraphs: [
-          "Most owners pick an entity type once — usually a single-member LLC, filed online in an afternoon — and never revisit it. That's fine until your profit grows. Once a business is consistently netting real money, the wrong structure quietly costs you thousands a year in self-employment tax you didn't have to pay.",
-          "An entity structure review looks at where your business actually is now: your net profit, how you pay yourself, your growth plans, and whether you have partners or outside investors on the horizon. Then it answers one practical question — is your current structure still the cheapest legal way to operate, or is it time to elect something different?",
+          "Most owners pick an entity type once (usually a single-member LLC, filed online in an afternoon) and never revisit it. That's fine until your profit grows. Once a business is consistently netting real money, the wrong structure quietly costs you thousands a year in self-employment tax you didn't have to pay.",
+          "An entity structure review looks at where your business actually is now: your net profit, how you pay yourself, your growth plans, and whether you have partners or outside investors on the horizon. Then it answers one practical question: is your current structure still the cheapest legal way to operate, or is it time to elect something different?",
         ],
       },
       {
@@ -80,7 +80,7 @@ export const SERVICES: Service[] = [
       {
         heading: "What you walk away with",
         paragraphs: [
-          "You get a clear recommendation in plain language: keep your current structure, or make a specific election, with the dollar impact spelled out and the filing steps and deadlines laid out. If an S-Corp election makes sense, we cover the reasonable-compensation question directly so you're not guessing — and not exposed.",
+          "You get a clear recommendation in layman's terms: keep your current structure, or make a specific election, with the dollar impact spelled out and the filing steps and deadlines laid out. If an S-Corp election makes sense, we cover the reasonable-compensation question directly so you're not guessing, and not exposed.",
           "This is a low-stakes, high-leverage place to start. Getting the structure right once pays off every year afterward.",
         ],
       },
@@ -132,7 +132,7 @@ export const SERVICES: Service[] = [
       {
         heading: "Clean books are the foundation everything else sits on",
         paragraphs: [
-          "When your books are accurate and current, every other financial decision gets easier. You know what you can spend, what you owe, and whether last month was actually profitable. When they're behind or sloppy, you're flying blind — and tax season turns into an expensive scramble to reconstruct a year you already lived through.",
+          "When your books are accurate and current, every other financial decision gets easier. You know what you can spend, what you owe, and whether last month was actually profitable. When they're behind or sloppy, you're flying blind, and tax season turns into an expensive scramble to reconstruct a year you already lived through.",
           "ADL keeps your books clean, categorized, and reconciled every month so the numbers are ready whenever you need them: for a loan application, a tax return, a pricing decision, or just a clear-eyed look at how the business is doing.",
         ],
       },
@@ -140,7 +140,7 @@ export const SERVICES: Service[] = [
         heading: "What monthly bookkeeping actually includes",
         paragraphs: [
           "Every month we reconcile your bank and credit-card accounts to the penny, categorize transactions correctly, and review for the small errors that compound — duplicate entries, miscategorized owner draws, transfers double-counted as income. We keep your chart of accounts sane instead of letting it sprawl into hundreds of categories nobody uses.",
-          "You get a clean set of financials — profit and loss, balance sheet, and cash position — delivered on a predictable schedule. More importantly, because a CPA is the one reviewing them, you get a heads-up when something looks off: margins slipping, a vendor cost creeping up, sales tax that's accruing faster than you expected.",
+          "You get a clean set of financials (profit and loss, balance sheet, and cash position) delivered on a predictable schedule. More importantly, because a CPA is the one reviewing them, you get a heads-up when something looks off: margins slipping, a vendor cost creeping up, sales tax that's accruing faster than you expected.",
         ],
       },
       {
@@ -167,7 +167,7 @@ export const SERVICES: Service[] = [
       {
         question: "Do you work in QuickBooks, or your own system?",
         answer:
-          "We work primarily in QuickBooks Online and can also help you set it up or clean up an existing file. If you're on another platform, we'll talk through whether it's worth keeping or migrating.",
+          "It depends on the complexity of your business. A small coffee shop that runs everything through a standalone POS system, for example, may not need QuickBooks at all; simple monthly tracking might be plenty. A manufacturing company with multiple employees, fixed assets, purchase orders, and invoicing is a different story: that business will likely need dedicated accounting software like QuickBooks or a comparable platform. We look at how you actually operate and recommend what fits, rather than defaulting to one tool for everyone.",
       },
       {
         question: "What's the difference between bookkeeping and what my tax preparer does?",
@@ -197,7 +197,7 @@ export const SERVICES: Service[] = [
     slug: "tax-preparation-fremont",
     metaTitle: "Tax Preparation & Return Review in Fremont, CA | ADL",
     metaDescription:
-      "Fremont, CA CPA preparing federal & California returns for individuals, LLCs, S-Corps, and C-Corps — plus prior-year return reviews to recover missed savings.",
+      "Fremont, CA CPA preparing federal & California returns for individuals, partnerships, LLCs, S-Corps, and C-Corps, plus prior-year return reviews to recover missed savings.",
     heroTagline:
       "Prepare this year's return right, and find what last year's left on the table.",
     relatedCategorySlugs: ["Tax"],
@@ -212,7 +212,7 @@ export const SERVICES: Service[] = [
         heading: "Prior-Year Tax Return Review",
         paragraphs: [
           "If you've already filed, this is the low-risk place to start: you're not committing to anything beyond finding out what was missed. Garrett reviews your previously filed business and personal returns to identify deductions, credits, and elections that were overlooked — and quantifies the savings that may still be recoverable through amended returns.",
-          "Returns prepared in a hurry, or by software that doesn't know your business, routinely leave money behind: a missed home-office or vehicle allocation, depreciation that wasn't optimized, an election that was never made, credits the preparer didn't ask about. As a general rule, amended returns can reach back within three years of filing — so the question of whether it's worth a look has a time limit. (That three-year window is a general rule, not advice on your specific return; we'll confirm what applies to you.)",
+          "Returns prepared in a hurry, or by software that doesn't know your business, routinely leave money behind: a missed home-office or vehicle allocation, depreciation that wasn't optimized, an election that was never made, credits the preparer didn't ask about. As a general rule, amended returns can reach back within three years of filing, so the question of whether it's worth a look has a time limit. (That three-year window is a general rule, not advice on your specific return; we'll confirm what applies to you.)",
           "You already did the hard part by filing. The review tells you what was left on the table and whether it's worth recovering.",
         ],
       },
@@ -220,7 +220,7 @@ export const SERVICES: Service[] = [
         heading: "Tax Return Preparation",
         paragraphs: [
           "On the preparation side, ADL handles full preparation and filing of new business and personal returns. Garrett is an IRS-credentialed preparer with an EFIN and PTIN and a licensed California CPA, so the same person who understands your books and your entity structure is the one signing your return.",
-          "We prepare both federal and California returns for individuals, LLCs, S-Corps, and C-Corps. Because we work year-round — not just in filing season — preparation isn't a once-a-year data dump. The structure decisions, the bookkeeping, and the return all line up, which is how you actually keep your tax bill down rather than just reporting it accurately after the fact.",
+          "We prepare both federal and California returns for individuals, partnerships, LLCs, S-Corps, and C-Corps. Because we work year-round — not just in filing season — preparation isn't a once-a-year data dump. The structure decisions, the bookkeeping, and the return all line up, which is how you actually keep your tax bill down rather than just reporting it accurately after the fact.",
         ],
       },
       {
@@ -245,7 +245,7 @@ export const SERVICES: Service[] = [
       {
         question: "Do you prepare both business and personal returns?",
         answer:
-          "Yes. We prepare federal and California returns for individuals as well as LLCs, S-Corps, and C-Corps. Handling the business and personal sides together is often where the real planning happens.",
+          "Yes. We prepare federal and California returns for individuals as well as partnerships, LLCs, S-Corps, and C-Corps. Handling the business and personal sides together is often where the real planning happens.",
       },
       {
         question: "What do you charge for tax preparation?",
@@ -290,14 +290,14 @@ export const SERVICES: Service[] = [
       {
         heading: "Choosing the right provider for your team",
         paragraphs: [
-          "There's no single best payroll provider — the right one depends on your team size, whether you have hourly or salaried staff, contractors, multiple states, or benefits to administer. We help you cut through the sales pitches and pick the platform that fits how you actually operate, then configure it correctly rather than leaving you with a half-finished setup.",
+          "There's no single best payroll provider; the right one depends on your team size, whether you have hourly or salaried staff, contractors, multiple states, or benefits to administer. We help you cut through the sales pitches and pick the platform that fits how you actually operate, then configure it correctly rather than leaving you with a half-finished setup.",
           "That includes the unglamorous but critical parts: pay schedules, deductions, benefit and retirement contributions, and the workflows so running payroll takes minutes, not an afternoon of second-guessing.",
         ],
       },
       {
         heading: "California payroll compliance, specifically",
         paragraphs: [
-          "California adds layers most payroll setups get wrong. You need to register with the EDD and handle state payroll taxes — UI, ETT, SDI — on top of federal withholding and FICA. Worker classification is heavily enforced under California's ABC test, and getting it wrong is one of the most expensive mistakes a small employer can make.",
+          "California adds layers most payroll setups get wrong. You need to register with the EDD and handle state payroll taxes (UI, ETT, SDI) on top of federal withholding and FICA. Worker classification is heavily enforced under California's ABC test, and getting it wrong is one of the most expensive mistakes a small employer can make.",
           "Then there are the details: itemized wage-statement requirements, sick-leave accrual, final-paycheck timing rules, and new-hire reporting. We make sure your system and your process satisfy these so you're not exposed. The goal isn't just software that runs payroll — it's a setup that keeps you on the right side of California's labor and tax agencies.",
         ],
       },
@@ -356,8 +356,8 @@ export const SERVICES: Service[] = [
       {
         heading: "Software is only as good as the way it's set up",
         paragraphs: [
-          "QuickBooks, a point-of-sale system, an inventory tool — none of it helps if it's configured wrong. The most common reason small business owners don't trust their own numbers is that the system was set up in a rush, by someone following default settings instead of thinking about what the business actually needs to see.",
-          "ADL configures your tools correctly from day one, so the data coming out the other end is something you can act on — and something your accountant and tax preparer can rely on without redoing it.",
+          "QuickBooks, a point-of-sale system, an inventory tool: none of it helps if it's configured wrong. The most common reason small business owners don't trust their own numbers is that the system was set up in a rush, by someone following default settings instead of thinking about what the business actually needs to see.",
+          "ADL configures your tools correctly from day one, so the data coming out the other end is something you can act on, and something your accountant and tax preparer can rely on without redoing it.",
         ],
       },
       {
@@ -482,9 +482,9 @@ export const SERVICES: Service[] = [
     slug: "personal-finance-education",
     metaTitle: "Personal Finance Education & Coaching | ADL Business Consulting",
     metaDescription:
-      "Plain-language personal finance guidance from a CPA: budgeting, debt, retirement, and wealth-building for individuals and small business owners.",
+      "Personal finance guidance from a CPA, in layman's terms: budgeting, debt, retirement, and wealth-building for individuals and small business owners.",
     heroTagline:
-      "Understand your own money the way a CPA does — in plain language.",
+      "Understand your own money the way a CPA does, in layman's terms.",
     relatedCategorySlugs: ["Personal Finance"],
     body: [
       {
@@ -551,7 +551,7 @@ export const SERVICES: Service[] = [
       {
         heading: "Your website should earn its keep",
         paragraphs: [
-          "For a lot of small businesses, the website is an afterthought — built once, never updated, slow, and quietly turning away the customers it was supposed to attract. A good site does the opposite: it loads fast, looks credible, works on a phone, and makes it easy for someone to become a customer.",
+          "For a lot of small businesses, the website is an afterthought: built once, never updated, slow, and quietly turning away the customers it was supposed to attract. A good site does the opposite: it loads fast, looks credible, works on a phone, and makes it easy for someone to become a customer.",
           "ADL builds modern, responsive websites and web apps and keeps them maintained, so your online presence is an asset that works for you rather than a box you checked years ago.",
         ],
       },
@@ -613,7 +613,7 @@ export const SERVICES: Service[] = [
         heading: "AI for small businesses, minus the hype",
         paragraphs: [
           "AI is genuinely useful for small businesses, but most of the conversation around it is either breathless hype or vague fear. The practical reality is more grounded: there are specific, repetitive tasks in every business that AI tools can now handle well, freeing you and your team for the work that actually needs a human.",
-          "ADL helps you cut through the noise and deploy AI where it earns its keep — tailored to your workflows, tied to real outcomes, not adopting technology for its own sake.",
+          "ADL helps you cut through the noise and deploy AI where it earns its keep, tailored to your workflows, tied to real outcomes, not adopting technology for its own sake.",
         ],
       },
       {

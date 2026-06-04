@@ -35,7 +35,7 @@ export const SITE = {
 /** About-section bio (three paragraphs). */
 export const ABOUT_BIO: string[] = [
   "Garrett Loughman is a California-licensed CPA (License #150109) with more than 15 years of experience across accounting, finance, consulting, finance transformation, and both internal and external audit. He founded ADL Business Consulting, PC to bring big-firm expertise directly to the small business owners who need it most.",
-  "After years advising larger organizations, Garrett kept seeing the same gap: small businesses making major financial decisions without the guidance bigger companies take for granted. ADL exists to close that gap with hands-on, practical advice — not just at tax time, but year-round.",
+  "After years advising larger organizations, Garrett kept seeing the same gap: small businesses making major financial decisions without the guidance bigger companies take for granted. ADL exists to close that gap with hands-on, practical advice, not just at tax time but year-round.",
   "Today he works directly with every client across entity structure, bookkeeping, tax, payroll, and technology, so owners spend less time wrestling with their financials and more time growing what they built.",
 ];
 
