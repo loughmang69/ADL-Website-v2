@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from "@phosphor-icons/react/dist/ssr";
 import { SITE, DISCLAIMER_FOOTER_SENTENCE } from "@/data/content";
+import { PRIORITY_SERVICE_SLUGS, getServiceBySlug } from "@/data/services";
 
 const NAV = [
   { label: "Services", href: "/#services" },
@@ -10,11 +11,17 @@ const NAV = [
   { label: "Disclaimer", href: "/disclaimer" },
 ];
 
+/** The five priority service pages, linked directly from the footer. */
+const FOOTER_SERVICES = PRIORITY_SERVICE_SLUGS.map((slug) => {
+  const service = getServiceBySlug(slug);
+  return { slug, label: service?.title ?? slug };
+});
+
 export default function Footer() {
   return (
     <footer className="bg-navy-deepest text-white">
       <div className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid gap-12 md:grid-cols-3">
+        <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-4">
           {/* Brand */}
           <div>
             <p className="font-black tracking-tighter text-lg">
@@ -42,6 +49,25 @@ export default function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
+                    className="rounded-sm text-white/80 transition-colors hover:text-accent"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Services */}
+          <nav aria-label="Services">
+            <h2 className="text-xs font-bold uppercase tracking-[0.1em] text-white/50">
+              Services
+            </h2>
+            <ul className="mt-4 space-y-3 text-sm">
+              {FOOTER_SERVICES.map((item) => (
+                <li key={item.slug}>
+                  <Link
+                    href={`/services/${item.slug}`}
                     className="rounded-sm text-white/80 transition-colors hover:text-accent"
                   >
                     {item.label}

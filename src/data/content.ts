@@ -40,23 +40,51 @@ export const ABOUT_BIO: string[] = [
 ];
 
 /**
- * Static Google review (assumption 3 — kept hardcoded until enough reviews
- * accumulate to warrant a dynamic embed).
- * TODO(verbatim): replace title/body with the exact review text from Google.
+ * Static fallback Google reviews — the exact, verbatim text of the live Google
+ * reviews. Used only when the Places API is not configured (see
+ * `getGoogleReviews()`); when GOOGLE_PLACES_API_KEY + GOOGLE_PLACE_ID are set,
+ * the Reviews section pulls reviews live instead.
  */
-export const GOOGLE_REVIEW = {
-  author: "Valerie L.",
-  stars: 5,
-  title: "Knowledgeable, responsive, and genuinely invested",
-  body: "Garrett took the time to understand my business and gave clear, actionable advice that saved me money and headaches. He explains things in plain language and is always responsive. I would recommend ADL Business Consulting to any small business owner looking for a trustworthy CPA.",
-  source: "Verified Google Review",
-} as const;
+export const GOOGLE_REVIEWS = [
+  {
+    author: "shiva afshar",
+    stars: 5,
+    text: `I spent thirty years in finance. I know how to close books. But when you're retired, with grandkids to visit and trips to plan, the last thing you want is nine entities sitting in the back of your head.
+
+That was my situation. Five LLCs, two partnerships, two trusts. I'd put the bookkeeping off for a month, then two, and eventually it would pile up and I'd lose a week grinding through it right before a deadline. I knew how to do it. I just didn't want to anymore.
+
+A friend suggested Garrett at ADL. Handing this kind of work off to someone else isn't straightforward when you've spent your career being the one who does it. You have a standard, and you want to know the person on the other end actually understands what they're looking at. Garrett does. He got up to speed on all nine entities quickly, asked the right questions, and took it from there without a lot of back and forth.
+
+I haven't thought about my books in months. That's the whole point.
+
+Five stars, without hesitation. If you're looking for someone who is sharp, organized, and will actually take things off your plate, Garrett at ADL is your person. I can't recommend him highly enough!`,
+    source: "Verified Google Review",
+  },
+  {
+    author: "Valerie L",
+    stars: 5,
+    text: `Completely transformed my business — I can't recommend ADL enough.
+
+Before working with Garrett at ADL Business Consulting, I was running Excel Cleaning as a sole proprietor, doing everything manually and honestly just hoping for the best when tax season rolled around. I had no real back office, no structure, and no idea how much it was costing me.
+
+Garrett changed all of that. He walked me through the real benefits of forming an LLC, including liability protection, tax flexibility, and credibility with clients, and then coordinated directly with my attorneys to make it happen. From there, it snowballed in the best way. He helped me redesign my logo and branding, overhauled my entire accounting process, and set me up with a new payroll provider that saves me money while giving me more services than I had before.
+
+What really sets Garrett apart is how thorough he is. He handles my monthly bookkeeping, tracks my federal, state, and local tax obligations so I'm never caught off guard with a big tax bill, and even remits my sales taxes for me every month. He built out over two dozen operational templates that have made running the day-to-day so much smoother. And he's always looking for ways to cut costs without cutting corners, finding savings I never would have noticed on my own.
+
+On top of all of it, he took the time to actually educate me on personal finance and how to use my business strategically for tax savings. I feel like I finally understand my own finances.
+
+If you're a small business owner who feels like you're just figuring it out as you go, Garrett is exactly who you need in your corner. ADL Business Consulting didn't just help me, they transformed the way I operate.
+
+— Excel Cleaning, LLC`,
+    source: "Verified Google Review",
+  },
+] as const;
 
 /** Contact form "What can we help you with?" options. */
 export const HELP_OPTIONS: string[] = [
   "Entity Structure Review",
   "Accounting & Bookkeeping",
-  "Tax Return Review",
+  "Tax Preparation & Return Review",
   "Payroll Implementation",
   "Technology Implementations",
   "Business Process Optimization",

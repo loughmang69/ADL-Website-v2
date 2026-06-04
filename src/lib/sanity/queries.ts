@@ -19,6 +19,12 @@ export const RELATED_POSTS_QUERY = `*[_type == "blogPost" && category == $catego
   "estimatedReadingTime": round(length(pt::text(body)) / 5 / 200)
 }`;
 
+/** Latest posts in any of the given categories (used by service detail pages). */
+export const POSTS_BY_CATEGORIES_QUERY = `*[_type == "blogPost" && category in $categories] | order(publishedAt desc) [0..2] {
+  _id, title, slug, publishedAt, category, excerpt, featuredImage,
+  "estimatedReadingTime": round(length(pt::text(body)) / 5 / 200)
+}`;
+
 export const APPROVED_TESTIMONIALS_QUERY = `*[_type == "testimonial" && approved == true] | order(_createdAt desc) {
   _id, name, role, stars, text
 }`;

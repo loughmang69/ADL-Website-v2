@@ -35,7 +35,7 @@ export default function ReviewCard({
         <StarRating value={rating} size={18} />
       </div>
 
-      <blockquote className="mt-5 flex-1 leading-relaxed text-navy-soft">
+      <blockquote className="mt-5 flex-1 whitespace-pre-line leading-relaxed text-navy-soft">
         {shown}
       </blockquote>
       {isLong && (

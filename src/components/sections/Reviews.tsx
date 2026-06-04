@@ -1,7 +1,7 @@
 import Button from "@/components/ui/Button";
 import StarRating from "@/components/ui/StarRating";
 import ReviewCard from "@/components/ui/ReviewCard";
-import { SITE, GOOGLE_REVIEW } from "@/data/content";
+import { SITE, GOOGLE_REVIEWS } from "@/data/content";
 import { getGoogleReviews } from "@/lib/google/reviews";
 
 function gridClass(count: number): string {
@@ -50,13 +50,16 @@ export default async function Reviews() {
               ))}
             </div>
           ) : (
-            <div className={gridClass(1)}>
-              <ReviewCard
-                author={GOOGLE_REVIEW.author}
-                rating={GOOGLE_REVIEW.stars}
-                text={GOOGLE_REVIEW.body}
-                meta={GOOGLE_REVIEW.source}
-              />
+            <div className={gridClass(GOOGLE_REVIEWS.length)}>
+              {GOOGLE_REVIEWS.map((review) => (
+                <ReviewCard
+                  key={review.author}
+                  author={review.author}
+                  rating={review.stars}
+                  text={review.text}
+                  meta={review.source}
+                />
+              ))}
             </div>
           )}
         </div>

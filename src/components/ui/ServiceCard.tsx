@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 import type { Service, ServiceCategory } from "@/data/services";
 import { ServiceIcon } from "./Icon";
 
@@ -39,9 +41,23 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       <h3 className="text-lg font-bold tracking-tight text-navy-deepest">
         {service.title}
       </h3>
-      <p className="mt-2 text-sm leading-relaxed text-navy-soft">
+      <p className="mt-2 flex-1 text-sm leading-relaxed text-navy-soft">
         {service.description}
       </p>
+      {!disabled && (
+        <Link
+          href={`/services/${service.slug}`}
+          className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-navy transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded-sm"
+          aria-label={`Learn more about ${service.title}`}
+        >
+          Learn more
+          <ArrowRightIcon
+            size={16}
+            aria-hidden="true"
+            className="transition-transform group-hover:translate-x-0.5"
+          />
+        </Link>
+      )}
     </div>
   );
 }

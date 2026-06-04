@@ -20,11 +20,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} | Bay Area CPA & Business Advisor`,
+    default: "Fremont, CA CPA for Small Businesses | ADL Business Consulting",
     template: `%s | ${SITE.shortName}`,
   },
   description:
-    "Bay Area CPA and business consultant serving small business owners in Fremont, CA. Accounting, bookkeeping, tax, payroll, and advisory services.",
+    "Fremont, CA CPA and business consultant for small business owners across the East Bay. Accounting, bookkeeping, tax, payroll, and advisory services.",
   applicationName: SITE.name,
   authors: [{ name: SITE.founderName }],
   robots: { index: true, follow: true },

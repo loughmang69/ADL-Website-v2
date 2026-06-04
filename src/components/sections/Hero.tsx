@@ -36,16 +36,16 @@ export default function Hero() {
           variants={fade(20)}
         >
           <span className="inline-block rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.1em] text-accent">
-            Bay Area, California · CPA Since 2013
+            Fremont, CA · CPA Since 2013
           </span>
           <h1 className="mt-6 text-4xl font-black leading-none tracking-tightest text-white md:text-6xl">
             Big-firm expertise.{" "}
             <span className="text-accent">Small business focus.</span>
           </h1>
           <p className="mt-6 max-w-prose text-base leading-relaxed text-white/70 md:text-lg">
-            ADL Business Consulting pairs deep CPA expertise with hands-on
-            consulting so you spend less time on financials and more time
-            growing what you built.
+            ADL Business Consulting is a Fremont, CA CPA firm that pairs deep
+            accounting expertise with hands-on consulting, so you spend less time
+            on financials and more time growing what you built.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button href="/#contact" variant="primary">

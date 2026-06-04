@@ -12,15 +12,16 @@ import Reviews from "@/components/sections/Reviews";
 import ContactForm from "@/components/sections/ContactForm";
 import BlogPreview from "@/components/sections/BlogPreview";
 
+const title = "Fremont, CA CPA for Small Businesses | ADL Business Consulting";
 const description =
-  "Bay Area CPA and business consultant serving small business owners in Fremont, CA. Accounting, bookkeeping, tax, payroll, and advisory services.";
+  "Fremont, CA CPA and business consultant for small business owners across the East Bay. Accounting, bookkeeping, tax, payroll, and advisory services.";
 
 export const metadata: Metadata = {
-  title: { absolute: `${SITE.name} | Bay Area CPA & Business Advisor` },
+  title: { absolute: title },
   description,
   alternates: { canonical: SITE.url },
   openGraph: {
-    title: `${SITE.name} | Bay Area CPA & Business Advisor`,
+    title,
     description,
     url: SITE.url,
     siteName: SITE.name,
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE.name} | Bay Area CPA & Business Advisor`,
+    title,
     description,
     images: ["/og-image.png"],
   },

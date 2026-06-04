@@ -16,6 +16,7 @@ import DisclaimerBanner from "@/components/ui/DisclaimerBanner";
 import PostHeader from "@/components/blog/PostHeader";
 import PostBody from "@/components/blog/PostBody";
 import AuthorBio from "@/components/blog/AuthorBio";
+import RelatedService from "@/components/blog/RelatedService";
 import RelatedPosts from "@/components/blog/RelatedPosts";
 
 export const revalidate = 60;
@@ -111,6 +112,7 @@ export default async function BlogPostPage({
             <PostBody value={post.body} />
           </div>
         )}
+        <RelatedService category={post.category} />
         <AuthorBio />
       </div>
       <div className="mx-auto mt-4 max-w-7xl">
