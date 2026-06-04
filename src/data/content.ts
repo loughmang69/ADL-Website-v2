@@ -95,7 +95,4 @@ export const HELP_OPTIONS: string[] = [
 ];
 
 export const DISCLAIMER_FOOTER_SENTENCE =
-  "ADL Business Consulting, PC provides general consulting and bookkeeping services. Content on this site is informational only and does not constitute legal, tax, or financial advice.";
-
-export const DISCLAIMER_BANNER_TEXT =
-  "General information only. This post is not tax, legal, or financial advice. Consult a professional for advice specific to your situation.";
+  "ADL Business Consulting, PC provides tax, bookkeeping, general business consulting, and advisory services for compensation. Content on this site is informational only and does not constitute legal, tax, or financial advice.";

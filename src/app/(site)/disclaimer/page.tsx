@@ -18,11 +18,12 @@ export default function DisclaimerPage() {
         </h1>
         <div className="mt-8 space-y-5 leading-relaxed text-navy-soft">
           <p>
-            ADL Business Consulting, PC provides general business consulting,
-            bookkeeping, and advisory services. Content on this website,
-            including blog posts and service descriptions, is for informational
-            purposes only. It does not constitute legal, tax, financial, or
-            accounting advice and should not be relied upon as such.
+            ADL Business Consulting, PC provides tax, bookkeeping, general
+            business consulting, and advisory services for compensation. Content
+            on this website, including blog posts and service descriptions, is
+            for informational purposes only. It does not constitute legal, tax,
+            financial, or accounting advice and should not be relied upon as
+            such.
           </p>
           <p>
             Every business situation is different. Consult a qualified CPA,
