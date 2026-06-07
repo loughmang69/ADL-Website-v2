@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 import Button from "@/components/ui/Button";
@@ -24,7 +24,18 @@ function spanClass(index: number, total: number): string {
 
 export default function Services() {
   const [active, setActive] = useState<string>("All");
+  // Cards must be visible without JS: the entrance animation is a
+  // progressive enhancement, gated on the component having mounted on the
+  // client. Before mount (SSR + first paint) we pass `initial={false}` so
+  // Framer Motion renders cards in their visible "show" state instead of
+  // baking `opacity:0` into the HTML — otherwise a hydration/JS failure
+  // leaves the whole services grid (and its "Learn more" links) invisible.
+  const [mounted, setMounted] = useState(false);
   const reduce = useReducedMotion();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const visible = useMemo(
     () =>
@@ -134,7 +145,7 @@ export default function Services() {
                 key={service.id}
                 layout={!reduce}
                 variants={cardVariants}
-                initial="hidden"
+                initial={mounted ? "hidden" : false}
                 animate="show"
                 exit="exit"
                 transition={{ duration: 0.25, ease: EASE_OUT_EXPO }}
