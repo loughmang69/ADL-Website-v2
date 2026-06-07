@@ -1,8 +1,21 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { revalidateTag } from "next/cache";
+import { createHash, timingSafeEqual } from "crypto";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+
+/**
+ * Constant-time, length-safe secret comparison. Hashing both sides first gives
+ * timingSafeEqual two equal-length buffers (it throws otherwise) and avoids
+ * leaking the secret's length, while keeping the compare resistant to timing
+ * side-channels.
+ */
+function secretsMatch(a: string, b: string): boolean {
+  const ah = createHash("sha256").update(a).digest();
+  const bh = createHash("sha256").update(b).digest();
+  return timingSafeEqual(ah, bh);
+}
 
 /**
  * On-publish revalidation endpoint for Sanity content.
@@ -25,13 +38,13 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const auth = request.headers.get("authorization");
-  const provided =
-    auth?.replace(/^Bearer\s+/i, "").trim() ??
-    request.nextUrl.searchParams.get("secret") ??
-    "";
+  // Header-only: the shared secret must arrive in the Authorization header.
+  // A `?secret=` query-string fallback was removed because query strings leak
+  // into access logs, browser history, and analytics in a way headers do not.
+  const auth = request.headers.get("authorization") ?? "";
+  const provided = auth.replace(/^Bearer\s+/i, "").trim();
 
-  if (provided !== secret) {
+  if (!provided || !secretsMatch(provided, secret)) {
     return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
   }
 
