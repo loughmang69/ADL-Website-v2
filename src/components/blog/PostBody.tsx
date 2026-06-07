@@ -7,6 +7,17 @@ import {
 import { urlForImage, imageRefDimensions } from "@/lib/sanity/client";
 import type { SanityImage } from "@/lib/sanity/types";
 
+/**
+ * Only allow link hrefs with a safe scheme. A CMS-authored link could contain
+ * `javascript:`/`data:` etc., which would be an XSS vector; anything that isn't
+ * http(s), mailto, tel, or a relative/anchor path is dropped to "#".
+ */
+function safeHref(href: unknown): string {
+  if (typeof href !== "string") return "#";
+  const trimmed = href.trim();
+  return /^(https?:|mailto:|tel:|\/|#)/i.test(trimmed) ? trimmed : "#";
+}
+
 const components: PortableTextComponents = {
   block: {
     h2: ({ children }) => (
@@ -51,7 +62,7 @@ const components: PortableTextComponents = {
     ),
     em: ({ children }) => <em>{children}</em>,
     link: ({ children, value }) => {
-      const href = (value?.href as string) ?? "#";
+      const href = safeHref(value?.href);
       const external = href.startsWith("http");
       return (
         <a

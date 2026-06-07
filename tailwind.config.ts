@@ -38,9 +38,24 @@ const config: Config = {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(8px)" },
         },
+        // Entrance reveals are CSS-driven (not JS) so content is never hidden
+        // behind hydration: keyframes always finish at the visible state, and
+        // if the stylesheet fails to load the element keeps its default
+        // (visible) opacity. Disable under prefers-reduced-motion via the
+        // `motion-reduce:animate-none` utility at the call site.
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        "fade-in-up": {
+          "0%": { opacity: "0", transform: "translateY(16px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "chevron-bounce": "chevron-bounce 1.8s ease-in-out infinite",
+        "fade-in": "fade-in 0.6s cubic-bezier(0.23, 1, 0.32, 1) both",
+        "fade-in-up": "fade-in-up 0.6s cubic-bezier(0.23, 1, 0.32, 1) both",
       },
     },
   },

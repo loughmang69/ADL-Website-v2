@@ -1,11 +1,6 @@
-"use client";
-
-import { motion, type Variants } from "framer-motion";
 import { CaretDownIcon } from "@phosphor-icons/react/dist/ssr";
 import Button from "@/components/ui/Button";
 import HeadshotFrame from "@/components/ui/HeadshotFrame";
-import { useReducedMotion } from "@/hooks/useReducedMotion";
-import { EASE_OUT_EXPO } from "@/lib/motion";
 
 const STATS = [
   { value: "15+", label: "Years Experience" },
@@ -14,27 +9,11 @@ const STATS = [
 ];
 
 export default function Hero() {
-  const reduce = useReducedMotion();
-
-  const fade = (y: number, delay = 0): Variants => ({
-    hidden: { opacity: 0, ...(reduce ? {} : { y }) },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: EASE_OUT_EXPO, delay },
-    },
-  });
-
   return (
     <section className="relative flex min-h-[100dvh] items-center overflow-hidden bg-navy-deepest pt-24">
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-12 px-6 py-16 lg:grid-cols-12 lg:items-center">
         {/* Left column */}
-        <motion.div
-          className="lg:col-span-7"
-          initial="hidden"
-          animate="show"
-          variants={fade(20)}
-        >
+        <div className="animate-fade-in-up motion-reduce:animate-none lg:col-span-7">
           <span className="inline-block rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.1em] text-accent">
             Fremont, CA · CPA Since 2013
           </span>
@@ -57,17 +36,9 @@ export default function Hero() {
           </div>
 
           {/* Trust bar */}
-          <motion.dl
-            className="mt-10 grid max-w-lg grid-cols-3 gap-6 border-t border-white/10 pt-6"
-            initial="hidden"
-            animate="show"
-            variants={{
-              hidden: {},
-              show: { transition: { staggerChildren: 0.05, delayChildren: 0.3 } },
-            }}
-          >
+          <dl className="mt-10 grid max-w-lg grid-cols-3 gap-6 border-t border-white/10 pt-6">
             {STATS.map((stat) => (
-              <motion.div key={stat.label} variants={fade(10)}>
+              <div key={stat.label}>
                 <dt className="sr-only">{stat.label}</dt>
                 <dd>
                   <span className="block text-2xl font-black tracking-tight text-accent md:text-3xl">
@@ -77,25 +48,20 @@ export default function Hero() {
                     {stat.label}
                   </span>
                 </dd>
-              </motion.div>
+              </div>
             ))}
-          </motion.dl>
+          </dl>
 
           {/* Mobile headshot (hidden on lg, where the right column shows it) */}
           <div className="mt-12 lg:hidden">
             <HeadshotFrame className="mx-auto max-w-xs" />
           </div>
-        </motion.div>
+        </div>
 
         {/* Right column (desktop only) */}
-        <motion.div
-          className="hidden lg:col-span-5 lg:block"
-          initial="hidden"
-          animate="show"
-          variants={fade(30, 0.2)}
-        >
+        <div className="hidden animate-fade-in-up motion-reduce:animate-none [animation-delay:150ms] lg:col-span-5 lg:block">
           <HeadshotFrame className="ml-auto max-w-sm" />
-        </motion.div>
+        </div>
       </div>
 
       {/* Scroll indicator */}

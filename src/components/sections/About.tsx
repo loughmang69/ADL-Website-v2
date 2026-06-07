@@ -1,11 +1,5 @@
-"use client";
-
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
 import { PhoneIcon, EnvelopeIcon } from "@phosphor-icons/react/dist/ssr";
 import HeadshotFrame from "@/components/ui/HeadshotFrame";
-import { useReducedMotion } from "@/hooks/useReducedMotion";
-import { EASE_OUT_EXPO } from "@/lib/motion";
 import { SITE, ABOUT_BIO } from "@/data/content";
 
 const STATS = [
@@ -15,32 +9,11 @@ const STATS = [
 ];
 
 export default function About() {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
-  const reduce = useReducedMotion();
-
-  const variant = (fromX: number) => ({
-    hidden: { opacity: 0, ...(reduce ? {} : { x: fromX }) },
-    show: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.6, ease: EASE_OUT_EXPO },
-    },
-  });
-
   return (
     <section id="about" className="bg-white px-6 py-24">
-      <div
-        ref={ref}
-        className="mx-auto grid max-w-7xl grid-cols-1 gap-14 lg:grid-cols-12 lg:items-center"
-      >
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-14 lg:grid-cols-12 lg:items-center">
         {/* Photo column (45%) */}
-        <motion.div
-          className="lg:col-span-5"
-          initial="hidden"
-          animate={inView ? "show" : "hidden"}
-          variants={variant(-40)}
-        >
+        <div className="animate-fade-in-up motion-reduce:animate-none lg:col-span-5">
           <HeadshotFrame className="mx-auto max-w-sm lg:mx-0" />
           <div className="mt-10 flex flex-wrap gap-3">
             <span className="rounded-full bg-surface-soft px-4 py-1.5 text-xs font-bold uppercase tracking-[0.1em] text-navy-soft">
@@ -50,15 +23,10 @@ export default function About() {
               {SITE.locationLabel}
             </span>
           </div>
-        </motion.div>
+        </div>
 
         {/* Text column (55%) */}
-        <motion.div
-          className="lg:col-span-7"
-          initial="hidden"
-          animate={inView ? "show" : "hidden"}
-          variants={variant(40)}
-        >
+        <div className="animate-fade-in-up motion-reduce:animate-none [animation-delay:120ms] lg:col-span-7">
           <span className="text-xs font-bold uppercase tracking-[0.1em] text-navy-soft">
             Meet Your Advisor
           </span>
@@ -107,7 +75,7 @@ export default function About() {
               {SITE.email}
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
