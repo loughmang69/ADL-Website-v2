@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/assets";
 
 interface HeadshotFrameProps {
   className?: string;
@@ -17,7 +18,7 @@ export default function HeadshotFrame({
       <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-gradient-to-br from-accent/40 to-navy-soft/40 p-[3px]">
         <div className="relative h-full w-full overflow-hidden rounded-[14px]">
           <Image
-            src="/uploads/headshot.jpg"
+            src={asset("/uploads/headshot.jpg")}
             alt="Garrett Loughman, CPA, founder of ADL Business Consulting"
             fill
             sizes={sizes}

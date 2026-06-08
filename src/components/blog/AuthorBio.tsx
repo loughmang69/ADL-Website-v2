@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { SITE } from "@/data/content";
+import { asset } from "@/lib/assets";
 
 export default function AuthorBio() {
   return (
     <aside className="mt-14 flex flex-col gap-5 rounded-2xl bg-surface-soft p-7 sm:flex-row sm:items-center">
       <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full">
         <Image
-          src="/uploads/headshot.jpg"
+          src={asset("/uploads/headshot.jpg")}
           alt={`${SITE.founderName}, CPA`}
           fill
           sizes="80px"

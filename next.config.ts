@@ -36,7 +36,28 @@ const contentSecurityPolicy = [
   "upgrade-insecure-requests",
 ].join("; ");
 
+/**
+ * A single identifier that changes on every deployment, exposed as
+ * `NEXT_PUBLIC_BUILD_ID` so the client-side VersionWatcher can compare the
+ * build it booted with against the live deployment and prompt a refresh when
+ * they diverge (the "open tab stuck on old version" case). `VERCEL_DEPLOYMENT_ID`
+ * is a system variable on every Vercel plan (incl. Hobby). Falls back to the
+ * git SHA, then a local dev stamp, when not on Vercel.
+ *
+ * Note: we intentionally do NOT set Next's `deploymentId` here. That only earns
+ * its keep with Vercel Skew Protection (a Pro feature) enabled — without it, it
+ * just appends a no-op `?dpl=` to every asset URL. The VersionWatcher below is
+ * the plan-independent fix and works on its own.
+ */
+const buildId =
+  process.env.VERCEL_DEPLOYMENT_ID ||
+  process.env.VERCEL_GIT_COMMIT_SHA ||
+  `dev-${Date.now()}`;
+
 const nextConfig: NextConfig = {
+  env: {
+    NEXT_PUBLIC_BUILD_ID: buildId,
+  },
   images: {
     remotePatterns: [
       {

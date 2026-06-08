@@ -1,5 +1,6 @@
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
+import VersionWatcher from "@/components/ui/VersionWatcher";
 
 export default function SiteLayout({
   children,
@@ -19,6 +20,7 @@ export default function SiteLayout({
         {children}
       </main>
       <Footer />
+      <VersionWatcher />
     </div>
   );
 }
