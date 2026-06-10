@@ -132,14 +132,14 @@ export const SERVICES: Service[] = [
       {
         heading: "Clean books are the foundation everything else sits on",
         paragraphs: [
-          "When your books are accurate and current, every other financial decision gets easier. You know what you can spend, what you owe, and whether last month was actually profitable. When they're behind or sloppy, you're flying blind, and tax season turns into an expensive scramble to reconstruct a year you already lived through.",
+          "When your books are accurate and current, every other financial decision gets easier. You know what you can spend, what you owe, and whether last month was actually profitable. When they're behind or disorganized, you're flying blind, and tax season turns into an expensive scramble to reconstruct a year you already lived through.",
           "ADL keeps your books clean, categorized, and reconciled every month so the numbers are ready whenever you need them: for a loan application, a tax return, a pricing decision, or just a clear-eyed look at how the business is doing.",
         ],
       },
       {
         heading: "What monthly bookkeeping actually includes",
         paragraphs: [
-          "Every month we reconcile your bank and credit-card accounts to the penny, categorize transactions correctly, and review for the small errors that compound: duplicate entries, miscategorized owner draws, transfers double-counted as income. We keep your chart of accounts sane instead of letting it sprawl into hundreds of categories nobody uses.",
+          "Every month we reconcile your bank and credit-card accounts with the utmost precision, categorize transactions correctly, and review for the small errors that compound: duplicate entries, miscategorized owner draws, transfers double-counted as income. We keep your chart of accounts sane instead of letting it sprawl into hundreds of categories nobody uses.",
           "You get a clean set of financials (profit and loss, balance sheet, and cash position) delivered on a predictable schedule. More importantly, because a CPA is the one reviewing them, you get a heads-up when something looks off: margins slipping, a vendor cost creeping up, sales tax that's accruing faster than you expected.",
         ],
       },
@@ -528,7 +528,7 @@ export const SERVICES: Service[] = [
       {
         question: "Do you give specific investment recommendations?",
         answer:
-          "Our focus is education and the tax-aware side of personal finance rather than recommending specific securities. We'll help you understand the landscape so you can make informed choices and ask better questions of any investment professional.",
+          "Our focus is education and the tax-aware side of personal finance rather than recommending specific securities. We'll help you understand the landscape so you can make informed choices and ask the right questions of any investment professional.",
       },
     ],
   },
@@ -565,7 +565,7 @@ export const SERVICES: Service[] = [
       {
         heading: "Maintained, not abandoned",
         paragraphs: [
-          "The reason most small business sites go stale is that there's no plan to maintain them. We build yours so updates are easy and, where it makes sense, handle the ongoing maintenance so it stays fast, secure, and current. A site that's kept up to date keeps working; one that's left to rot becomes a liability.",
+          "The reason most small business sites go stale is that there's no plan to maintain them. We build yours so updates are easy and, where it makes sense, handle the ongoing maintenance so it stays fast, secure, and current. A site that's kept up to date keeps working; one that's left untouched becomes a liability.",
           "And because ADL understands the business behind the website, the work is oriented around results (bringing in inquiries and customers), not just shipping something that looks nice.",
         ],
       },
@@ -620,7 +620,7 @@ export const SERVICES: Service[] = [
         heading: "Where AI actually helps right now",
         paragraphs: [
           "The wins tend to be concrete: an assistant that handles routine customer inquiries so they're answered instantly, automations that take care of repetitive admin and data entry, and tools that help summarize and surface insights from your financial reporting. The common thread is offloading the predictable, time-consuming work that doesn't need your judgment.",
-          "We start from your workflows and find the spots where AI removes a real bottleneck, rather than bolting on a chatbot because everyone else has one. The aim is measurable time saved and fewer dropped balls.",
+          "We start from your workflows and find the spots where AI removes a real bottleneck, rather than bolting on a chatbot because everyone else has one. The aim is measurable time saved and fewer misses.",
         ],
       },
       {
