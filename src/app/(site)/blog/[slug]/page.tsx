@@ -60,6 +60,7 @@ export async function generateMetadata({
       url: `${SITE.url}/blog/${slug}`,
       type: "article",
       publishedTime: post.publishedAt,
+      modifiedTime: post._updatedAt ?? post.publishedAt,
       images: [{ url: ogImage, width: 1200, height: 630 }],
     },
     twitter: {

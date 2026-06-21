@@ -11,11 +11,17 @@ import {
   enforceRateLimit,
   getClientIp,
 } from "@/lib/ratelimit";
+import { isAllowedOrigin } from "@/lib/security/origin";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
+  // 0. CSRF origin check: reject cross-site form submissions.
+  if (!isAllowedOrigin(request.headers)) {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
+
   // 1. Rate limit (5 / 60s per IP)
   const ip = getClientIp(request.headers);
   const { success } = await enforceRateLimit(contactLimiter, ip);

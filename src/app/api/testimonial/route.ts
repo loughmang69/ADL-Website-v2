@@ -13,11 +13,17 @@ import {
   enforceRateLimit,
   getClientIp,
 } from "@/lib/ratelimit";
+import { isAllowedOrigin } from "@/lib/security/origin";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
+  // 0. CSRF origin check: reject cross-site form submissions.
+  if (!isAllowedOrigin(request.headers)) {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
+
   // 1. Rate limit (3 / 60s per IP)
   const ip = getClientIp(request.headers);
   const { success } = await enforceRateLimit(testimonialLimiter, ip);
@@ -84,7 +90,8 @@ export async function POST(request: Request) {
     );
   }
 
-  // 5. Notify Garrett (best effort — submission is already saved)
+  // 5. Notify Garrett (best effort — submission is already saved, so an email
+  // failure must NOT surface as an error to the user or they may resubmit).
   if (resend) {
     const { subject, html, text } = buildTestimonialEmail(
       parsed.data,
@@ -100,23 +107,15 @@ export async function POST(request: Request) {
       });
       if (error) {
         console.error("Testimonial Resend error:", error.message);
-        return NextResponse.json(
-          { error: "Submission failed. Please try again later." },
-          { status: 500 },
-        );
       }
     } catch (err) {
       console.error(
         "Testimonial email unexpected error:",
         err instanceof Error ? err.message : "unknown",
       );
-      return NextResponse.json(
-        { error: "Submission failed. Please try again later." },
-        { status: 500 },
-      );
     }
   }
 
-  // 6. Success
+  // 6. Success — the testimonial is persisted regardless of email outcome.
   return NextResponse.json({ success: true });
 }

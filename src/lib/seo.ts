@@ -137,6 +137,7 @@ export function blogPostingJsonLd(
     headline: post.title,
     description: post.excerpt,
     datePublished: post.publishedAt,
+    dateModified: post._updatedAt ?? post.publishedAt,
     url: `${SITE.url}/blog/${post.slug.current}`,
     ...(imageUrl ? { image: imageUrl } : {}),
     author: {

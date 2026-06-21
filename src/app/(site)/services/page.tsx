@@ -16,6 +16,11 @@ export const metadata: Metadata = {
       "Accounting, bookkeeping, tax, entity structure, payroll, and technology services for Fremont, CA and East Bay small businesses.",
     url: `${SITE.url}/services`,
     type: "website",
+    images: ["/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-image.png"],
   },
 };
 

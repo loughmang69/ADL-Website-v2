@@ -38,9 +38,16 @@ export interface BlogPostListItem {
 
 /** Shape returned by POST_BY_SLUG_QUERY (full post). */
 export interface BlogPost extends BlogPostListItem {
+  _updatedAt: string;
   body?: PortableTextBlock[];
   seoTitle?: string;
   seoDescription?: string;
+}
+
+/** Shape returned by POST_SITEMAP_QUERY (slug + last-modified, for the sitemap). */
+export interface BlogPostSitemapItem {
+  slug: string;
+  _updatedAt: string;
 }
 
 export interface Testimonial {

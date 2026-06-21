@@ -1,11 +1,12 @@
 import { CaretDownIcon } from "@phosphor-icons/react/dist/ssr";
 import Button from "@/components/ui/Button";
 import HeadshotFrame from "@/components/ui/HeadshotFrame";
+import { SERVICES } from "@/data/services";
 
 const STATS = [
   { value: "15+", label: "Years Experience" },
   { value: "CPA", label: "CA License #150109" },
-  { value: "9", label: "Practice Areas" },
+  { value: String(SERVICES.length), label: "Practice Areas" },
 ];
 
 export default function Hero() {
@@ -52,15 +53,17 @@ export default function Hero() {
             ))}
           </dl>
 
-          {/* Mobile headshot (hidden on lg, where the right column shows it) */}
-          <div className="mt-12 lg:hidden">
-            <HeadshotFrame className="mx-auto max-w-xs" />
-          </div>
         </div>
 
-        {/* Right column (desktop only) */}
-        <div className="hidden animate-fade-in-up motion-reduce:animate-none [animation-delay:150ms] lg:col-span-5 lg:block">
-          <HeadshotFrame className="ml-auto max-w-sm" />
+        {/* Single headshot: centered below the copy on mobile, right column on
+            desktop. One <Image> render (responsive sizes) avoids a duplicate
+            request while preserving the layout at every breakpoint. The grid's
+            gap-12 supplies the 3rem mobile spacing the old mt-12 used to. */}
+        <div className="animate-fade-in-up motion-reduce:animate-none lg:col-span-5 lg:[animation-delay:150ms]">
+          <HeadshotFrame
+            className="mx-auto max-w-xs lg:ml-auto lg:mr-0 lg:max-w-sm"
+            priority
+          />
         </div>
       </div>
 

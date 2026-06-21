@@ -49,7 +49,6 @@ export default function ContactForm() {
       notes: String(data.get("notes") ?? "").trim(),
       contactMethod: method,
       "bot-field": String(data.get("bot-field") ?? ""),
-      "form-name": "contact",
     };
 
     // Client-side validation
@@ -192,8 +191,7 @@ export default function ContactForm() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} noValidate>
-              {/* Hidden tracking + honeypot */}
-              <input type="hidden" name="form-name" value="contact" />
+              {/* Honeypot */}
               <div
                 className="absolute -left-[9999px]"
                 aria-hidden="true"

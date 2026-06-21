@@ -18,6 +18,11 @@ export const metadata: Metadata = {
       "Practical articles on tax strategy, bookkeeping, California payroll, and small business finance from a Fremont, CA CPA.",
     url: `${SITE.url}/blog`,
     type: "website",
+    images: ["/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-image.png"],
   },
 };
 

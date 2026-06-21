@@ -3,11 +3,16 @@ export const ALL_POSTS_QUERY = `*[_type == "blogPost"] | order(publishedAt desc)
 }`;
 
 export const POST_BY_SLUG_QUERY = `*[_type == "blogPost" && slug.current == $slug][0] {
-  _id, title, slug, publishedAt, category, excerpt, featuredImage, body, seoTitle, seoDescription,
+  _id, _updatedAt, title, slug, publishedAt, category, excerpt, featuredImage, body, seoTitle, seoDescription,
   "estimatedReadingTime": round(length(pt::text(body)) / 5 / 200)
 }`;
 
 export const POST_SLUGS_QUERY = `*[_type == "blogPost" && defined(slug.current)].slug.current`;
+
+/** Slug + last-modified timestamp for each post, used to build sitemap lastmod. */
+export const POST_SITEMAP_QUERY = `*[_type == "blogPost" && defined(slug.current)]{
+  "slug": slug.current, _updatedAt
+}`;
 
 export const LATEST_3_POSTS_QUERY = `*[_type == "blogPost"] | order(publishedAt desc) [0..2] {
   _id, title, slug, publishedAt, category, excerpt, featuredImage,
