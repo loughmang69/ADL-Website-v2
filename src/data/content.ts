@@ -26,6 +26,7 @@ export const SITE = {
   founderName: "Garrett Loughman",
   founderTitle: "Garrett Loughman, CPA, MBA",
   cpaSince: "2013",
+  linkedinUrl: "https://www.linkedin.com/in/garrettloughman",
   googleReviewUrl: "https://g.page/r/CUJAnBWd91buEAE/review",
   googleProfileUrl:
     "https://www.google.com/search?q=ADL+Business+Consulting+PC+Garrett+Loughman+CPA+Fremont+CA",

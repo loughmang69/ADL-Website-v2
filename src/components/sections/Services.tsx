@@ -29,7 +29,7 @@ const ICON_TINTS: Record<ServiceCategory, string> = {
  */
 export default function Services() {
   return (
-    <section id="services" className="bg-white px-6 py-24">
+    <section id="services" className="bg-surface-soft px-6 py-24">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <span className="text-xs font-bold uppercase tracking-[0.1em] text-navy-soft">
@@ -85,7 +85,7 @@ export default function Services() {
         </div>
 
         <Reveal>
-          <div className="mt-12 flex flex-col items-start gap-4 rounded-2xl bg-surface-soft p-8 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-12 flex flex-col items-start gap-4 rounded-2xl bg-white p-8 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-lg font-semibold text-navy-deepest">
               Not sure where to start? Every engagement starts with a free
               conversation, not a sales pitch.

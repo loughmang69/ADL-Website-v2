@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { InfoIcon } from "@phosphor-icons/react/dist/ssr";
-import { DISCLAIMER_FOOTER_SENTENCE } from "@/data/content";
+import { DISCLAIMER_BANNER_SENTENCE } from "@/data/content";
 
 export default function DisclaimerBanner() {
   return (
@@ -12,7 +12,7 @@ export default function DisclaimerBanner() {
         aria-hidden="true"
       />
       <p className="leading-relaxed">
-        {DISCLAIMER_FOOTER_SENTENCE}{" "}
+        {DISCLAIMER_BANNER_SENTENCE}{" "}
         <Link
           href="/disclaimer"
           className="font-semibold text-navy underline underline-offset-2 transition-colors hover:text-navy-deep"

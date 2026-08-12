@@ -18,7 +18,7 @@ export default function BlogCard({ post, excerptLength = 140 }: BlogCardProps) {
     : null;
 
   return (
-    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-navy-deepest/[0.08] bg-white transition-[transform,border-color,box-shadow] duration-200 ease-out hover:-translate-y-[3px] hover:border-accent hover:shadow-xl hover:shadow-navy/5 focus-within:border-accent">
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-navy-deepest/[0.08] bg-white transition-[transform,border-color,box-shadow] duration-200 ease-out hover:-translate-y-[3px] hover:border-navy/40 hover:shadow-xl hover:shadow-navy/5 focus-within:border-navy">
       <div className="relative aspect-[16/9] w-full overflow-hidden bg-navy-deepest">
         {imageUrl ? (
           <Image
@@ -26,7 +26,9 @@ export default function BlogCard({ post, excerptLength = 140 }: BlogCardProps) {
             alt={post.featuredImage?.alt || post.title}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-            className="object-cover"
+            /* Zoom is gated behind a hover-capable pointer: on touch devices a
+               tap fires :hover and the image would stick at 1.04. */
+            className="object-cover transition-transform duration-300 ease-out motion-reduce:transform-none [@media(hover:hover)]:group-hover:scale-[1.04]"
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-navy-deep to-navy-deepest">

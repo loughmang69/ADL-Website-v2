@@ -11,7 +11,7 @@ import { WHO_WE_HELP } from "@/data/content";
  */
 export default function WhoWeHelp() {
   return (
-    <section id="who-we-help" className="bg-surface-soft px-6 py-24">
+    <section id="who-we-help" className="bg-white px-6 py-24">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <span className="text-xs font-bold uppercase tracking-[0.1em] text-navy-soft">

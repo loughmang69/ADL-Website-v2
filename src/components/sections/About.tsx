@@ -13,16 +13,16 @@ const STATS = [
 
 export default function About() {
   return (
-    <section id="about" className="bg-white px-6 py-24">
+    <section id="about" className="bg-surface-soft px-6 py-24">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-14 lg:grid-cols-12 lg:items-center">
         {/* Photo column (45%) */}
         <div className="animate-fade-in-up motion-reduce:animate-none lg:col-span-5">
           <HeadshotFrame className="mx-auto max-w-sm lg:mx-0" />
           <div className="mt-10 flex flex-wrap gap-3">
-            <span className="rounded-full bg-surface-soft px-4 py-1.5 text-xs font-bold uppercase tracking-[0.1em] text-navy-soft">
+            <span className="rounded-full bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.1em] text-navy-soft">
               Licensed CPA Since {SITE.cpaSince}
             </span>
-            <span className="rounded-full bg-surface-soft px-4 py-1.5 text-xs font-bold uppercase tracking-[0.1em] text-navy-soft">
+            <span className="rounded-full bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.1em] text-navy-soft">
               {SITE.locationLabel}
             </span>
           </div>

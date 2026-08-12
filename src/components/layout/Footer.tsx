@@ -1,5 +1,10 @@
 import Link from "next/link";
-import { PhoneIcon, EnvelopeIcon, MapPinIcon } from "@phosphor-icons/react/dist/ssr";
+import {
+  PhoneIcon,
+  EnvelopeIcon,
+  MapPinIcon,
+  LinkedinLogoIcon,
+} from "@phosphor-icons/react/dist/ssr";
 import { SITE, DISCLAIMER_FOOTER_SENTENCE } from "@/data/content";
 import { FOOTER_SERVICE_SLUGS, getServiceBySlug } from "@/data/services";
 
@@ -110,6 +115,17 @@ export default function Footer() {
               <li className="inline-flex items-center gap-2 text-white/80">
                 <MapPinIcon size={18} aria-hidden="true" />
                 {SITE.locationLabel}
+              </li>
+              <li>
+                <a
+                  href={SITE.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-sm text-white/80 transition-colors hover:text-accent"
+                >
+                  <LinkedinLogoIcon size={18} aria-hidden="true" />
+                  LinkedIn
+                </a>
               </li>
             </ul>
           </div>
