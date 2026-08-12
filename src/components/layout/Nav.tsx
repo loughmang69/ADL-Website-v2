@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Button from "@/components/ui/Button";
 
 const NAV_LINKS = [
@@ -12,48 +13,51 @@ const NAV_LINKS = [
   { label: "Blog", href: "/blog" },
 ];
 
-function Logo({ light }: { light: boolean }) {
+function Logo() {
   return (
     <Link
       href="/"
-      className="font-black tracking-tighter text-lg leading-none"
+      className="rounded-sm text-lg font-black leading-none tracking-tighter"
       aria-label="ADL Business Consulting — home"
     >
-      <span className="text-accent">ADL</span>{" "}
-      <span className={light ? "text-white" : "text-navy"}>
-        Business Consulting
-      </span>
+      <span className="text-navy">ADL</span>{" "}
+      <span className="text-navy-deepest">Business Consulting</span>
     </Link>
   );
 }
 
 export default function Nav() {
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  // Solid header whenever scrolled OR the mobile menu is open.
-  const solid = scrolled || open;
+  /**
+   * The header used to flip between transparent and solid at a `scrollY > 40`
+   * boolean, driven by a `window.addEventListener("scroll")`. Two problems:
+   * the flip snapped, and it inverted the link colour to white on the
+   * assumption of a dark hero behind it. The hero is now a light surface, so
+   * the text stays dark at every scroll position and only the *backdrop*
+   * animates in.
+   *
+   * The backdrop is a sibling layer whose opacity is interpolated from scroll
+   * position, so nothing but `opacity` is animated and the text never reflows.
+   */
+  const { scrollY } = useScroll();
+  const backdrop = useTransform(scrollY, [0, 80], [0, 1]);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        solid
-          ? "border-b border-navy-deepest/10 bg-white/95 shadow-sm backdrop-blur-md"
-          : "border-b border-transparent bg-transparent"
-      }`}
-    >
+    <header className="fixed inset-x-0 top-0 z-50">
+      {/* Backdrop layer. Purely decorative, so it is hidden from the a11y tree
+          and never intercepts pointer events. */}
+      <motion.div
+        style={{ opacity: open ? 1 : backdrop }}
+        className="pointer-events-none absolute inset-0 border-b border-navy-deepest/10 bg-white/95 shadow-sm backdrop-blur-md"
+        aria-hidden="true"
+      />
+
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4"
+        className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4"
         aria-label="Primary"
       >
-        <Logo light={!solid} />
+        <Logo />
 
         {/* Desktop links */}
         <div className="hidden items-center gap-8 lg:flex">
@@ -62,9 +66,7 @@ export default function Nav() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`rounded-sm transition-colors hover:text-accent ${
-                    solid ? "text-navy" : "text-white/90"
-                  }`}
+                  className="rounded-sm text-navy-deepest transition-colors duration-150 hover:text-navy"
                 >
                   {link.label}
                 </Link>
@@ -85,29 +87,34 @@ export default function Nav() {
           aria-controls="mobile-menu"
           onClick={() => setOpen((v) => !v)}
         >
-          <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
           <span
-            className={`absolute left-1/2 top-1/2 block h-0.5 w-6 -translate-x-1/2 transition-all duration-300 ${
-              solid ? "bg-navy" : "bg-white"
-            } ${open ? "rotate-45" : "-translate-y-1.5"}`}
+            className={`absolute left-1/2 top-1/2 block h-0.5 w-6 -translate-x-1/2 bg-navy-deepest transition-transform duration-300 ease-out ${
+              open ? "rotate-45" : "-translate-y-1.5"
+            }`}
           />
           <span
-            className={`absolute left-1/2 top-1/2 block h-0.5 w-6 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-200 ${
-              solid ? "bg-navy" : "bg-white"
-            } ${open ? "opacity-0" : "opacity-100"}`}
+            className={`absolute left-1/2 top-1/2 block h-0.5 w-6 -translate-x-1/2 -translate-y-1/2 bg-navy-deepest transition-opacity duration-200 ease-out ${
+              open ? "opacity-0" : "opacity-100"
+            }`}
           />
           <span
-            className={`absolute left-1/2 top-1/2 block h-0.5 w-6 -translate-x-1/2 transition-all duration-300 ${
-              solid ? "bg-navy" : "bg-white"
-            } ${open ? "-rotate-45" : "translate-y-1.5"}`}
+            className={`absolute left-1/2 top-1/2 block h-0.5 w-6 -translate-x-1/2 bg-navy-deepest transition-transform duration-300 ease-out ${
+              open ? "-rotate-45" : "translate-y-1.5"
+            }`}
           />
         </button>
       </nav>
 
-      {/* Mobile slide-down menu */}
+      {/* Mobile slide-down menu.
+
+          `inert` is what keeps the collapsed menu out of the keyboard tab order.
+          Previously the panel was hidden with `max-h-0 overflow-hidden`, which
+          hides it visually but leaves every link focusable, so a keyboard user
+          tabbing through the page fell into an invisible menu. */}
       <div
         id="mobile-menu"
-        className={`overflow-hidden bg-white lg:hidden transition-[max-height] duration-300 ease-out ${
+        inert={!open}
+        className={`relative overflow-hidden bg-white transition-[max-height] duration-300 ease-out lg:hidden ${
           open ? "max-h-96 border-b border-navy-deepest/10" : "max-h-0"
         }`}
       >
@@ -118,7 +125,7 @@ export default function Nav() {
                 <Link
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-lg px-3 py-3 text-base font-medium text-navy transition-colors hover:bg-surface-soft hover:text-accent"
+                  className="block rounded-lg px-3 py-3 text-base font-medium text-navy-deepest transition-colors hover:bg-surface-soft hover:text-navy"
                 >
                   {link.label}
                 </Link>

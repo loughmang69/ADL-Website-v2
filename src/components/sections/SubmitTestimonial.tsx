@@ -112,7 +112,7 @@ export default function SubmitTestimonial() {
   }
 
   const inputClass =
-    "w-full rounded-lg border border-navy-deepest/15 bg-white px-4 py-3 text-navy-deepest placeholder:text-navy-soft/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1";
+    "w-full rounded-lg border border-navy-deepest/15 bg-white px-4 py-3 text-navy-deepest placeholder:text-navy-soft/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-1";
 
   return (
     <>
@@ -127,7 +127,7 @@ export default function SubmitTestimonial() {
           ref={triggerRef}
           type="button"
           onClick={() => setOpen(true)}
-          className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white transition-[transform,background-color] duration-150 ease-out hover:bg-navy-deep active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+          className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white transition-[transform,background-color] duration-150 ease-out hover:bg-navy-deep active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2"
         >
           Submit a Testimonial
         </button>

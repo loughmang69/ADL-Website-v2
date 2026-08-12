@@ -62,14 +62,14 @@ export default function About() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-8">
             <a
               href={SITE.phoneHref}
-              className="inline-flex items-center gap-2 rounded-sm font-medium text-navy transition-colors hover:text-accent"
+              className="inline-flex items-center gap-2 rounded-sm font-medium text-navy transition-colors hover:text-navy-deep"
             >
               <PhoneIcon size={20} aria-hidden="true" />
               {SITE.phone}
             </a>
             <a
               href={SITE.emailHref}
-              className="inline-flex items-center gap-2 rounded-sm font-medium text-navy transition-colors hover:text-accent"
+              className="inline-flex items-center gap-2 rounded-sm font-medium text-navy transition-colors hover:text-navy-deep"
             >
               <EnvelopeIcon size={20} aria-hidden="true" />
               {SITE.email}

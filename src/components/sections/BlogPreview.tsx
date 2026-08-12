@@ -29,7 +29,7 @@ export default async function BlogPreview() {
           </div>
           <Link
             href="/blog"
-            className="inline-flex items-center gap-1.5 rounded-sm text-sm font-semibold text-navy transition-colors hover:text-accent"
+            className="inline-flex items-center gap-1.5 rounded-sm text-sm font-semibold text-navy transition-colors hover:text-navy-deep"
           >
             View all posts
             <ArrowRightIcon size={16} aria-hidden="true" />

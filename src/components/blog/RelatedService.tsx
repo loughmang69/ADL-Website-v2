@@ -46,7 +46,7 @@ export default function RelatedService({
         </div>
         <Link
           href={`/services/${service.slug}`}
-          className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-navy-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+          className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-navy-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2"
         >
           Learn more
           <ArrowRightIcon size={16} aria-hidden="true" />

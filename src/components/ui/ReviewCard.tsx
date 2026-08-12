@@ -43,7 +43,7 @@ export default function ReviewCard({
           type="button"
           onClick={() => setExpanded((v) => !v)}
           aria-expanded={expanded}
-          className="mt-2 self-start rounded-sm text-sm font-semibold text-navy transition-colors hover:text-accent active:scale-[0.97]"
+          className="mt-2 self-start rounded-sm text-sm font-semibold text-navy transition-colors hover:text-navy-deep active:scale-[0.97]"
         >
           {expanded ? "Show less" : "Read full review"}
         </button>

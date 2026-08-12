@@ -106,7 +106,7 @@ export default async function ServiceDetailPage({
             <li>
               <Link
                 href="/"
-                className="rounded-sm transition-colors hover:text-accent"
+                className="rounded-sm transition-colors hover:text-navy-deep"
               >
                 Home
               </Link>
@@ -117,7 +117,7 @@ export default async function ServiceDetailPage({
             <li>
               <Link
                 href="/services"
-                className="rounded-sm transition-colors hover:text-accent"
+                className="rounded-sm transition-colors hover:text-navy-deep"
               >
                 Services
               </Link>

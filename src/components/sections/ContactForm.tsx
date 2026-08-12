@@ -21,7 +21,7 @@ type FieldErrors = Partial<Record<string, string[]>>;
 
 const inputBase =
   "w-full rounded-lg border bg-white px-4 py-3 text-navy-deepest placeholder:text-navy-soft/50 " +
-  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 transition-colors";
+  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-1 transition-colors";
 
 function fieldClass(hasError: boolean): string {
   return `${inputBase} ${hasError ? "border-danger" : "border-navy-deepest/15"}`;
@@ -175,14 +175,14 @@ export default function ContactForm() {
               <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:gap-6">
                 <a
                   href={SITE.phoneHref}
-                  className="inline-flex items-center gap-2 rounded-sm font-semibold text-navy transition-colors hover:text-accent"
+                  className="inline-flex items-center gap-2 rounded-sm font-semibold text-navy transition-colors hover:text-navy-deep"
                 >
                   <PhoneIcon size={18} aria-hidden="true" />
                   {SITE.phone}
                 </a>
                 <a
                   href={SITE.emailHref}
-                  className="inline-flex items-center gap-2 rounded-sm font-semibold text-navy transition-colors hover:text-accent"
+                  className="inline-flex items-center gap-2 rounded-sm font-semibold text-navy transition-colors hover:text-navy-deep"
                 >
                   <EnvelopeIcon size={18} aria-hidden="true" />
                   {SITE.email}
@@ -381,7 +381,7 @@ export default function ContactForm() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent px-6 py-3.5 text-sm font-semibold text-navy-deepest transition-[transform,background-color] duration-150 ease-out hover:bg-accent/90 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:opacity-60"
+                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-navy px-6 py-3.5 text-sm font-semibold text-white transition-[transform,background-color] duration-150 ease-out hover:bg-navy-deep active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 disabled:opacity-60"
               >
                 {status === "loading" && (
                   <span

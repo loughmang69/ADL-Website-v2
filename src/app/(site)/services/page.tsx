@@ -66,7 +66,7 @@ export default function ServicesIndexPage() {
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-navy-soft">
                   {service.description}
                 </p>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-navy transition-colors group-hover:text-accent">
+                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-navy transition-colors group-hover:text-navy-deep">
                   Learn more
                   <ArrowRightIcon
                     size={16}

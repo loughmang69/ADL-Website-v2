@@ -70,7 +70,7 @@ const components: PortableTextComponents = {
           {...(external
             ? { target: "_blank", rel: "noopener noreferrer" }
             : {})}
-          className="font-medium text-navy underline underline-offset-2 transition-colors hover:text-accent"
+          className="font-medium text-navy underline underline-offset-2 transition-colors hover:text-navy-deep"
         >
           {children}
         </a>

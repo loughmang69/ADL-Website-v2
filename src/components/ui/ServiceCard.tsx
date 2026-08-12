@@ -47,7 +47,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       {!disabled && (
         <Link
           href={`/services/${service.slug}`}
-          className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-navy transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded-sm"
+          className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-navy transition-colors hover:text-navy-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 rounded-sm"
           aria-label={`Learn more about ${service.title}`}
         >
           Learn more

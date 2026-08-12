@@ -15,7 +15,7 @@ export default function DisclaimerBanner() {
         {DISCLAIMER_FOOTER_SENTENCE}{" "}
         <Link
           href="/disclaimer"
-          className="font-semibold text-navy underline underline-offset-2 transition-colors hover:text-accent"
+          className="font-semibold text-navy underline underline-offset-2 transition-colors hover:text-navy-deep"
         >
           Full Disclaimer
         </Link>

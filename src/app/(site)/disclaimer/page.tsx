@@ -39,7 +39,7 @@ export default function DisclaimerPage() {
             For questions, contact:{" "}
             <a
               href="mailto:info@adlbusinessconsulting.com"
-              className="font-medium text-navy underline underline-offset-2 transition-colors hover:text-accent"
+              className="font-medium text-navy underline underline-offset-2 transition-colors hover:text-navy-deep"
             >
               info@adlbusinessconsulting.com
             </a>
