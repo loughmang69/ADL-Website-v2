@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Button from "@/components/ui/Button";
@@ -28,6 +28,53 @@ function Logo() {
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const toggleRef = useRef<HTMLButtonElement>(null);
+
+  /**
+   * While the mobile menu is open it behaves like a modal surface: Escape
+   * closes it and returns focus to the toggle, and Tab is contained within it
+   * so focus cannot wander into the page behind. Without this a keyboard user
+   * who opened the menu would tab straight past it into content they cannot
+   * see.
+   */
+  useEffect(() => {
+    if (!open) return;
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+        toggleRef.current?.focus();
+        return;
+      }
+      if (e.key !== "Tab") return;
+
+      const focusables = menuRef.current?.querySelectorAll<HTMLElement>("a[href]");
+      if (!focusables || focusables.length === 0) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      const toggle = toggleRef.current;
+
+      // The toggle sits outside the panel but is part of the same widget, so
+      // the cycle runs: toggle -> links -> back to toggle.
+      if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        toggle?.focus();
+      } else if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        toggle?.focus();
+      } else if (e.shiftKey && document.activeElement === toggle) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === toggle) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [open]);
 
   /**
    * The header used to flip between transparent and solid at a `scrollY > 40`
@@ -80,6 +127,7 @@ export default function Nav() {
 
         {/* Mobile hamburger */}
         <button
+          ref={toggleRef}
           type="button"
           className="relative h-10 w-10 lg:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -112,6 +160,7 @@ export default function Nav() {
           hides it visually but leaves every link focusable, so a keyboard user
           tabbing through the page fell into an invisible menu. */}
       <div
+        ref={menuRef}
         id="mobile-menu"
         inert={!open}
         className={`relative overflow-hidden bg-white transition-[max-height] duration-300 ease-out lg:hidden ${

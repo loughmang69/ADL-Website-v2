@@ -33,7 +33,7 @@ export default function About() {
           <span className="text-xs font-bold uppercase tracking-[0.1em] text-navy-soft">
             Meet Your Advisor
           </span>
-          <h2 className="mt-2 text-3xl font-black tracking-tight text-navy-deepest md:text-5xl">
+          <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-navy-deepest md:text-5xl">
             {SITE.founderTitle}
           </h2>
           <div className="mt-6 space-y-4 text-navy-soft">

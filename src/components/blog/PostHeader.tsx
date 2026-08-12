@@ -16,7 +16,7 @@ export default function PostHeader({ post }: { post: BlogPost }) {
         <span>{readTimeLabel(post.estimatedReadingTime)}</span>
       </div>
 
-      <h1 className="mt-5 text-3xl font-black leading-tight tracking-tight text-navy-deepest md:text-5xl">
+      <h1 className="mt-5 font-display text-3xl font-semibold leading-tight tracking-tight text-navy-deepest md:text-5xl">
         {post.title}
       </h1>
 

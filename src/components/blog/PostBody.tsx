@@ -21,7 +21,7 @@ function safeHref(href: unknown): string {
 const components: PortableTextComponents = {
   block: {
     h2: ({ children }) => (
-      <h2 className="mt-12 text-2xl font-black tracking-tight text-navy-deepest md:text-3xl">
+      <h2 className="mt-12 font-display text-2xl font-semibold tracking-tight text-navy-deepest md:text-3xl">
         {children}
       </h2>
     ),

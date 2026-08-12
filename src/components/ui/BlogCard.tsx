@@ -9,9 +9,21 @@ interface BlogCardProps {
   post: BlogPostListItem;
   /** Max characters for the excerpt (140 on listing, 120 in preview). */
   excerptLength?: number;
+  /**
+   * Heading level for the post title. Defaults to 3, which is correct wherever
+   * the card sits under a section h2 (homepage preview, related posts). The
+   * /blog listing has no intermediate heading, so it passes 2 to avoid an
+   * h1 -> h3 skip.
+   */
+  headingLevel?: 2 | 3;
 }
 
-export default function BlogCard({ post, excerptLength = 140 }: BlogCardProps) {
+export default function BlogCard({
+  post,
+  excerptLength = 140,
+  headingLevel = 3,
+}: BlogCardProps) {
+  const Heading = headingLevel === 2 ? "h2" : "h3";
   const href = `/blog/${post.slug.current}`;
   const imageUrl = post.featuredImage
     ? urlForImage(post.featuredImage).width(800).height(450).fit("crop").url()
@@ -49,14 +61,14 @@ export default function BlogCard({ post, excerptLength = 140 }: BlogCardProps) {
           <span aria-hidden="true">·</span>
           <span>{readTimeLabel(post.estimatedReadingTime)}</span>
         </div>
-        <h3 className="text-lg font-bold tracking-tight text-navy-deepest">
+        <Heading className="text-lg font-bold tracking-tight text-navy-deepest">
           <Link
             href={href}
             className="rounded-sm outline-none after:absolute after:inset-0 after:content-[''] focus-visible:underline"
           >
             {post.title}
           </Link>
-        </h3>
+        </Heading>
         {post.excerpt && (
           <p className="mt-2 text-sm leading-relaxed text-navy-soft">
             {truncate(post.excerpt, excerptLength)}

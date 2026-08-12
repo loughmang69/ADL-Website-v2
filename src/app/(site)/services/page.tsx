@@ -31,7 +31,7 @@ export default function ServicesIndexPage() {
         <span className="text-xs font-bold uppercase tracking-[0.1em] text-navy-soft">
           What We Do
         </span>
-        <h1 className="mt-2 text-4xl font-black tracking-tight text-navy-deepest md:text-6xl">
+        <h1 className="mt-2 font-display text-4xl font-semibold tracking-tight text-navy-deepest md:text-6xl">
           Services
         </h1>
         <p className="mt-4 max-w-prose text-navy-soft">
@@ -42,37 +42,39 @@ export default function ServicesIndexPage() {
           service to see how it works.
         </p>
 
-        <ul className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {/* Rows, matching the homepage. A three-up card grid for exactly three
+            items is the pattern the redesign removed, and having the index
+            contradict the section it mirrors would undo the point. */}
+        <ul className="mt-12 border-t border-surface-line">
           {SERVICES.map((service) => (
             <li key={service.id}>
               <Link
                 href={`/services/${service.slug}`}
-                className="group flex h-full flex-col rounded-2xl border border-navy-deepest/[0.08] bg-white p-6 transition-[transform,border-color,box-shadow] duration-200 ease-out hover:-translate-y-[3px] hover:border-accent hover:shadow-xl hover:shadow-navy/5"
+                className="group grid grid-cols-1 items-start gap-x-8 gap-y-4 border-b border-surface-line py-9 transition-colors duration-200 ease-out hover:bg-surface-soft/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 lg:grid-cols-[4rem_16rem_1fr_auto] lg:items-center"
               >
-                <div className="mb-5 flex items-start justify-between gap-3">
-                  <span className="flex h-[52px] w-[52px] items-center justify-center rounded-xl bg-surface-soft text-navy">
-                    <ServiceIcon
-                      name={service.icon}
-                      size={26}
-                      weight="duotone"
-                    />
-                  </span>
-                  <span className="rounded-full bg-surface-soft px-3 py-1 text-xs font-bold uppercase tracking-[0.1em] text-navy-soft">
+                <span className="flex h-14 w-14 items-center justify-center rounded-xl bg-surface-soft text-navy">
+                  <ServiceIcon name={service.icon} size={28} weight="duotone" />
+                </span>
+
+                <div>
+                  <span className="text-[11px] font-bold uppercase tracking-[0.12em] text-navy-soft">
                     {service.tag}
                   </span>
+                  <h2 className="mt-1.5 text-xl font-bold tracking-tight text-navy-deepest">
+                    {service.title}
+                  </h2>
                 </div>
-                <h2 className="text-lg font-bold tracking-tight text-navy-deepest">
-                  {service.title}
-                </h2>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-navy-soft">
+
+                <p className="max-w-prose leading-relaxed text-navy-soft">
                   {service.description}
                 </p>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-navy transition-colors group-hover:text-navy-deep">
+
+                <span className="inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-navy transition-colors group-hover:text-navy-deep">
                   Learn more
                   <ArrowRightIcon
                     size={16}
                     aria-hidden="true"
-                    className="transition-transform group-hover:translate-x-0.5"
+                    className="transition-transform duration-200 ease-out group-hover:translate-x-0.5"
                   />
                 </span>
               </Link>
