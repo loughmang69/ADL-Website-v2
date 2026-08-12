@@ -12,8 +12,12 @@ import { ServiceIcon } from "@/components/ui/Icon";
 const CATEGORY_TO_SERVICE_SLUG: Partial<Record<BlogCategory, string>> = {
   Tax: "tax-preparation-fremont",
   Accounting: "bookkeeping-services-fremont",
-  Technology: "quickbooks-setup-bay-area",
-  Payroll: "payroll-setup-california",
+  Payroll: "business-advisory-fremont",
+  Technology: "business-advisory-fremont",
+  "Business Strategy": "business-advisory-fremont",
+  // 'Personal Finance' intentionally has no mapped service, so it renders
+  // nothing. The blog deliberately covers a broader range of topics than the
+  // three front-facing services.
 };
 
 export default function RelatedService({

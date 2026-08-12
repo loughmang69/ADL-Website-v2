@@ -8,12 +8,12 @@ import { ServiceIcon } from "@/components/ui/Icon";
 export const metadata: Metadata = {
   title: { absolute: "Services for Fremont, CA Small Businesses | ADL" },
   description:
-    "Accounting, bookkeeping, tax preparation, entity structure, payroll, and QuickBooks setup for Fremont, CA and East Bay small businesses, from a licensed CPA.",
+    "Tax preparation and review, bookkeeping and cleanup, and business advisory for Fremont, CA and East Bay small businesses, from a licensed CPA.",
   alternates: { canonical: `${SITE.url}/services` },
   openGraph: {
     title: `Services | ${SITE.shortName}`,
     description:
-      "Accounting, bookkeeping, tax, entity structure, payroll, and technology services for Fremont, CA and East Bay small businesses.",
+      "Tax preparation and review, bookkeeping and cleanup, and business advisory for Fremont, CA and East Bay small businesses.",
     url: `${SITE.url}/services`,
     type: "website",
     images: ["/og-image.png"],
@@ -35,10 +35,11 @@ export default function ServicesIndexPage() {
           Services
         </h1>
         <p className="mt-4 max-w-prose text-navy-soft">
-          Practical help across the areas small businesses in Fremont and the
-          East Bay need most: accounting, tax, entity structure, payroll, and
-          technology, from {SITE.founderName}, CPA. Explore a service to see how
-          it works.
+          Three services for small businesses in Fremont and the East Bay: tax
+          preparation and review, bookkeeping and cleanup, and business
+          advisory, all handled directly by {SITE.founderName}, CPA. Entity
+          structure, payroll, and systems work sits inside advisory. Explore a
+          service to see how it works.
         </p>
 
         <ul className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">

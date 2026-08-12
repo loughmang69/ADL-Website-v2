@@ -1,11 +1,14 @@
 import { PhoneIcon, EnvelopeIcon } from "@phosphor-icons/react/dist/ssr";
 import HeadshotFrame from "@/components/ui/HeadshotFrame";
+import AnimatedStat from "@/components/ui/AnimatedStat";
 import { SITE, ABOUT_BIO } from "@/data/content";
 
+// Unlike the Hero's third stat, these are not derived from SERVICES.length.
+// They are biographical, so they are stated directly.
 const STATS = [
   { value: "15+", label: "Years in Finance" },
   { value: "13+", label: "Years Licensed" },
-  { value: "9", label: "Practice Areas" },
+  { value: "3", label: "Core Services" },
 ];
 
 export default function About() {
@@ -44,22 +47,21 @@ export default function About() {
           {/* Stats */}
           <dl className="mt-8 grid grid-cols-3 gap-6 border-t border-navy-deepest/10 pt-6">
             {STATS.map((stat) => (
-              <div key={stat.label}>
-                <dt className="sr-only">{stat.label}</dt>
-                <dd>
-                  <span className="block text-2xl font-black tracking-tight text-navy md:text-3xl">
-                    {stat.value}
-                  </span>
-                  <span className="mt-1 block text-xs leading-tight text-navy-soft">
-                    {stat.label}
-                  </span>
-                </dd>
-              </div>
+              <AnimatedStat
+                key={stat.label}
+                value={stat.value}
+                label={stat.label}
+                valueClassName="block text-2xl font-black tracking-tight text-navy md:text-3xl"
+                labelClassName="mt-1 block text-xs leading-tight text-navy-soft"
+              />
             ))}
           </dl>
 
           {/* Contact row */}
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-8">
+          <p className="mt-8 text-xs font-bold uppercase tracking-[0.1em] text-navy-soft">
+            Talk directly with your CPA
+          </p>
+          <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:gap-8">
             <a
               href={SITE.phoneHref}
               className="inline-flex items-center gap-2 rounded-sm font-medium text-navy transition-colors hover:text-navy-deep"

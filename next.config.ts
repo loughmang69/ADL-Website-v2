@@ -67,6 +67,57 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  /**
+   * The six service pages removed in the CPA-first repositioning. Permanent so
+   * the existing search equity transfers rather than being dropped.
+   *
+   * Entity structure, payroll, QuickBooks/tech, and process work all fold into
+   * Business Advisory, which is genuinely where that work now lives. Personal
+   * Finance Education goes to the blog, since it is closer to an article topic
+   * than a service. Website/app and AI work have no natural successor, so they
+   * land on the services index: a 301 to a relevant hub preserves more equity
+   * than one to the homepage.
+   */
+  async redirects() {
+    return [
+      {
+        source: "/services/entity-structure-review",
+        destination: "/services/business-advisory-fremont",
+        permanent: true,
+      },
+      {
+        source: "/services/payroll-setup-california",
+        destination: "/services/business-advisory-fremont",
+        permanent: true,
+      },
+      {
+        source: "/services/quickbooks-setup-bay-area",
+        destination: "/services/business-advisory-fremont",
+        permanent: true,
+      },
+      {
+        source: "/services/business-process-optimization",
+        destination: "/services/business-advisory-fremont",
+        permanent: true,
+      },
+      {
+        source: "/services/personal-finance-education",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/services/website-app-development",
+        destination: "/services",
+        permanent: true,
+      },
+      {
+        source: "/services/ai-agent-implementation",
+        destination: "/services",
+        permanent: true,
+      },
+    ];
+  },
+
   async headers() {
     return [
       {

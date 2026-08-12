@@ -3,6 +3,7 @@ import { SITE } from "@/data/content";
 import JsonLd from "@/components/ui/JsonLd";
 import { localBusinessJsonLd } from "@/lib/seo";
 import Hero from "@/components/sections/Hero";
+import WhoWeHelp from "@/components/sections/WhoWeHelp";
 import Services from "@/components/sections/Services";
 import HowItWorks from "@/components/sections/HowItWorks";
 import About from "@/components/sections/About";
@@ -12,9 +13,10 @@ import Reviews from "@/components/sections/Reviews";
 import ContactForm from "@/components/sections/ContactForm";
 import BlogPreview from "@/components/sections/BlogPreview";
 
-const title = "Fremont, CA CPA for Small Businesses | ADL Business Consulting";
+const title =
+  "Fremont, CA CPA — Tax, Bookkeeping & Advisory | ADL Business Consulting";
 const description =
-  "Fremont, CA CPA and business consultant for small business owners across the East Bay. Accounting, bookkeeping, tax, payroll, and advisory services.";
+  "Fremont, CA CPA firm for small business owners: tax prep and review, bookkeeping, and business advisory, all handled directly by a licensed CPA.";
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -42,6 +44,7 @@ export default function HomePage() {
     <>
       <JsonLd data={localBusinessJsonLd()} />
       <Hero />
+      <WhoWeHelp />
       <Services />
       <HowItWorks />
       <About />

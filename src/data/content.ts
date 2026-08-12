@@ -11,7 +11,7 @@
 export const SITE = {
   name: "ADL Business Consulting, PC",
   shortName: "ADL Business Consulting",
-  tagline: "Big-firm expertise. Small business focus.",
+  tagline: "Taxes handled. Books clean. Business clear.",
   url: "https://www.adlbusinessconsulting.com",
   phone: "510-320-2724",
   phoneHref: "tel:+15103202724",
@@ -23,7 +23,6 @@ export const SITE = {
   locationLabel: "Fremont, California",
   license: "CA License #150109",
   licenseNumber: "150109",
-  ein: "42-2067797",
   founderName: "Garrett Loughman",
   founderTitle: "Garrett Loughman, CPA, MBA",
   cpaSince: "2013",
@@ -36,8 +35,74 @@ export const SITE = {
 export const ABOUT_BIO: string[] = [
   "Garrett Loughman is a California-licensed CPA (License #150109) with more than 15 years of experience across accounting, finance, consulting, finance transformation, and both internal and external audit. He founded ADL Business Consulting, PC to bring big-firm expertise directly to the small business owners who need it most.",
   "After years advising larger organizations, Garrett kept seeing the same gap: small businesses making major financial decisions without the guidance bigger companies take for granted. ADL exists to close that gap with hands-on, practical advice, not just at tax time but year-round.",
-  "Today he works directly with every client across entity structure, bookkeeping, tax, payroll, and technology, so owners spend less time wrestling with their financials and more time growing what they built.",
+  "Today he works directly with every client on taxes, bookkeeping, and the advisory decisions that come with running a business, so owners spend less time wrestling with their financials and more time growing what they built.",
 ];
+
+/**
+ * Homepage "Who We Help" section. Qualifies visitors by situation rather than
+ * by industry: a visitor who matches none of a list of named verticals bounces,
+ * whereas everyone recognises themselves in a circumstance.
+ */
+export const WHO_WE_HELP = {
+  eyebrow: "Who We Help",
+  heading: "Built for business owners and individuals alike.",
+  audiences: [
+    {
+      title: "Small business owners",
+      body: "LLCs, corporations, and sole proprietors who want their taxes, books, and bigger decisions handled by one CPA instead of passed between departments. Contractors and trades, professional practices, residential and commercial real estate owners, and many more trust us.",
+    },
+    {
+      title: "Businesses outgrowing DIY books",
+      body: "You have been doing your own bookkeeping between jobs, or the last bookkeeper did not work out, and it is time for books you can actually trust. Cleanup first, then a monthly cadence that keeps them current.",
+    },
+    {
+      title: "Individuals who want a CPA-reviewed return",
+      body: "Straightforward personal tax preparation and return review, handled by the same CPA and with the same attention.",
+    },
+  ],
+} as const;
+
+/**
+ * "The ADL Approach". A named engagement sequence rather than a generic
+ * three-step process. Step one is deliberately a named offer with a defined
+ * output: it is the free consultation that already existed, given a name and a
+ * deliverable, so it gives a visitor something specific to ask for. No pricing
+ * is implied or exposed.
+ *
+ * Numbering is used here and nowhere else on the site, because this is the only
+ * section whose order carries meaning.
+ */
+export const ADL_APPROACH = {
+  eyebrow: "How It Works",
+  heading: "The ADL Approach",
+  steps: [
+    {
+      tagline: "Free, and it has a name",
+      title: "The Books & Structure Review",
+      body: "Send over last year's return and whatever your books look like right now, however rough. Garrett looks at your entity structure, your bookkeeping, and what was actually filed. Thirty minutes on the phone. No cost, no obligation.",
+    },
+    {
+      title: "You get it in writing",
+      body: "A short written summary of where you stand: what is clean, what is behind, what is quietly costing you money, and what has a deadline attached. Yours to keep whether or not you decide to work with ADL.",
+    },
+    {
+      title: "We agree on scope before any work starts",
+      body: "A written engagement letter covering exactly what is included and what it costs. No hourly surprises, no scope that quietly expands.",
+    },
+    {
+      title: "We clean up what is behind",
+      body: "Whatever the review turned up. Unreconciled accounts, miscategorized expenses, an entity election that should have been made two years ago, a return worth amending.",
+    },
+    {
+      title: "We keep it current",
+      body: "Monthly financial results, so you always know where the business stands and tax season is not a reconstruction project.",
+    },
+    {
+      title: "We stay ahead of the deadlines",
+      body: "Quarterly estimates, the 75-day S-corp deadline, and tax return extension planning. You hear from Garrett before each one, not after.",
+    },
+  ],
+} as const;
 
 /**
  * Static fallback Google reviews — the exact, verbatim text of the live Google
@@ -82,17 +147,17 @@ If you're a small business owner who feels like you're just figuring it out as y
 
 /** Contact form "What can we help you with?" options. */
 export const HELP_OPTIONS: string[] = [
-  "Entity Structure Review",
-  "Accounting & Bookkeeping",
   "Tax Preparation & Return Review",
-  "Payroll Implementation",
-  "Technology Implementations",
-  "Business Process Optimization",
-  "Personal Finance Education",
-  "Website & App Development",
-  "AI Agent Implementation",
+  "Bookkeeping & Cleanup",
+  "Business Advisory & Consulting",
   "Something else / Not sure yet",
 ];
 
 export const DISCLAIMER_FOOTER_SENTENCE =
-  "ADL Business Consulting, PC provides tax, bookkeeping, general business consulting, and advisory services for compensation. Content on this site is informational only and does not constitute legal, tax, or financial advice.";
+  "ADL Business Consulting, PC provides tax preparation, bookkeeping, and business advisory services for compensation. Site content is informational only, does not constitute tax, legal, or financial advice, and does not create a CPA-client relationship.";
+
+/** Shown at the top of every blog post. Deliberately shorter and more direct
+ *  than the footer sentence, which describes the firm rather than warning about
+ *  the article the reader is about to treat as advice. */
+export const DISCLAIMER_BANNER_SENTENCE =
+  "General information only. This post is not tax, legal, or financial advice, and reading it does not create a CPA-client relationship. Consult a professional for advice specific to your situation.";
