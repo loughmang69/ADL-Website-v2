@@ -9,16 +9,28 @@ interface BlogCardProps {
   post: BlogPostListItem;
   /** Max characters for the excerpt (140 on listing, 120 in preview). */
   excerptLength?: number;
+  /**
+   * Heading level for the post title. Defaults to 3, which is correct wherever
+   * the card sits under a section h2 (homepage preview, related posts). The
+   * /blog listing has no intermediate heading, so it passes 2 to avoid an
+   * h1 -> h3 skip.
+   */
+  headingLevel?: 2 | 3;
 }
 
-export default function BlogCard({ post, excerptLength = 140 }: BlogCardProps) {
+export default function BlogCard({
+  post,
+  excerptLength = 140,
+  headingLevel = 3,
+}: BlogCardProps) {
+  const Heading = headingLevel === 2 ? "h2" : "h3";
   const href = `/blog/${post.slug.current}`;
   const imageUrl = post.featuredImage
     ? urlForImage(post.featuredImage).width(800).height(450).fit("crop").url()
     : null;
 
   return (
-    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-navy-deepest/[0.08] bg-white transition-[transform,border-color,box-shadow] duration-200 ease-out hover:-translate-y-[3px] hover:border-accent hover:shadow-xl hover:shadow-navy/5 focus-within:border-accent">
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-navy-deepest/[0.08] bg-white transition-[transform,border-color,box-shadow] duration-200 ease-out hover:-translate-y-[3px] hover:border-navy/40 hover:shadow-xl hover:shadow-navy/5 focus-within:border-navy">
       <div className="relative aspect-[16/9] w-full overflow-hidden bg-navy-deepest">
         {imageUrl ? (
           <Image
@@ -26,7 +38,9 @@ export default function BlogCard({ post, excerptLength = 140 }: BlogCardProps) {
             alt={post.featuredImage?.alt || post.title}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-            className="object-cover"
+            /* Zoom is gated behind a hover-capable pointer: on touch devices a
+               tap fires :hover and the image would stick at 1.04. */
+            className="object-cover transition-transform duration-300 ease-out motion-reduce:transform-none [@media(hover:hover)]:group-hover:scale-[1.04]"
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-navy-deep to-navy-deepest">
@@ -47,14 +61,14 @@ export default function BlogCard({ post, excerptLength = 140 }: BlogCardProps) {
           <span aria-hidden="true">·</span>
           <span>{readTimeLabel(post.estimatedReadingTime)}</span>
         </div>
-        <h3 className="text-lg font-bold tracking-tight text-navy-deepest">
+        <Heading className="text-lg font-bold tracking-tight text-navy-deepest">
           <Link
             href={href}
             className="rounded-sm outline-none after:absolute after:inset-0 after:content-[''] focus-visible:underline"
           >
             {post.title}
           </Link>
-        </h3>
+        </Heading>
         {post.excerpt && (
           <p className="mt-2 text-sm leading-relaxed text-navy-soft">
             {truncate(post.excerpt, excerptLength)}

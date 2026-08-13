@@ -99,7 +99,7 @@ export default async function BlogPostPage({
       <div className="mx-auto max-w-prose">
         <Link
           href="/blog"
-          className="mb-8 inline-flex items-center gap-1.5 rounded-sm text-sm font-semibold text-navy-soft transition-colors hover:text-accent"
+          className="mb-8 inline-flex items-center gap-1.5 rounded-sm text-sm font-semibold text-navy-soft transition-colors hover:text-navy-deep"
         >
           <ArrowLeftIcon size={16} aria-hidden="true" />
           All posts

@@ -1,7 +1,12 @@
 import Link from "next/link";
-import { PhoneIcon, EnvelopeIcon, MapPinIcon } from "@phosphor-icons/react/dist/ssr";
+import {
+  PhoneIcon,
+  EnvelopeIcon,
+  MapPinIcon,
+  LinkedinLogoIcon,
+} from "@phosphor-icons/react/dist/ssr";
 import { SITE, DISCLAIMER_FOOTER_SENTENCE } from "@/data/content";
-import { PRIORITY_SERVICE_SLUGS, getServiceBySlug } from "@/data/services";
+import { FOOTER_SERVICE_SLUGS, getServiceBySlug } from "@/data/services";
 
 const NAV = [
   { label: "Services", href: "/#services" },
@@ -11,10 +16,16 @@ const NAV = [
   { label: "Disclaimer", href: "/disclaimer" },
 ];
 
-/** The five priority service pages, linked directly from the footer. */
-const FOOTER_SERVICES = PRIORITY_SERVICE_SLUGS.map((slug) => {
+/**
+ * All service pages, linked from the footer. Derived from SERVICES rather than
+ * a hand-maintained list: the previous version held five hardcoded slugs and
+ * fell back to `?? slug`, so removing a service silently rendered a dead link
+ * labelled with its raw slug instead of failing loudly.
+ */
+const FOOTER_SERVICES = FOOTER_SERVICE_SLUGS.map((slug) => {
   const service = getServiceBySlug(slug);
-  return { slug, label: service?.title ?? slug };
+  if (!service) throw new Error(`Footer references unknown service: ${slug}`);
+  return { slug, label: service.title };
 });
 
 export default function Footer() {
@@ -104,6 +115,17 @@ export default function Footer() {
               <li className="inline-flex items-center gap-2 text-white/80">
                 <MapPinIcon size={18} aria-hidden="true" />
                 {SITE.locationLabel}
+              </li>
+              <li>
+                <a
+                  href={SITE.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-sm text-white/80 transition-colors hover:text-accent"
+                >
+                  <LinkedinLogoIcon size={18} aria-hidden="true" />
+                  LinkedIn
+                </a>
               </li>
             </ul>
           </div>

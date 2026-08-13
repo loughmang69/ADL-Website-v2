@@ -106,7 +106,7 @@ export default async function ServiceDetailPage({
             <li>
               <Link
                 href="/"
-                className="rounded-sm transition-colors hover:text-accent"
+                className="rounded-sm transition-colors hover:text-navy-deep"
               >
                 Home
               </Link>
@@ -117,7 +117,7 @@ export default async function ServiceDetailPage({
             <li>
               <Link
                 href="/services"
-                className="rounded-sm transition-colors hover:text-accent"
+                className="rounded-sm transition-colors hover:text-navy-deep"
               >
                 Services
               </Link>
@@ -138,7 +138,7 @@ export default async function ServiceDetailPage({
           <ServiceIcon name={service.icon} size={16} weight="duotone" />
           {service.tag}
         </span>
-        <h1 className="mt-5 text-4xl font-black leading-tight tracking-tight text-navy-deepest md:text-5xl">
+        <h1 className="mt-5 font-display text-4xl font-semibold leading-tight tracking-tight text-navy-deepest md:text-5xl">
           {heading}
         </h1>
         <p className="mt-5 text-lg leading-relaxed text-navy-soft">
@@ -156,7 +156,7 @@ export default async function ServiceDetailPage({
       <div className="mx-auto mt-14 max-w-3xl px-6">
         {service.body.map((section) => (
           <section key={section.heading} className="mt-10 first:mt-0">
-            <h2 className="text-2xl font-black tracking-tight text-navy-deepest">
+            <h2 className="font-display text-2xl font-semibold tracking-tight text-navy-deepest">
               {section.heading}
             </h2>
             {section.paragraphs.map((para, i) => (
@@ -174,7 +174,7 @@ export default async function ServiceDetailPage({
       {/* FAQ */}
       {service.faqs.length > 0 && (
         <div className="mx-auto mt-16 max-w-3xl px-6">
-          <h2 className="text-2xl font-black tracking-tight text-navy-deepest">
+          <h2 className="font-display text-2xl font-semibold tracking-tight text-navy-deepest">
             Frequently Asked Questions
           </h2>
           <dl className="mt-6 divide-y divide-navy-deepest/[0.08] border-y border-navy-deepest/[0.08]">

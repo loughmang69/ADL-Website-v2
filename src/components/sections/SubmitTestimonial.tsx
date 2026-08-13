@@ -74,6 +74,9 @@ export default function SubmitTestimonial() {
       role: String(data.get("role") ?? "").trim(),
       stars,
       text: String(data.get("text") ?? "").trim(),
+      // Sent so consent is recorded with the testimonial, not just enforced in
+      // the browser. The server requires this to be true.
+      permission: data.get("permission") === "on",
       "bot-field": String(data.get("bot-field") ?? ""),
     };
 
@@ -81,7 +84,7 @@ export default function SubmitTestimonial() {
     if (stars < 1) return setError("Please select a star rating.");
     if (payload.text.length < 20)
       return setError("Please write at least 20 characters.");
-    if (!data.get("permission"))
+    if (!payload.permission)
       return setError("Please grant permission to display your testimonial.");
 
     setStatus("loading");
@@ -112,7 +115,7 @@ export default function SubmitTestimonial() {
   }
 
   const inputClass =
-    "w-full rounded-lg border border-navy-deepest/15 bg-white px-4 py-3 text-navy-deepest placeholder:text-navy-soft/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1";
+    "w-full rounded-lg border border-navy-deepest/15 bg-white px-4 py-3 text-navy-deepest placeholder:text-navy-soft/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-1";
 
   return (
     <>
@@ -127,7 +130,7 @@ export default function SubmitTestimonial() {
           ref={triggerRef}
           type="button"
           onClick={() => setOpen(true)}
-          className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white transition-[transform,background-color] duration-150 ease-out hover:bg-navy-deep active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+          className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white transition-[transform,background-color] duration-150 ease-out hover:bg-navy-deep active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2"
         >
           Submit a Testimonial
         </button>
@@ -207,7 +210,7 @@ export default function SubmitTestimonial() {
                   id="t-role"
                   name="role"
                   type="text"
-                  placeholder="Owner, Excel Cleaning, LLC"
+                  placeholder="Owner, Day Dreaming, Inc."
                   className={inputClass}
                 />
               </div>
@@ -250,8 +253,8 @@ export default function SubmitTestimonial() {
                   className="mt-1 h-4 w-4 accent-navy"
                 />
                 <span>
-                  I give ADL Business Consulting permission to display this
-                  testimonial on their website.
+                  I give ADL Business Consulting, PC permission to display this
+                  testimonial on their website
                 </span>
               </label>
 

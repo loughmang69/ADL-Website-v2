@@ -2,14 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Mirrors the Tailwind colour tokens. See tailwind.config.ts for the contrast
+   rule governing --c-accent: it is a dark-surface-only colour. */
 :root {
-  --c-navy-deepest: #0d1f3c;
-  --c-navy-deep: #142b56;
-  --c-navy: #1a3d6e;
-  --c-navy-soft: #1a6a8a;
-  --c-accent: #67cbea;
-  --c-bg-soft: #f7f9fc;
-  --c-danger: #e05a5a;
+  --c-navy-deepest: #101c2e;
+  --c-navy-deep: #123259;
+  --c-navy: #1a4b8c;
+  --c-navy-soft: #4a5a72;
+  --c-accent: #99ccff;
+  --c-bg-soft: #eef3fc;
+  --c-line: #d3deee;
+  --c-danger: #c2342f;
 }
 
 @layer base {
@@ -20,7 +23,10 @@
   }
 
   body {
-    @apply bg-white text-navy font-sans antialiased;
+    /* Body text is the ink token, not `navy` — `navy` is now the interactive
+       colour, and using it for running text would render the whole page in
+       link blue. */
+    @apply bg-white text-navy-deepest font-sans antialiased;
     min-height: 100dvh;
   }
 
@@ -29,8 +35,10 @@
     color: var(--c-navy-deepest);
   }
 
+  /* Focus rings use `navy` (8.65:1 on white). They previously used `accent`,
+     which is 1.86:1 and is not a valid focus indicator under WCAG 2.2 SC 1.4.11. */
   :focus-visible {
-    @apply outline-none ring-2 ring-accent ring-offset-2;
+    @apply outline-none ring-2 ring-navy ring-offset-2;
   }
 }
 

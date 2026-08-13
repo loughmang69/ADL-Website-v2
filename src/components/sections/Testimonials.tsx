@@ -2,6 +2,7 @@ import { sanityFetch } from "@/lib/sanity/client";
 import { APPROVED_TESTIMONIALS_QUERY } from "@/lib/sanity/queries";
 import type { Testimonial } from "@/lib/sanity/types";
 import TestimonialCard from "@/components/ui/TestimonialCard";
+import Reveal from "@/components/ui/Reveal";
 import SubmitTestimonial from "./SubmitTestimonial";
 
 function gridClass(count: number): string {
@@ -20,24 +21,26 @@ export default async function Testimonials() {
   return (
     <section id="testimonials" className="bg-white px-6 py-24">
       <div className="mx-auto max-w-7xl">
-        <div className="text-center">
+        {/* Left aligned, matching every other section heading. The old centred
+            treatment was the only one on the page and read as inconsistent. */}
+        <Reveal>
           <span className="text-xs font-bold uppercase tracking-[0.1em] text-navy-soft">
             Testimonials
           </span>
-          <h2 className="mt-2 text-3xl font-black tracking-tight text-navy-deepest md:text-5xl">
-            What Clients Are Saying
+          <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-navy-deepest md:text-5xl">
+            What It&rsquo;s Like to Work With Us
           </h2>
-        </div>
+        </Reveal>
 
         <div className="mt-12">
           {testimonials.length === 0 ? (
-            <p className="text-center text-navy-soft">
-              Client testimonials coming soon.
-            </p>
+            <p className="text-navy-soft">Client testimonials coming soon.</p>
           ) : (
             <div className={gridClass(testimonials.length)}>
-              {testimonials.map((t) => (
-                <TestimonialCard key={t._id} testimonial={t} />
+              {testimonials.map((t, i) => (
+                <Reveal key={t._id} delay={i * 70} className="h-full">
+                  <TestimonialCard testimonial={t} />
+                </Reveal>
               ))}
             </div>
           )}

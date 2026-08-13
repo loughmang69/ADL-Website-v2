@@ -69,7 +69,7 @@ export default function StarRating({
             onChange={() => onChange(n)}
             className="sr-only peer"
           />
-          <span className="block rounded-md peer-focus-visible:ring-2 peer-focus-visible:ring-accent peer-focus-visible:ring-offset-2">
+          <span className="block rounded-md peer-focus-visible:ring-2 peer-focus-visible:ring-navy peer-focus-visible:ring-offset-2">
             <StarIcon
               size={size}
               weight={n <= active ? "fill" : "regular"}

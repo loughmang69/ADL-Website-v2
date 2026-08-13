@@ -12,7 +12,7 @@ export default function RelatedPosts({
     <section aria-labelledby="related-heading" className="mt-16">
       <h2
         id="related-heading"
-        className="text-2xl font-black tracking-tight text-navy-deepest"
+        className="font-display text-2xl font-semibold tracking-tight text-navy-deepest"
       >
         Related Posts
       </h2>

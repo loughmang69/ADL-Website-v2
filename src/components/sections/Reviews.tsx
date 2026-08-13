@@ -1,6 +1,7 @@
 import Button from "@/components/ui/Button";
 import StarRating from "@/components/ui/StarRating";
 import ReviewCard from "@/components/ui/ReviewCard";
+import Reveal from "@/components/ui/Reveal";
 import { SITE, GOOGLE_REVIEWS } from "@/data/content";
 import { getGoogleReviews } from "@/lib/google/reviews";
 
@@ -18,15 +19,15 @@ export default async function Reviews() {
   return (
     <section id="reviews" className="bg-surface-soft px-6 py-24">
       <div className="mx-auto max-w-7xl">
-        <div className="text-center">
+        <Reveal>
           <span className="text-xs font-bold uppercase tracking-[0.1em] text-navy-soft">
             Google Reviews
           </span>
-          <h2 className="mt-2 text-3xl font-black tracking-tight text-navy-deepest md:text-4xl">
+          <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-navy-deepest md:text-4xl">
             What Clients Say on Google
           </h2>
           {dynamic && typeof data.rating === "number" && (
-            <div className="mt-4 flex flex-col items-center gap-2">
+            <div className="mt-4 flex items-center gap-3">
               <StarRating value={Math.round(data.rating)} size={22} />
               <p className="text-sm text-navy-soft">
                 {data.rating.toFixed(1)} out of 5
@@ -34,37 +35,39 @@ export default async function Reviews() {
               </p>
             </div>
           )}
-        </div>
+        </Reveal>
 
         <div className="mt-10">
           {dynamic ? (
             <div className={gridClass(data.reviews.length)}>
               {data.reviews.map((r, i) => (
-                <ReviewCard
-                  key={`${r.author}-${i}`}
-                  author={r.author}
-                  rating={r.rating}
-                  text={r.text}
-                  meta={r.relativeTime || "Google Review"}
-                />
+                <Reveal key={`${r.author}-${i}`} delay={i * 70} className="h-full">
+                  <ReviewCard
+                    author={r.author}
+                    rating={r.rating}
+                    text={r.text}
+                    meta={r.relativeTime || "Google Review"}
+                  />
+                </Reveal>
               ))}
             </div>
           ) : (
             <div className={gridClass(GOOGLE_REVIEWS.length)}>
-              {GOOGLE_REVIEWS.map((review) => (
-                <ReviewCard
-                  key={review.author}
-                  author={review.author}
-                  rating={review.stars}
-                  text={review.text}
-                  meta={review.source}
-                />
+              {GOOGLE_REVIEWS.map((review, i) => (
+                <Reveal key={review.author} delay={i * 70} className="h-full">
+                  <ReviewCard
+                    author={review.author}
+                    rating={review.stars}
+                    text={review.text}
+                    meta={review.source}
+                  />
+                </Reveal>
               ))}
             </div>
           )}
         </div>
 
-        <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <Button href={SITE.googleReviewUrl} variant="primary" external>
             Leave Us a Review
           </Button>

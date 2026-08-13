@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Fraunces } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
@@ -13,6 +13,18 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+/**
+ * Display face, used only for the hero h1 and section h2s via `font-display`.
+ * Geist still carries all body, UI, and navigation text. Loading it here (not
+ * per-component) keeps it in the same `next/font` pipeline as Geist, so it is
+ * self-hosted and preloaded rather than fetched from a font CDN at runtime.
+ */
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
   display: "swap",
 });
@@ -31,7 +43,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0d1f3c",
+  // Matches the new page ground. The site no longer opens on a dark surface.
+  themeColor: "#EEF3FC",
 };
 
 export default function RootLayout({
@@ -40,7 +53,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable}`}
+    >
       <body>
         {children}
         <Analytics />

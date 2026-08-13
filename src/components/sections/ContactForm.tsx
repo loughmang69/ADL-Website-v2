@@ -16,12 +16,13 @@ const VALUE_PROPS = [
 ];
 
 type ContactMethod = "Email" | "Phone";
+const METHODS: ContactMethod[] = ["Email", "Phone"];
 type Status = "idle" | "loading" | "success" | "error";
 type FieldErrors = Partial<Record<string, string[]>>;
 
 const inputBase =
   "w-full rounded-lg border bg-white px-4 py-3 text-navy-deepest placeholder:text-navy-soft/50 " +
-  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 transition-colors";
+  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-1 transition-colors";
 
 function fieldClass(hasError: boolean): string {
   return `${inputBase} ${hasError ? "border-danger" : "border-navy-deepest/15"}`;
@@ -105,17 +106,17 @@ export default function ContactForm() {
   }
 
   return (
-    <section
-      id="contact"
-      className="bg-gradient-to-br from-navy-deep to-navy-deepest px-6 py-24"
-    >
+    // The one place colour goes to full strength. A solid panel rather than a
+    // gradient: the rest of the page is restrained, so this section carries its
+    // weight by being the only saturated surface on it.
+    <section id="contact" className="bg-navy-deep px-6 py-24">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
         {/* Left column */}
         <div className="text-white">
           <span className="text-xs font-bold uppercase tracking-[0.1em] text-accent">
             Get In Touch
           </span>
-          <h2 className="mt-2 text-3xl font-black tracking-tight md:text-5xl">
+          <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight md:text-5xl">
             Let&rsquo;s Talk About Your Business
           </h2>
           <p className="mt-4 max-w-prose text-white/70">
@@ -175,14 +176,14 @@ export default function ContactForm() {
               <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:gap-6">
                 <a
                   href={SITE.phoneHref}
-                  className="inline-flex items-center gap-2 rounded-sm font-semibold text-navy transition-colors hover:text-accent"
+                  className="inline-flex items-center gap-2 rounded-sm font-semibold text-navy transition-colors hover:text-navy-deep"
                 >
                   <PhoneIcon size={18} aria-hidden="true" />
                   {SITE.phone}
                 </a>
                 <a
                   href={SITE.emailHref}
-                  className="inline-flex items-center gap-2 rounded-sm font-semibold text-navy transition-colors hover:text-accent"
+                  className="inline-flex items-center gap-2 rounded-sm font-semibold text-navy transition-colors hover:text-navy-deep"
                 >
                   <EnvelopeIcon size={18} aria-hidden="true" />
                   {SITE.email}
@@ -353,18 +354,48 @@ export default function ContactForm() {
                   <span className="mb-1.5 block text-sm font-semibold text-navy-deepest">
                     Preferred Contact Method
                   </span>
+                  {/* A radiogroup must behave like one: arrow keys move the
+                      selection and only the selected control is tabbable
+                      (roving tabindex). Previously these were plain buttons
+                      wearing radio roles, so a keyboard user tabbed through
+                      both and arrow keys did nothing. */}
                   <div
                     role="radiogroup"
                     aria-label="Preferred contact method"
                     className="inline-flex rounded-lg border border-navy-deepest/15 p-1"
                   >
-                    {(["Email", "Phone"] as ContactMethod[]).map((m) => (
+                    {METHODS.map((m, i) => (
                       <button
                         key={m}
                         type="button"
                         role="radio"
                         aria-checked={method === m}
+                        tabIndex={method === m ? 0 : -1}
                         onClick={() => setMethod(m)}
+                        onKeyDown={(e) => {
+                          if (
+                            e.key !== "ArrowRight" &&
+                            e.key !== "ArrowLeft" &&
+                            e.key !== "ArrowDown" &&
+                            e.key !== "ArrowUp"
+                          )
+                            return;
+                          e.preventDefault();
+                          const step =
+                            e.key === "ArrowRight" || e.key === "ArrowDown"
+                              ? 1
+                              : -1;
+                          const next =
+                            METHODS[
+                              (i + step + METHODS.length) % METHODS.length
+                            ];
+                          setMethod(next);
+                          e.currentTarget.parentElement
+                            ?.querySelectorAll<HTMLButtonElement>(
+                              '[role="radio"]',
+                            )
+                            [METHODS.indexOf(next)]?.focus();
+                        }}
                         className={`rounded-md px-5 py-2 text-sm font-semibold transition-colors duration-150 active:scale-[0.97] ${
                           method === m
                             ? "bg-navy text-white"
@@ -381,7 +412,7 @@ export default function ContactForm() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent px-6 py-3.5 text-sm font-semibold text-navy-deepest transition-[transform,background-color] duration-150 ease-out hover:bg-accent/90 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:opacity-60"
+                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-navy px-6 py-3.5 text-sm font-semibold text-white transition-[transform,background-color] duration-150 ease-out hover:bg-navy-deep active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 disabled:opacity-60"
               >
                 {status === "loading" && (
                   <span
