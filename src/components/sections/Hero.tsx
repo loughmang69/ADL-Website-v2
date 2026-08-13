@@ -35,7 +35,8 @@ export default function Hero() {
             <span className="text-navy">Business clear.</span>
           </h1>
           <p className="mt-6 max-w-prose text-base leading-relaxed text-navy-soft md:text-lg">
-            ADL Business Consulting is a Fremont, CA CPA firm built around three
+            ADL Business Consulting, PC is a Fremont, CA CPA firm built around
+            three
             things small business owners actually need: accurate tax
             preparation, bookkeeping that stays current, and straight answers on
             the decisions that shape your business. All handled directly by

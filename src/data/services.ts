@@ -92,7 +92,7 @@ export const SERVICES: Service[] = [
       {
         question: "Do you only work with S-corps?",
         answer:
-          "No. LLCs, sole proprietors filing Schedule C, partnerships, and individuals are all common clients. The entity structure work happens on the advisory side if you're not sure which structure fits.",
+          "No. LLCs, sole proprietors filing Schedule C, partnerships, corporations, and individuals are all common clients. The entity structure work happens on the advisory side if you're not sure which structure fits.",
       },
       {
         question: "When should I reach out before tax season?",
@@ -126,7 +126,7 @@ export const SERVICES: Service[] = [
       {
         heading: "Monthly bookkeeping that doesn't fall behind",
         paragraphs: [
-          "Ongoing reconciliation, categorization, and financial reporting, built around QuickBooks and delivered on a monthly cadence, so you always have an accurate picture of where the business stands, and so tax season isn't a scramble to reconstruct a year's worth of transactions.",
+          "Ongoing reconciliation, categorization, and clean financials delivered on a monthly cadence, so you always have an accurate picture of where the business stands, and so tax season isn't a scramble to reconstruct a year's worth of transactions.",
         ],
       },
       {
@@ -138,7 +138,7 @@ export const SERVICES: Service[] = [
       {
         heading: "Books built for decisions, not just filing",
         paragraphs: [
-          "Bookkeeping done well isn't only a compliance requirement. Clean, current financials are what make it possible to answer real questions with confidence: can you afford to hire, is a price increase actually working, where is cash actually going.",
+          "Bookkeeping done well isn't only a compliance requirement. Clean, current financials are what make it possible to answer real questions with confidence: can you afford to hire, is a price increase actually working, where is cash actually going?",
         ],
       },
     ],
@@ -155,10 +155,9 @@ export const SERVICES: Service[] = [
           "There's no real limit. A few months behind or a few years behind both start the same way: a review of what exists and a plan to reconstruct the rest.",
       },
       {
-        question:
-          "Do you use QuickBooks, or can you work with what I already have?",
+        question: "What bookkeeping software do you support?",
         answer:
-          "QuickBooks is the standard setup, but existing systems can usually be assessed and either kept or migrated as part of getting started.",
+          "Whether you have an existing software or not, we can assess what the best fit is for your needs which could be QuickBooks, Xero, or something else entirely.",
       },
       {
         question:

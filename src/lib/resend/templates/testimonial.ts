@@ -26,6 +26,7 @@ export function buildTestimonialEmail(
         ${data.role ? `<tr><td style="padding:6px 12px;font-weight:600;color:#0d1f3c;">Role</td><td style="padding:6px 12px;color:#142b56;">${esc(data.role)}</td></tr>` : ""}
         <tr><td style="padding:6px 12px;font-weight:600;color:#0d1f3c;">Rating</td><td style="padding:6px 12px;color:#142b56;">${stars} stars</td></tr>
         <tr><td style="padding:6px 12px;font-weight:600;color:#0d1f3c;vertical-align:top;">Testimonial</td><td style="padding:6px 12px;color:#142b56;">${esc(data.text).replace(/\n/g, "<br/>")}</td></tr>
+        <tr><td style="padding:6px 12px;font-weight:600;color:#0d1f3c;">Display permission</td><td style="padding:6px 12px;color:#142b56;">${data.permission ? "Granted by submitter" : "NOT granted"}</td></tr>
       </table>
       <p style="margin:16px 0 0;">
         <a href="${esc(studioUrl)}" style="display:inline-block;background:#1a3d6e;color:#ffffff;text-decoration:none;padding:10px 18px;border-radius:8px;font-size:14px;">Review in Sanity Studio</a>
@@ -40,6 +41,7 @@ export function buildTestimonialEmail(
     `Name: ${data.name}`,
     data.role ? `Role: ${data.role}` : null,
     `Rating: ${data.stars}/5`,
+    `Display permission: ${data.permission ? "Granted by submitter" : "NOT granted"}`,
     "",
     data.text,
     "",

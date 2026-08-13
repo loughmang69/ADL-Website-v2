@@ -78,6 +78,9 @@ export async function POST(request: Request) {
       text: parsed.data.text,
       approved: false,
       submittedAt: new Date().toISOString(),
+      // Zod guarantees this is `true` (see testimonialSchema), so it is stored
+      // as an explicit record of consent rather than an assumption.
+      permissionGranted: parsed.data.permission,
     });
   } catch (err) {
     console.error(

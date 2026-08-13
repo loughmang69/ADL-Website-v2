@@ -50,7 +50,7 @@ export const WHO_WE_HELP = {
   audiences: [
     {
       title: "Small business owners",
-      body: "LLCs, corporations, and sole proprietors who want their taxes, books, and bigger decisions handled by one CPA instead of passed between departments. Contractors and trades, professional practices, residential and commercial real estate owners, and many more trust us.",
+      body: "Whether you are a Sole Proprietor filing a Schedule C with your Form 1040 or a Corporation filing Form 1120, your taxes, books, and business needs are handled by one CPA instead of passed between departments. Contractors and trades, professional practices, residential and commercial real estate owners, and many more trust us.",
     },
     {
       title: "Businesses outgrowing DIY books",

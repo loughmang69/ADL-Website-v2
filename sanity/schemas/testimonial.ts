@@ -15,7 +15,7 @@ export const testimonial = defineType({
       name: "role",
       title: "Role / Company",
       type: "string",
-      description: "e.g. Owner, Excel Cleaning, LLC",
+      description: "e.g. Owner, Day Dreaming, Inc.",
     }),
     defineField({
       name: "stars",
@@ -42,6 +42,22 @@ export const testimonial = defineType({
       title: "Submitted At",
       type: "datetime",
       readOnly: true,
+    }),
+    /**
+     * Record of the display-consent checkbox at submission time. Read-only:
+     * this is a record of what the submitter agreed to, not a setting to be
+     * changed after the fact.
+     *
+     * Testimonials created before this field existed will read as unset rather
+     * than false. Treat unset as "not recorded", not as "consent refused".
+     */
+    defineField({
+      name: "permissionGranted",
+      title: "Display Permission Granted",
+      type: "boolean",
+      readOnly: true,
+      description:
+        "Confirmed by the submitter at the time of submission. Unset on testimonials submitted before this was recorded.",
     }),
   ],
   orderings: [
