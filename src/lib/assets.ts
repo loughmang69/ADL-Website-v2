@@ -11,6 +11,7 @@
  */
 const ASSET_VERSIONS: Record<string, number> = {
   "/uploads/headshot.jpg": 1,
+  "/uploads/headshot-avatar.jpg": 1,
 };
 
 /** Returns a /public asset path with its cache-busting version appended. */
