@@ -14,10 +14,33 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     [],
   );
 
+  /**
+   * The listing at /blog is a view over the posts, so the newest post
+   * _updatedAt is a real modification date for it rather than a guess.
+   * (A deleted post is the one case this would not move; adds and edits both
+   * do.) _updatedAt is an ISO-8601 UTC string, so a lexicographic max is
+   * also the chronological one.
+   *
+   * The other static routes deliberately keep no lastModified. Their content
+   * lives in source files, and nothing at runtime knows when those last
+   * changed: build time would churn the date on every unrelated deploy, and
+   * anything else would be hardcoded. No lastmod is better than a wrong one.
+   */
+  const latestPostUpdate = posts.reduce<string | undefined>(
+    (latest, post) =>
+      !latest || post._updatedAt > latest ? post._updatedAt : latest,
+    undefined,
+  );
+
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: SITE.url, changeFrequency: "monthly", priority: 1 },
     { url: `${SITE.url}/services`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${SITE.url}/blog`, changeFrequency: "weekly", priority: 0.8 },
+    {
+      url: `${SITE.url}/blog`,
+      lastModified: latestPostUpdate,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
     { url: `${SITE.url}/disclaimer`, changeFrequency: "yearly", priority: 0.3 },
   ];
 
