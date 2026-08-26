@@ -115,6 +115,32 @@ const nextConfig: NextConfig = {
         destination: "/services",
         permanent: true,
       },
+      /**
+       * Legacy .html blog URLs from the pre-Next static site. Google still has
+       * these indexed and was reporting them as redirect errors once they began
+       * hard-404ing against /blog/[slug].
+       *
+       * Order matters: /blog/index.html is the directory index, so it belongs
+       * at /blog. Without this entry the pattern below would rewrite it to
+       * /blog/index, which is a 404, turning a plain 404 into a redirect chain
+       * that ends in one.
+       */
+      {
+        source: "/blog/index.html",
+        destination: "/blog",
+        permanent: true,
+      },
+      /**
+       * One pattern rather than an entry per slug, so posts Google has not
+       * re-crawled yet are covered too. The param is constrained to [^/]+ and
+       * the ".html" suffix is required, so a clean URL like /blog/llc-vs-s-corp
+       * cannot match and there is no redirect loop.
+       */
+      {
+        source: "/blog/:slug([^/]+).html",
+        destination: "/blog/:slug",
+        permanent: true,
+      },
     ];
   },
 
