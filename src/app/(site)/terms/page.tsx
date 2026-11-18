@@ -148,9 +148,6 @@ export default function TermsPage() {
         <a href={SITE.emailHref}>{SITE.email}</a> &middot;{" "}
         <a href={SITE.phoneHref}>{SITE.phone}</a>
       </p>
-      <p>
-        See also our <Link href="/privacy">Privacy Policy</Link>.
-      </p>
     </LegalPage>
   );
 }

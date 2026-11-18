@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import LegalPage from "@/components/layout/LegalPage";
 import { SITE } from "@/data/content";
 
@@ -191,10 +190,6 @@ export default function PrivacyPage() {
         <br />
         <a href={SITE.emailHref}>{SITE.email}</a> &middot;{" "}
         <a href={SITE.phoneHref}>{SITE.phone}</a>
-      </p>
-      <p>
-        See also our <Link href="/terms">Terms of Use</Link> and{" "}
-        <Link href="/disclaimer">Legal Disclaimer</Link>.
       </p>
     </LegalPage>
   );
