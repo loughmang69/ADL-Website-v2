@@ -19,8 +19,9 @@ const securityHeaders = [
  * 'unsafe-inline' is still required for script/style because Next.js injects
  * inline bootstrap scripts and inline styles without nonces; tightening that
  * needs nonce-based middleware and is the planned follow-up before enforcement.
- * Third parties allow-listed: Vercel Analytics/Speed Insights, Sanity's CDN, and
- * Cloudflare Turnstile (script + challenge iframe on the contact form).
+ * Third parties allow-listed: Vercel Analytics/Speed Insights, Sanity's CDN,
+ * Google reviewer profile photos (googleusercontent.com), and Cloudflare
+ * Turnstile (script + challenge iframe on the contact form).
  * Scoped to exclude /studio (the Sanity Studio SPA needs a far looser policy).
  */
 const contentSecurityPolicy = [
@@ -32,7 +33,7 @@ const contentSecurityPolicy = [
   "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com https://challenges.cloudflare.com",
   "frame-src https://challenges.cloudflare.com",
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob: https://cdn.sanity.io",
+  "img-src 'self' data: blob: https://cdn.sanity.io https://*.googleusercontent.com",
   "font-src 'self' data:",
   "connect-src 'self' https://*.sanity.io https://va.vercel-scripts.com https://vitals.vercel-insights.com https://challenges.cloudflare.com",
   "upgrade-insecure-requests",

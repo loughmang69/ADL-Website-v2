@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/check-site-truth.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check:truth": "node scripts/check-site-truth.mjs"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.7",

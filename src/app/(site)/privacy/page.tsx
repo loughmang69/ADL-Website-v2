@@ -96,6 +96,10 @@ export default function PrivacyPage() {
           repeated form submissions.
         </li>
         <li>
+          <strong>Cloudflare</strong> runs a security check (Turnstile) on our
+          consultation form to tell people apart from automated bots.
+        </li>
+        <li>
           <strong>Sanity</strong> stores submitted testimonials and our blog
           content.
         </li>
@@ -122,13 +126,33 @@ export default function PrivacyPage() {
         , which is incorporated into this policy for that purpose.
       </p>
 
+      <h2>Form security check</h2>
+      <p>
+        To keep automated spam out of our consultation form, the form uses
+        Cloudflare Turnstile. When the form loads, Cloudflare processes
+        information such as your IP address and technical details about your
+        browser and device to confirm you are a person. It is used only for
+        that security purpose, not for advertising. Cloudflare describes its
+        practices in the{" "}
+        <a
+          href="https://www.cloudflare.com/turnstile-privacy-policy/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Turnstile Privacy Addendum
+        </a>
+        .
+      </p>
+
       <h2>Cookies and analytics</h2>
       <p>
         This website does not use cookies to track you. Our analytics, provided
         by Vercel, are cookie-free: they count page views and measure site
         performance without identifying individual visitors or following you
-        across other websites. We do not use advertising pixels, retargeting,
-        session recording, or social media trackers.
+        across other websites. The security check on our form may use
+        temporary browser data only to confirm you are not a bot. We do not
+        use advertising pixels, retargeting, session recording, or social
+        media trackers.
       </p>
 
       <h2>Do Not Track and third-party tracking</h2>

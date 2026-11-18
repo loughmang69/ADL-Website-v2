@@ -1,0 +1,46 @@
+{
+  "_about": "Approved list for scripts/check-site-truth.mjs, which runs before every build. Every outside domain referenced in the code and every package in package.json dependencies must be listed here. 'disclosedAs' is the word that must appear on the Privacy Policy page (src/app/(site)/privacy/page.tsx) because that service receives visitor data; null means it receives none (a plain link, a schema URL, or a library that runs on our own server). Adding an entry is a decision about the privacy policy, not a formality: if the new thing receives visitor data, update the Privacy Policy and LEGAL_EFFECTIVE_DATE in the same change. See AGENTS.md, 'Keeping the site truthful'.",
+
+  "externalHosts": {
+    "www.adlbusinessconsulting.com": { "purpose": "Our own site", "disclosedAs": null },
+    "schema.org": { "purpose": "Structured-data vocabulary URL, never requested", "disclosedAs": null },
+    "openapi.vercel.sh": { "purpose": "vercel.json schema URL, never requested", "disclosedAs": null },
+    "www.linkedin.com": { "purpose": "Link only", "disclosedAs": null },
+    "www.google.com": { "purpose": "Link only (Google profile search)", "disclosedAs": null },
+    "maps.google.com": { "purpose": "Links only (Google Maps listing, Google Maps terms)", "disclosedAs": null },
+    "g.page": { "purpose": "Link only (Leave a review)", "disclosedAs": null },
+    "policies.google.com": { "purpose": "Links only (Google terms and privacy policy)", "disclosedAs": null },
+    "www.cloudflare.com": { "purpose": "Link only (Turnstile Privacy Addendum)", "disclosedAs": null },
+    "va.vercel-scripts.com": { "purpose": "Vercel Web Analytics script (cookie-free)", "disclosedAs": "Vercel" },
+    "vitals.vercel-insights.com": { "purpose": "Vercel Speed Insights", "disclosedAs": "Vercel" },
+    "places.googleapis.com": { "purpose": "Server-side fetch of Google reviews", "disclosedAs": "Google" },
+    "*.googleusercontent.com": { "purpose": "Reviewer profile photos loaded from Google", "disclosedAs": "Google" },
+    "cdn.sanity.io": { "purpose": "Blog and site images from Sanity", "disclosedAs": "Sanity" },
+    "*.sanity.io": { "purpose": "Sanity content API", "disclosedAs": "Sanity" },
+    "challenges.cloudflare.com": { "purpose": "Cloudflare Turnstile on the contact form (script, iframe, server verify)", "disclosedAs": "Cloudflare" }
+  },
+
+  "dependencies": {
+    "@phosphor-icons/react": { "purpose": "Icons, bundled", "disclosedAs": null },
+    "@sanity/image-url": { "purpose": "Builds Sanity image URLs", "disclosedAs": "Sanity" },
+    "@upstash/ratelimit": { "purpose": "Form rate limiting (server)", "disclosedAs": "Upstash" },
+    "@upstash/redis": { "purpose": "Rate-limit storage (server)", "disclosedAs": "Upstash" },
+    "@vercel/analytics": { "purpose": "Cookie-free page analytics", "disclosedAs": "Vercel" },
+    "@vercel/speed-insights": { "purpose": "Performance measurement", "disclosedAs": "Vercel" },
+    "framer-motion": { "purpose": "Animations, bundled", "disclosedAs": null },
+    "next": { "purpose": "Framework", "disclosedAs": null },
+    "next-sanity": { "purpose": "Sanity client and Studio", "disclosedAs": "Sanity" },
+    "react": { "purpose": "Framework", "disclosedAs": null },
+    "react-dom": { "purpose": "Framework", "disclosedAs": null },
+    "resend": { "purpose": "Delivers form emails (server)", "disclosedAs": "Resend" },
+    "sanity": { "purpose": "Sanity Studio at /studio (owner only)", "disclosedAs": "Sanity" },
+    "styled-components": { "purpose": "Required by Sanity Studio", "disclosedAs": null },
+    "zod": { "purpose": "Form validation", "disclosedAs": null }
+  },
+
+  "forbiddenPatterns": [
+    { "pattern": "document\\.cookie", "why": "The Privacy Policy says the site does not use cookies to track visitors." },
+    { "pattern": "\\b(localStorage|sessionStorage)\\b", "why": "Storing data in visitors' browsers must be reviewed against the Privacy Policy's cookie section first." },
+    { "pattern": "googletagmanager|\\bgtag\\(|\\bfbq\\(|hotjar|clarity\\.ms|connect\\.facebook\\.net|tiktok|linkedin\\.com/insight|segment\\.com|fullstory|logrocket|intercom|tawk\\.to|crisp\\.chat|calendly\\.com", "why": "Ad pixels, session replay, chat widgets and schedulers are the main source of California wiretap (CIPA) lawsuits and would make the Privacy Policy untrue. Garrett must approve, and the Privacy Policy must be updated, first." }
+  ]
+}
