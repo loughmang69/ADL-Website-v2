@@ -23,6 +23,9 @@ export const SITE = {
   locationLabel: "Fremont, California",
   license: "CA License #150109",
   licenseNumber: "150109",
+  /** The firm's own CBA license (accountancy corporation), separate from Garrett's personal CPA license. */
+  firmLicense: "CBA Firm License #10249",
+  firmLicenseNumber: "10249",
   founderName: "Garrett Loughman",
   founderTitle: "Garrett Loughman, CPA, MBA",
   cpaSince: "2013",
@@ -80,11 +83,11 @@ export const ADL_APPROACH = {
     {
       tagline: "Free, and it has a name",
       title: "The Books & Structure Review",
-      body: "Send over last year's return and whatever your books look like right now, however rough. Garrett looks at your entity structure, your bookkeeping, and what was actually filed. Thirty minutes on the phone. No cost, no obligation.",
+      body: "Thirty minutes on the phone about your entity, your books, and what's been filed. No cost, no obligation.",
     },
     {
-      title: "You get it in writing",
-      body: "A short written summary of where you stand: what is clean, what is behind, what is quietly costing you money, and what has a deadline attached. Yours to keep whether or not you decide to work with ADL.",
+      title: "You get clear next steps",
+      body: "After the call, Garrett follows up by email with what he'd recommend. If your situation calls for a closer look at your books or returns, he'll explain what that involves before any work begins.",
     },
     {
       title: "We agree on scope before any work starts",
@@ -124,7 +127,7 @@ A friend suggested Garrett at ADL. Handing this kind of work off to someone else
 I haven't thought about my books in months. That's the whole point.
 
 Five stars, without hesitation. If you're looking for someone who is sharp, organized, and will actually take things off your plate, Garrett at ADL is your person. I can't recommend him highly enough!`,
-    source: "Verified Google Review",
+    source: "Google Review",
   },
   {
     author: "Valerie L",
@@ -142,7 +145,7 @@ On top of all of it, he took the time to actually educate me on personal finance
 If you're a small business owner who feels like you're just figuring it out as you go, Garrett is exactly who you need in your corner. ADL Business Consulting didn't just help me, they transformed the way I operate.
 
 — Excel Cleaning, LLC`,
-    source: "Verified Google Review",
+    source: "Google Review",
   },
 ] as const;
 
@@ -162,3 +165,9 @@ export const DISCLAIMER_FOOTER_SENTENCE =
  *  the article the reader is about to treat as advice. */
 export const DISCLAIMER_BANNER_SENTENCE =
   "General information only. This post is not tax, legal, or financial advice, and reading it does not create a CPA-client relationship. Consult a professional for advice specific to your situation.";
+
+/**
+ * Effective date shown on the Privacy Policy, Terms of Use, and Accessibility
+ * pages. Update it whenever the text of any of those pages changes.
+ */
+export const LEGAL_EFFECTIVE_DATE = "November 18, 2026";

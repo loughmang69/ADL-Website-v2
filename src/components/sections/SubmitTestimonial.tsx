@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { XIcon, CheckCircleIcon } from "@phosphor-icons/react/dist/ssr";
 import Button from "@/components/ui/Button";
 import StarRating from "@/components/ui/StarRating";
@@ -266,6 +267,16 @@ export default function SubmitTestimonial() {
               >
                 {status === "loading" ? "Submitting..." : "Submit Testimonial"}
               </Button>
+              <p className="text-center text-xs text-navy-soft">
+                See our{" "}
+                <Link
+                  href="/privacy"
+                  className="font-semibold text-navy underline underline-offset-2"
+                >
+                  Privacy Policy
+                </Link>{" "}
+                for how we handle your information.
+              </p>
             </form>
           </div>
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import {
   CheckCircleIcon,
   PhoneIcon,
@@ -345,13 +346,19 @@ export default function ContactForm() {
                   >
                     Additional notes or context
                   </label>
+                  <p id="notes-hint" className="mb-1.5 text-xs text-navy-soft">
+                    Please don&rsquo;t include Social Security or account
+                    numbers here.
+                  </p>
                   <textarea
                     id="notes"
                     name="notes"
                     rows={4}
                     maxLength={2000}
                     aria-invalid={!!errors.notes}
-                    aria-describedby={errors.notes ? "notes-error" : undefined}
+                    aria-describedby={
+                      errors.notes ? "notes-hint notes-error" : "notes-hint"
+                    }
                     className={`${fieldClass(!!errors.notes)} resize-y`}
                   />
                   {errors.notes && (
@@ -433,6 +440,16 @@ export default function ContactForm() {
                 )}
                 {status === "loading" ? "Sending..." : "Request a Free Consultation"}
               </button>
+              <p className="mt-3 text-center text-xs text-navy-soft">
+                See our{" "}
+                <Link
+                  href="/privacy"
+                  className="font-semibold text-navy underline underline-offset-2"
+                >
+                  Privacy Policy
+                </Link>{" "}
+                for how we handle your information.
+              </p>
             </form>
           )}
         </div>

@@ -13,7 +13,14 @@ const NAV = [
   { label: "About", href: "/#about" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/#contact" },
+];
+
+/** Legal pages, linked from the bottom bar on every page. */
+const LEGAL = [
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms of Use", href: "/terms" },
   { label: "Disclaimer", href: "/disclaimer" },
+  { label: "Accessibility", href: "/accessibility" },
 ];
 
 /**
@@ -45,6 +52,7 @@ export default function Footer() {
             <p className="mt-5 text-sm text-white/80">
               {SITE.founderName}, CPA, {SITE.license}
             </p>
+            <p className="mt-1 text-sm text-white/80">{SITE.firmLicense}</p>
             <p className="mt-1 text-sm text-white/50">
               © 2026 {SITE.name}. All rights reserved.
             </p>
@@ -133,6 +141,20 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-14 border-t border-white/10 pt-6">
+          <nav aria-label="Legal" className="mb-4">
+            <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+              {LEGAL.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="rounded-sm font-semibold text-white/80 transition-colors hover:text-accent"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
           <p className="text-xs leading-relaxed text-white/50">
             {DISCLAIMER_FOOTER_SENTENCE}{" "}
             <Link

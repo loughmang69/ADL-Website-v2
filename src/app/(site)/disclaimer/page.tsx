@@ -50,7 +50,9 @@ export default function DisclaimerPage() {
           <p>
             Garrett Loughman holds an active California CPA license (License No.
             150109). The firm is incorporated in California as ADL Business
-            Consulting, PC.
+            Consulting, PC, and is licensed by the California Board of
+            Accountancy as an accountancy corporation (Firm License No.{" "}
+            {SITE.firmLicenseNumber}).
           </p>
           <p>
             This site may link to third-party websites or resources for

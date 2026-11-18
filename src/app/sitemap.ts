@@ -42,6 +42,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     { url: `${SITE.url}/disclaimer`, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${SITE.url}/privacy`, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${SITE.url}/terms`, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${SITE.url}/accessibility`, changeFrequency: "yearly", priority: 0.3 },
   ];
 
   const serviceRoutes: MetadataRoute.Sitemap = SERVICES.map((service) => ({

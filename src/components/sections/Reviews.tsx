@@ -38,7 +38,7 @@ export default async function Reviews() {
         </Reveal>
 
         <div className="mt-10">
-          {dynamic ? (
+          {dynamic && (
             <div className={gridClass(data.reviews.length)}>
               {data.reviews.map((r, i) => (
                 <Reveal key={`${r.author}-${i}`} delay={i * 70} className="h-full">
@@ -47,11 +47,34 @@ export default async function Reviews() {
                     rating={r.rating}
                     text={r.text}
                     meta={r.relativeTime || "Google Review"}
+                    authorUri={r.authorUri}
+                    authorPhotoUri={r.authorPhotoUri}
+                    reviewUri={r.reviewUri}
                   />
                 </Reveal>
               ))}
             </div>
-          ) : (
+          )}
+          {dynamic && (
+            // Required by Google Maps Platform: "Google Maps" attribution in
+            // the same container as the reviews, plus a notice of how they
+            // were selected and ordered.
+            <div className="mt-6 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-xs text-navy-soft">
+                Showing up to 5 reviews, selected and ordered by Google&rsquo;s
+                relevance ranking.
+              </p>
+              <span
+                translate="no"
+                aria-label="Google Maps"
+                className="text-sm font-normal tracking-normal text-[#5E5E5E]"
+                style={{ fontFamily: "Roboto, Arial, sans-serif" }}
+              >
+                Google Maps
+              </span>
+            </div>
+          )}
+          {!dynamic && (
             <div className={gridClass(GOOGLE_REVIEWS.length)}>
               {GOOGLE_REVIEWS.map((review, i) => (
                 <Reveal key={review.author} delay={i * 70} className="h-full">
