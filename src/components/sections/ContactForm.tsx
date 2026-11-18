@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import {
   CheckCircleIcon,
@@ -31,11 +31,108 @@ function fieldClass(hasError: boolean): string {
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+// Cloudflare Turnstile. The site key is chosen per environment in
+// next.config.ts (real key in production, Cloudflare's test key elsewhere).
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "";
+const TURNSTILE_SCRIPT_SRC =
+  "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+
+interface TurnstileApi {
+  render: (
+    container: HTMLElement,
+    options: {
+      sitekey: string;
+      theme?: "light" | "dark" | "auto";
+      callback?: (token: string) => void;
+      "expired-callback"?: () => void;
+      "error-callback"?: () => void;
+    },
+  ) => string;
+  reset: (widgetId?: string) => void;
+  remove: (widgetId: string) => void;
+}
+
+declare global {
+  interface Window {
+    turnstile?: TurnstileApi;
+  }
+}
+
+let turnstileScript: Promise<void> | null = null;
+
+/** Loads the Turnstile script once per page, however many times it's asked. */
+function loadTurnstile(): Promise<void> {
+  if (window.turnstile) return Promise.resolve();
+  if (!turnstileScript) {
+    turnstileScript = new Promise<void>((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = TURNSTILE_SCRIPT_SRC;
+      script.async = true;
+      script.defer = true;
+      script.onload = () => resolve();
+      script.onerror = () => {
+        turnstileScript = null;
+        reject(new Error("Turnstile failed to load"));
+      };
+      document.head.appendChild(script);
+    });
+  }
+  return turnstileScript;
+}
+
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<FieldErrors>({});
   const [banner, setBanner] = useState<string | null>(null);
   const [method, setMethod] = useState<ContactMethod>("Email");
+  const turnstileRef = useRef<HTMLDivElement>(null);
+  const widgetIdRef = useRef<string | null>(null);
+  const tokenRef = useRef<string>("");
+
+  // Render the Turnstile widget whenever the form is on screen.
+  const formVisible = status !== "success";
+  useEffect(() => {
+    if (!formVisible || !TURNSTILE_SITE_KEY) return;
+    let cancelled = false;
+    loadTurnstile()
+      .then(() => {
+        const el = turnstileRef.current;
+        if (cancelled || !el || !window.turnstile || widgetIdRef.current) return;
+        widgetIdRef.current = window.turnstile.render(el, {
+          sitekey: TURNSTILE_SITE_KEY,
+          theme: "light",
+          callback: (token) => {
+            tokenRef.current = token;
+          },
+          "expired-callback": () => {
+            tokenRef.current = "";
+          },
+          "error-callback": () => {
+            tokenRef.current = "";
+          },
+        });
+      })
+      .catch(() => {
+        // Script blocked or offline: the server will refuse the submission and
+        // the visitor sees a message pointing them to email or phone.
+      });
+    return () => {
+      cancelled = true;
+      if (widgetIdRef.current && window.turnstile) {
+        window.turnstile.remove(widgetIdRef.current);
+      }
+      widgetIdRef.current = null;
+      tokenRef.current = "";
+    };
+  }, [formVisible]);
+
+  /** Tokens are single-use: get a fresh one after every server attempt. */
+  function resetTurnstile() {
+    tokenRef.current = "";
+    if (widgetIdRef.current && window.turnstile) {
+      window.turnstile.reset(widgetIdRef.current);
+    }
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -51,6 +148,7 @@ export default function ContactForm() {
       notes: String(data.get("notes") ?? "").trim(),
       contactMethod: method,
       "bot-field": String(data.get("bot-field") ?? ""),
+      turnstileToken: tokenRef.current,
     };
 
     // Client-side validation
@@ -66,6 +164,14 @@ export default function ContactForm() {
     setErrors(next);
     if (Object.keys(next).length > 0) return;
 
+    if (!payload.turnstileToken) {
+      setStatus("error");
+      setBanner(
+        "Please complete the security check above the button, then submit again.",
+      );
+      return;
+    }
+
     setStatus("loading");
     setBanner(null);
     try {
@@ -80,6 +186,7 @@ export default function ContactForm() {
         form.reset();
         return;
       }
+      resetTurnstile();
       if (res.status === 400) {
         const body = (await res.json().catch(() => ({}))) as {
           errors?: FieldErrors;
@@ -87,6 +194,17 @@ export default function ContactForm() {
         setErrors(body.errors ?? {});
         setStatus("error");
         setBanner("Please correct the highlighted fields and try again.");
+        return;
+      }
+      if (res.status === 403 || res.status === 503) {
+        const body = (await res.json().catch(() => ({}))) as {
+          error?: string;
+        };
+        setStatus("error");
+        setBanner(
+          body.error ??
+            "We couldn't verify the security check. Please try again, or email or call us directly.",
+        );
         return;
       }
       if (res.status === 429) {
@@ -101,6 +219,7 @@ export default function ContactForm() {
         "Something went wrong sending your message. Please email or call us directly.",
       );
     } catch {
+      resetTurnstile();
       setStatus("error");
       setBanner(
         "Something went wrong sending your message. Please email or call us directly.",
@@ -427,10 +546,13 @@ export default function ContactForm() {
                 </div>
               </div>
 
+              {/* Cloudflare Turnstile security check */}
+              <div ref={turnstileRef} className="mt-6 min-h-[65px]" />
+
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-navy px-6 py-3.5 text-sm font-semibold text-white transition-[transform,background-color] duration-150 ease-out hover:bg-navy-deep active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 disabled:opacity-60"
+                className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-navy px-6 py-3.5 text-sm font-semibold text-white transition-[transform,background-color] duration-150 ease-out hover:bg-navy-deep active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 disabled:opacity-60"
               >
                 {status === "loading" && (
                   <span

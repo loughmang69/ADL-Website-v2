@@ -19,7 +19,8 @@ const securityHeaders = [
  * 'unsafe-inline' is still required for script/style because Next.js injects
  * inline bootstrap scripts and inline styles without nonces; tightening that
  * needs nonce-based middleware and is the planned follow-up before enforcement.
- * Third parties allow-listed: Vercel Analytics/Speed Insights and Sanity's CDN.
+ * Third parties allow-listed: Vercel Analytics/Speed Insights, Sanity's CDN, and
+ * Cloudflare Turnstile (script + challenge iframe on the contact form).
  * Scoped to exclude /studio (the Sanity Studio SPA needs a far looser policy).
  */
 const contentSecurityPolicy = [
@@ -28,11 +29,12 @@ const contentSecurityPolicy = [
   "object-src 'none'",
   "frame-ancestors 'none'",
   "form-action 'self'",
-  "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com",
+  "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com https://challenges.cloudflare.com",
+  "frame-src https://challenges.cloudflare.com",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https://cdn.sanity.io",
   "font-src 'self' data:",
-  "connect-src 'self' https://*.sanity.io https://va.vercel-scripts.com https://vitals.vercel-insights.com",
+  "connect-src 'self' https://*.sanity.io https://va.vercel-scripts.com https://vitals.vercel-insights.com https://challenges.cloudflare.com",
   "upgrade-insecure-requests",
 ].join("; ");
 
@@ -54,9 +56,21 @@ const buildId =
   process.env.VERCEL_GIT_COMMIT_SHA ||
   `dev-${Date.now()}`;
 
+/**
+ * Cloudflare Turnstile site key (public). The real key only works on
+ * adlbusinessconsulting.com, so previews and local dev get Cloudflare's
+ * documented always-pass test key instead. The matching secret is chosen the
+ * same way in src/lib/security/turnstile.ts.
+ */
+const turnstileSiteKey =
+  process.env.VERCEL_ENV === "production"
+    ? "0x4AAAAAAGGgkOK0eyVyxoDV"
+    : "1x00000000000000000000AA";
+
 const nextConfig: NextConfig = {
   env: {
     NEXT_PUBLIC_BUILD_ID: buildId,
+    NEXT_PUBLIC_TURNSTILE_SITE_KEY: turnstileSiteKey,
   },
   images: {
     remotePatterns: [

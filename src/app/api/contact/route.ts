@@ -13,6 +13,8 @@ import {
 } from "@/lib/ratelimit";
 import { isAllowedOrigin } from "@/lib/security/origin";
 import { screenSubmission } from "@/lib/security/screen";
+import { verifyTurnstile } from "@/lib/security/turnstile";
+import { SITE } from "@/data/content";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -49,6 +51,27 @@ export async function POST(request: Request) {
     record["bot-field"].length > 0
   ) {
     return NextResponse.json({ success: true });
+  }
+
+  // 3b. Cloudflare Turnstile: stop automated form fillers before any email is
+  // sent. People pitching by hand pass this and are caught by the screen below.
+  const turnstile = await verifyTurnstile(record["turnstileToken"], ip);
+  if (!turnstile.ok) {
+    if (turnstile.reason === "unavailable") {
+      return NextResponse.json(
+        {
+          error: `Our spam check is temporarily unavailable. Please email ${SITE.email} or call ${SITE.phone} and we'll get right back to you.`,
+        },
+        { status: 503 },
+      );
+    }
+    return NextResponse.json(
+      {
+        error:
+          "We couldn't verify the security check. Please try again, or email or call us directly.",
+      },
+      { status: 403 },
+    );
   }
 
   // 2 + 4. Validate
