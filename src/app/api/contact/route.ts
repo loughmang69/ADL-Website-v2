@@ -12,6 +12,7 @@ import {
   getClientIp,
 } from "@/lib/ratelimit";
 import { isAllowedOrigin } from "@/lib/security/origin";
+import { screenSubmission } from "@/lib/security/screen";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -68,7 +69,13 @@ export async function POST(request: Request) {
     );
   }
 
-  const { subject, html, text, replyTo } = buildContactEmail(parsed.data);
+  // Flag likely sales solicitations. Never drops: the email still goes out,
+  // tagged "[Screened]" so a real client caught by mistake is not lost.
+  const screen = screenSubmission(parsed.data);
+  const { subject, html, text, replyTo } = buildContactEmail(
+    parsed.data,
+    screen,
+  );
 
   try {
     const { error } = await resend.emails.send({

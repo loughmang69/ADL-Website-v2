@@ -58,6 +58,8 @@ export default function ContactForm() {
     if (!payload.email) next.email = ["Please enter your email"];
     else if (!EMAIL_RE.test(payload.email))
       next.email = ["Enter a valid email address"];
+    if (!payload.helpWith)
+      next.helpWith = ["Please choose what we can help with"];
     if (payload.notes.length > 2000)
       next.notes = ["Please keep notes under 2000 characters"];
     setErrors(next);
@@ -308,13 +310,17 @@ export default function ContactForm() {
                     htmlFor="helpWith"
                     className="mb-1.5 block text-sm font-semibold text-navy-deepest"
                   >
-                    What can we help you with?
+                    What can we help you with? <span className="text-danger">*</span>
                   </label>
                   <select
                     id="helpWith"
                     name="helpWith"
                     defaultValue=""
-                    className={fieldClass(false)}
+                    required
+                    aria-required="true"
+                    aria-invalid={!!errors.helpWith}
+                    aria-describedby={errors.helpWith ? "helpWith-error" : undefined}
+                    className={fieldClass(!!errors.helpWith)}
                   >
                     <option value="" disabled>
                       Select an option
@@ -325,6 +331,11 @@ export default function ContactForm() {
                       </option>
                     ))}
                   </select>
+                  {errors.helpWith && (
+                    <p id="helpWith-error" role="alert" className="mt-1 text-sm text-danger">
+                      {errors.helpWith[0]}
+                    </p>
+                  )}
                 </div>
 
                 <div className="sm:col-span-2">

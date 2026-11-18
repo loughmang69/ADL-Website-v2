@@ -1,4 +1,5 @@
 import type { ContactInput } from "@/lib/validations/contact";
+import type { ScreenResult } from "@/lib/security/screen";
 
 function esc(value: string): string {
   return value
@@ -16,8 +17,12 @@ function row(label: string, value?: string): string {
   </tr>`;
 }
 
-export function buildContactEmail(data: ContactInput) {
-  const subject = `New consultation request from ${data.name}`;
+export function buildContactEmail(data: ContactInput, screen?: ScreenResult) {
+  const flagged = !!screen?.flagged;
+  const subject = `${flagged ? "[Screened] " : ""}New consultation request from ${data.name}`;
+  const screenNote = flagged
+    ? `Possible solicitation: ${screen!.reasons.join("; ")}`
+    : "";
 
   const html = `<!doctype html>
 <html>
@@ -25,6 +30,7 @@ export function buildContactEmail(data: ContactInput) {
     <div style="max-width:560px;margin:0 auto;padding:24px;">
       <h1 style="font-size:18px;color:#0d1f3c;margin:0 0 4px;">New consultation request</h1>
       <p style="font-size:13px;color:#1a6a8a;margin:0 0 16px;">Submitted via adlbusinessconsulting.com</p>
+      ${flagged ? `<p style="font-size:13px;color:#8a1a1a;background:#fdf1f1;border:1px solid #f0c9c9;border-radius:8px;padding:8px 12px;margin:0 0 16px;">${esc(screenNote)}</p>` : ""}
       <table style="width:100%;border-collapse:collapse;background:#ffffff;border:1px solid #e3e9f2;border-radius:8px;overflow:hidden;font-size:14px;">
         ${row("Name", data.name)}
         ${row("Email", data.email)}
@@ -40,6 +46,7 @@ export function buildContactEmail(data: ContactInput) {
 
   const text = [
     "New consultation request",
+    flagged ? screenNote : null,
     "",
     `Name: ${data.name}`,
     `Email: ${data.email}`,
